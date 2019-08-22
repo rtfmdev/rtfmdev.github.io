@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>poetry on &gt;rtfm /dev</title>
-    <link>http://example.org/tags/poetry/</link>
+    <link>http://rtfmdev.github.io/tags/poetry/</link>
     <description>Recent content in poetry on &gt;rtfm /dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 22 Aug 2019 22:54:23 +0300</lastBuildDate>
     
-	<atom:link href="http://example.org/tags/poetry/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://rtfmdev.github.io/tags/poetry/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Third Post</title>
-      <link>http://example.org/third-post/</link>
+      <link>http://rtfmdev.github.io/third-post/</link>
       <pubDate>Thu, 22 Aug 2019 22:54:23 +0300</pubDate>
       
-      <guid>http://example.org/third-post/</guid>
+      <guid>http://rtfmdev.github.io/third-post/</guid>
       <description>I think that I shall never see
 A poem lovely as a tree.
 A tree whose hungry mouth is prest
@@ -32,10 +32,10 @@ Poems are made by fools like me,</description>
     
     <item>
       <title>Second Post</title>
-      <link>http://example.org/second-post/</link>
+      <link>http://rtfmdev.github.io/second-post/</link>
       <pubDate>Thu, 22 Aug 2019 22:52:35 +0300</pubDate>
       
-      <guid>http://example.org/second-post/</guid>
+      <guid>http://rtfmdev.github.io/second-post/</guid>
       <description>That it will never come again
 Is what makes life so sweet.
 Believing what we don’t believe
@@ -48,10 +48,10 @@ Precisely opposite.</description>
     
     <item>
       <title>If by Rudyard Kipling</title>
-      <link>http://example.org/first_post/</link>
+      <link>http://rtfmdev.github.io/first_post/</link>
       <pubDate>Sat, 12 Jan 2019 22:14:57 -0600</pubDate>
       
-      <guid>http://example.org/first_post/</guid>
+      <guid>http://rtfmdev.github.io/first_post/</guid>
       <description>If you can keep your head when all about you
 Are losing theirs and blaming it on you,
 If you can trust yourself when all men doubt you,

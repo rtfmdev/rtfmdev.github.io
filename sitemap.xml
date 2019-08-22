@@ -3,57 +3,57 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>http://rtfmdev.github.io/</loc>
     <lastmod>2019-08-22T22:54:23+03:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/blog/</loc>
+    <loc>http://rtfmdev.github.io/blog/</loc>
     <lastmod>2019-08-22T22:54:23+03:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/tags/life/</loc>
+    <loc>http://rtfmdev.github.io/tags/life/</loc>
     <lastmod>2019-08-22T22:54:23+03:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/tags/poetry/</loc>
+    <loc>http://rtfmdev.github.io/tags/poetry/</loc>
     <lastmod>2019-08-22T22:54:23+03:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>http://rtfmdev.github.io/tags/</loc>
     <lastmod>2019-08-22T22:54:23+03:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/third-post/</loc>
+    <loc>http://rtfmdev.github.io/third-post/</loc>
     <lastmod>2019-08-22T22:54:23+03:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/second-post/</loc>
+    <loc>http://rtfmdev.github.io/second-post/</loc>
     <lastmod>2019-08-22T22:52:35+03:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/posts/my-first-post/</loc>
+    <loc>http://rtfmdev.github.io/posts/my-first-post/</loc>
     <lastmod>2019-08-22T20:05:53+03:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/posts/</loc>
+    <loc>http://rtfmdev.github.io/posts/</loc>
     <lastmod>2019-08-22T20:05:53+03:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/first_post/</loc>
+    <loc>http://rtfmdev.github.io/first_post/</loc>
     <lastmod>2019-01-12T22:14:57-06:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/about/</loc>
+    <loc>http://rtfmdev.github.io/about/</loc>
   </url>
   
 </urlset>
