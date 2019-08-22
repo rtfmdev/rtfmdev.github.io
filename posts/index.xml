@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on &gt;rtfm /dev</title>
-    <link>http://rtfmdev.github.io/posts/</link>
+    <link>https://rtfmdev.github.io/posts/</link>
     <description>Recent content in Posts on &gt;rtfm /dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 22 Aug 2019 20:05:53 +0300</lastBuildDate>
     
-	<atom:link href="http://rtfmdev.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rtfmdev.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>My First Post</title>
-      <link>http://rtfmdev.github.io/posts/my-first-post/</link>
+      <link>https://rtfmdev.github.io/posts/my-first-post/</link>
       <pubDate>Thu, 22 Aug 2019 20:05:53 +0300</pubDate>
       
-      <guid>http://rtfmdev.github.io/posts/my-first-post/</guid>
+      <guid>https://rtfmdev.github.io/posts/my-first-post/</guid>
       <description>Lorem _ipsum_hu dolor sit amet, consectetur adipiscing elit. Duis faucibus ut est mattis imperdiet. Proin volutpat consequat arcu sed interdum. Nullam non dui sit amet ex maximus bibendum ac in purus. Proin pretium suscipit dui et semper. Aliquam bibendum turpis sed metus ultrices hendrerit. Vivamus vel tincidunt leo. Phasellus consequat dictum risus, vitae facilisis massa facilisis nec. Praesent consequat tortor vel ante convallis fringilla. Suspendisse non ipsum pellentesque, lacinia ante vel, tincidunt ipsum.</description>
     </item>
     
