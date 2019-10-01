@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My First Post | RTFM DevOps</title>
+<title>Second | RTFM DevOps</title>
 
 
 <link rel="stylesheet" href="/book.min.89885fa0429ec73067282f26fc0c6d38cfc617a443ec4e835d47b821c52c6e92.css" integrity="sha256-iYhfoEKexzBnKC8m/AxtOM/GF6RD7E6DXUe4IcUsbpI=">
@@ -51,7 +51,7 @@ https://github.com/denzalman/rtfm-template
   
 
   <style>
-  nav ul a[href$="\2fposts\2fmy-first-post\2f "] {
+  nav ul a[href$="\2fposts\2fsecond\2f "] {
       color: #004ed0;
   }
   </style>
@@ -96,21 +96,55 @@ https://github.com/denzalman/rtfm-template
   <label for="menu-control">
     <img src="/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>My First Post</strong>
+  <strong>Second</strong>
 </header>
       
 
 <header class="markdown">
-  <h1>My First Post</h1>
+  <h1>Second</h1>
   <h5>
     <strong>Oct 1, 2019</strong>
   </h5>
 </header>
 <article class="markdown">
 
-<h3 id="purus-pellentesque-vehicula-condimentum-inceptos">Purus Pellentesque Vehicula Condimentum Inceptos</h3>
+<h3 id="lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
 
-<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<pre><code>{{ partial &quot;header.html&quot; . }}
+
+&lt;section id=content&gt;
+  &lt;h1&gt;{{ if .Params.heading }} {{ .Params.heading }} {{ else }} {{ .Title }} {{ end }}&lt;/h1&gt;
+
+  {{ if .Params.date }}
+    &lt;div id=sub-header&gt;
+      {{ .Date.Format (.Site.Params.dateform | default &quot;January 2006&quot;) }} · {{ .ReadingTime }} minute read
+    &lt;/div&gt;
+  {{ end }}
+
+  &lt;div class=&quot;entry-content&quot;&gt;
+    {{ .Content }}
+  &lt;/div&gt;
+
+  &lt;div id=links&gt;
+    {{ if .PrevInSection }}
+      &lt;a class=&quot;basic-alignment left&quot; href=&quot;{{.PrevInSection.Permalink}}&quot;&gt;&amp;laquo; {{.PrevInSection.Title}}&lt;/a&gt;
+    {{ end }}
+    {{ if .NextInSection }}
+      &lt;a class=&quot;basic-alignment left&quot; href=&quot;{{.NextInSection.Permalink}}&quot;&gt;{{.NextInSection.Title}} &amp;raquo;&lt;/a&gt;
+    {{ end }}
+  &lt;/div&gt;
+&lt;/section&gt;
+
+{{ partial &quot;footer.html&quot; . }}
+</code></pre>
+
+<p>Sed posuere consectetur est at lobortis. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Etiam porta sem malesuada magna mollis euismod.</p>
+
+<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla. Etiam porta sem malesuada magna mollis euismod.</p>
+
+<p>Nullam quis risus eget urna mollis ornare vel eu leo. Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum. Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
 </article>
 
       
@@ -118,7 +152,7 @@ https://github.com/denzalman/rtfm-template
   
   
   <div>
-    <a href="https://github.com/denzalman/rtfm-template/edit/master/exampleSite/content/posts/my-first-post.md" target="_blank" rel="noopener">
+    <a href="https://github.com/denzalman/rtfm-template/edit/master/exampleSite/content/posts/second.md" target="_blank" rel="noopener">
       <img src="/svg/edit.svg" alt="Edit" /> Edit this page
     </a>
   </div>
@@ -138,7 +172,7 @@ https://github.com/denzalman/rtfm-template
 <ul>
 <li>
 <ul>
-<li><a href="#purus-pellentesque-vehicula-condimentum-inceptos">Purus Pellentesque Vehicula Condimentum Inceptos</a></li>
+<li><a href="#lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
 </ul></li>
 </ul></li>
 </ul>

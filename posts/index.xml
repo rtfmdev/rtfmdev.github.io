@@ -1,23 +1,42 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on &gt;rtfm /dev</title>
+    <title>Posts on RTFM DevOps</title>
     <link>https://rtfmdev.github.io/posts/</link>
-    <description>Recent content in Posts on &gt;rtfm /dev</description>
+    <description>Recent content in Posts on RTFM DevOps</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 22 Aug 2019 20:05:53 +0300</lastBuildDate>
+    <lastBuildDate>Tue, 01 Oct 2019 14:24:31 +0300</lastBuildDate>
     
 	<atom:link href="https://rtfmdev.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Second</title>
+      <link>https://rtfmdev.github.io/posts/second/</link>
+      <pubDate>Tue, 01 Oct 2019 14:24:31 +0300</pubDate>
+      
+      <guid>https://rtfmdev.github.io/posts/second/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. {{ partial &amp;quot;header.html&amp;quot; . }} &amp;lt;section id=content&amp;gt; &amp;lt;h1&amp;gt;{{ if .Params.heading }} {{ .Params.heading }} {{ else }} {{ .Title }} {{ end }}&amp;lt;/h1&amp;gt; {{ if .Params.date }} &amp;lt;div id=sub-header&amp;gt; {{ .Date.Format (.Site.Params.dateform | default &amp;quot;January 2006&amp;quot;) }} · {{ .ReadingTime }} minute read &amp;lt;/div&amp;gt; {{ end }} &amp;lt;div class=&amp;quot;entry-content&amp;quot;&amp;gt; {{ .Content }} &amp;lt;/div&amp;gt; &amp;lt;div id=links&amp;gt; {{ if .PrevInSection }} &amp;lt;a class=&amp;quot;basic-alignment left&amp;quot; href=&amp;quot;{{.</description>
+    </item>
+    
+    <item>
       <title>My First Post</title>
       <link>https://rtfmdev.github.io/posts/my-first-post/</link>
-      <pubDate>Thu, 22 Aug 2019 20:05:53 +0300</pubDate>
+      <pubDate>Tue, 01 Oct 2019 11:53:37 +0300</pubDate>
       
       <guid>https://rtfmdev.github.io/posts/my-first-post/</guid>
-      <description>Lorem _ipsum_hu dolor sit amet, consectetur adipiscing elit. Duis faucibus ut est mattis imperdiet. Proin volutpat consequat arcu sed interdum. Nullam non dui sit amet ex maximus bibendum ac in purus. Proin pretium suscipit dui et semper. Aliquam bibendum turpis sed metus ultrices hendrerit. Vivamus vel tincidunt leo. Phasellus consequat dictum risus, vitae facilisis massa facilisis nec. Praesent consequat tortor vel ante convallis fringilla. Suspendisse non ipsum pellentesque, lacinia ante vel, tincidunt ipsum.</description>
+      <description>Purus Pellentesque Vehicula Condimentum Inceptos Nullam id dolor id nibh ultricies vehicula ut id elit. Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</description>
+    </item>
+    
+    <item>
+      <title>(Hu)go Template Primer</title>
+      <link>https://rtfmdev.github.io/posts/goisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://rtfmdev.github.io/posts/goisforlovers/</guid>
+      <description>Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
+This document is a brief primer on using Go templates.</description>
     </item>
     
   </channel>
