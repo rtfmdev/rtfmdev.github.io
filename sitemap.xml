@@ -7,11 +7,15 @@
   </url>
   
   <url>
+    <loc>https://rtfmdev.github.io/docs/introduction/examples/test/</loc>
+  </url>
+  
+  <url>
     <loc>https://rtfmdev.github.io/docs/introduction/examples/with-toc/</loc>
   </url>
   
   <url>
-    <loc>https://rtfmdev.github.io/docs/more-examples/</loc>
+    <loc>https://rtfmdev.github.io/docs/introduction/kubernetes/</loc>
   </url>
   
   <url>
@@ -19,7 +23,19 @@
   </url>
   
   <url>
+    <loc>https://rtfmdev.github.io/docs/introduction/examples/</loc>
+  </url>
+  
+  <url>
     <loc>https://rtfmdev.github.io/docs/introduction/examples/shortcodes/</loc>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/docs/miscellaneous/shortcodes/</loc>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/docs/miscellaneous/</loc>
   </url>
   
   <url>
@@ -48,12 +64,7 @@
   </url>
   
   <url>
-    <loc>https://rtfmdev.github.io/docs/introduction/examples/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rtfmdev.github.io/docs/more-examples/server/</loc>
+    <loc>https://rtfmdev.github.io/docs/miscellaneous/server/</loc>
     <priority>0</priority>
   </url>
   
