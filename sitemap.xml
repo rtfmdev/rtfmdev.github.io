@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://rtfmdev.github.io/docs/devops-tools/</loc>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/docs/kubernetes/kubectl/</loc>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/docs/miscellaneous/examples/test/</loc>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/docs/miscellaneous/examples/with-toc/</loc>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/docs/AWS/</loc>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/docs/kubernetes/</loc>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/docs/miscellaneous/examples/without-toc/</loc>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/docs/miscellaneous/examples/</loc>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/docs/miscellaneous/examples/shortcodes/</loc>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/docs/linux/</loc>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/docs/kubernetes/ingress/</loc>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/docs/kubernetes/helm/</loc>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/docs/kubernetes/advanced_tools/</loc>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/docs/miscellaneous/</loc>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/</loc>
+    <lastmod>2019-10-01T14:24:31+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/posts/second/</loc>
+    <lastmod>2019-10-01T14:24:31+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/posts/</loc>
+    <lastmod>2019-10-01T14:24:31+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/tags/Devops/</loc>
+    <lastmod>2019-10-01T11:53:37+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/tags/Geting-started/</loc>
+    <lastmod>2019-10-01T11:53:37+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/posts/my-first-post/</loc>
+    <lastmod>2019-10-01T11:53:37+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/tags/</loc>
+    <lastmod>2019-10-01T11:53:37+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/posts/goisforlovers/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/categories/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/categories/Development/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/tags/development/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/tags/go/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/tags/golang/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/categories/golang/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/tags/templates/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/tags/themes/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/docs/kubernetes/configMaps/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/docs/kubernetes/volume_types/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/docs/miscellaneous/server/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/docs/</loc>
+  </url>
+  
+</urlset>

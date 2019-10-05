@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introduction on RTFM DevOps</title>
+    <link>https://rtfmdev.github.io/</link>
+    <description>Recent content in Introduction on RTFM DevOps</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 01 Oct 2019 14:24:31 +0300</lastBuildDate>
+    
+	<atom:link href="https://rtfmdev.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://rtfmdev.github.io/docs/kubernetes/kubectl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rtfmdev.github.io/docs/kubernetes/kubectl/</guid>
+      <description>kubectl cheatsheet Connection details To look at the connection details, we can either see the content of the ~/.kube/config file (on Linux) or run the following command:
+$ kubectl config view Cluster info kubectl cluster-info When not using the kubectl proxy, we need to authenticate to the API server when sending API requests. We can authenticate by providing a Bearer Token when issuing a curl, or by providing a set of keys and certificates.</description>
+    </item>
+    
+    <item>
+      <title>Test</title>
+      <link>https://rtfmdev.github.io/docs/miscellaneous/examples/test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rtfmdev.github.io/docs/miscellaneous/examples/test/</guid>
+      <description>Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nulla vitae elit libero, a pharetra augue. Cras mattis consectetur purus sit amet fermentum.
+Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas faucibus mollis interdum. Cras mattis consectetur purus sit amet fermentum.</description>
+    </item>
+    
+    <item>
+      <title>With Table of Contents</title>
+      <link>https://rtfmdev.github.io/docs/miscellaneous/examples/with-toc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rtfmdev.github.io/docs/miscellaneous/examples/with-toc/</guid>
+      <description>Caput vino delphine in tamen vias Cognita laeva illo fracta Lorem markdownum pavent auras, surgit nunc cingentibus libet Laomedonque que est. Pastor An arbor filia foedat, ne fugit aliter, per. Helicona illas et callida neptem est Oresitrophos caput, dentibus est venit. Tenet reddite famuli praesentem fortibus, quaeque vis foret si frondes gelidos gravidae circumtulit inpulit armenta nativum.
+ Te at cruciabere vides rubentis manebo Maturuit in praetemptat ruborem ignara postquam habitasse Subitarum supplevit quoque fontesque venabula spretis modo Montis tot est mali quasque gravis Quinquennem domus arsit ipse Pellem turis pugnabant locavit  Natus quaerere Pectora et sine mulcere, coniuge dum tincta incurvae.</description>
+    </item>
+    
+    <item>
+      <title>Without Table of Contents</title>
+      <link>https://rtfmdev.github.io/docs/miscellaneous/examples/without-toc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rtfmdev.github.io/docs/miscellaneous/examples/without-toc/</guid>
+      <description>At me ipso nepotibus nunc celebratior genus Tanto oblite Lorem markdownum pectora novis patenti igne sua opus aurae feras materiaque illic demersit imago et aristas questaque posset. Vomit quoque suo inhaesuro clara. Esse cumque, per referri triste. Ut exponit solisque communis in tendens vincetis agisque iamque huic bene ante vetat omina Thebae rates. Aeacus servat admonitu concidit, ad resimas vultus et rugas vultu dignamque Siphnon.
+Quam iugulum regia simulacra, plus meruit humo pecorumque haesit, ab discedunt dixit: ritu pharetramque.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://rtfmdev.github.io/docs/miscellaneous/examples/shortcodes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rtfmdev.github.io/docs/miscellaneous/examples/shortcodes/</guid>
+      <description>Shortcodes Expand shortcode Default {{&amp;lt; expand &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /expand &amp;gt;}}  Expand ↕  Markdown content Lorem markdownum insigne&amp;hellip;    With Custom Label {{&amp;lt; expand &amp;#34;Custom Label&amp;#34; &amp;#34;...&amp;#34; &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /expand &amp;gt;}}  Custom Label ...  Markdown content Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa protulit, sed sed aere valvis inhaesuro Pallas animam: qui quid, ignes.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://rtfmdev.github.io/docs/kubernetes/ingress/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rtfmdev.github.io/docs/kubernetes/ingress/</guid>
+      <description>Ingress &amp;quot;An Ingress is a collection of rules that allow inbound connections to reach the cluster Services.&amp;quot;  To allow the inbound connection to reach the cluster Services, Ingress configures a Layer 7 HTTP/HTTPS load balancer for Services and provides the following:
+TLS (Transport Layer Security) Name-based virtual hosting Fanout routing Loadbalancing Custom rules.  With Ingress, users do not connect directly to a Service. Users reach the Ingress endpoint, and, from there, the request is forwarded to the desired Service.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://rtfmdev.github.io/docs/kubernetes/helm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rtfmdev.github.io/docs/kubernetes/helm/</guid>
+      <description> Helm </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://rtfmdev.github.io/docs/kubernetes/advanced_tools/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rtfmdev.github.io/docs/kubernetes/advanced_tools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lorem ipsum dolor sit amet</title>
+      <link>https://rtfmdev.github.io/posts/second/</link>
+      <pubDate>Tue, 01 Oct 2019 14:24:31 +0300</pubDate>
+      
+      <guid>https://rtfmdev.github.io/posts/second/</guid>
+      <description>&lt;p&gt;Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>My First Post</title>
+      <link>https://rtfmdev.github.io/posts/my-first-post/</link>
+      <pubDate>Tue, 01 Oct 2019 11:53:37 +0300</pubDate>
+      
+      <guid>https://rtfmdev.github.io/posts/my-first-post/</guid>
+      <description>&lt;h3 id=&#34;purus-pellentesque-vehicula-condimentum-inceptos&#34;&gt;Purus Pellentesque Vehicula Condimentum Inceptos&lt;/h3&gt;
+
+&lt;p&gt;Nullam id dolor id nibh ultricies vehicula ut id elit. Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>(Hu)go Template Primer</title>
+      <link>https://rtfmdev.github.io/posts/goisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://rtfmdev.github.io/posts/goisforlovers/</guid>
+      <description>&lt;p&gt;Hugo uses the excellent &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt; &lt;a href=&#34;https://golang.org/pkg/html/template/&#34;&gt;html/template&lt;/a&gt; library for
+its template engine. It is an extremely lightweight engine that provides a very
+small amount of logic. In our experience that it is just the right amount of
+logic to be able to create a good static website.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://rtfmdev.github.io/docs/kubernetes/configMaps/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rtfmdev.github.io/docs/kubernetes/configMaps/</guid>
+      <description> ConfigMaps and Secrets </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://rtfmdev.github.io/docs/kubernetes/volume_types/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rtfmdev.github.io/docs/kubernetes/volume_types/</guid>
+      <description>Volume Types A directory which is mounted inside a Pod is backed by the underlying Volume Type. A Volume Type decides the properties of the directory, like size, content, default access modes, etc. Some examples of Volume Types are:
+emptyDir An empty Volume is created for the Pod as soon as it is scheduled on the worker node. The Volume&amp;rsquo;s life is tightly coupled with the Pod. If the Pod is terminated, the content of emptyDir is deleted forever.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://rtfmdev.github.io/docs/miscellaneous/server/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rtfmdev.github.io/docs/miscellaneous/server/</guid>
+      <description>Nimium sacravere cetera exorata multifidasque satia Datum perierunt nato Lorem markdownum. Sit en turpe, recessit nominibus et sanguis totis. Unaque cognitius docuit sensimus mutasse terra flammas. Nec nunc sustinet Coeranon figura Erecthida saepe gestu vel: quod mei. Docto interdum quasi labefactus nocentius miserrimus pars cum missi matrem, ipse fletus illo super.
+ Metuunt non paene iniectis licuit Extemplo iugulum relictis reddidit caput Frustra adspiceres viae Non fluctibus civiliter pater procedit non Deos spumis ille aderam semper Stygios quantum Orgia hoc  Dare hirtus cervice Cecropis Si veteris alas proelia, sic remotis in portus nisi minimae acerris carina: et ne.</description>
+    </item>
+    
+  </channel>
+</rss>
