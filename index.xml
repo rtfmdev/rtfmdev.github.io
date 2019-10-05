@@ -12,50 +12,51 @@
     
     
     <item>
-      <title>Test</title>
-      <link>https://rtfmdev.github.io/docs/introduction/examples/test/</link>
+      <title></title>
+      <link>https://rtfmdev.github.io/docs/kubernetes/kubectl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://rtfmdev.github.io/docs/introduction/examples/test/</guid>
+      <guid>https://rtfmdev.github.io/docs/kubernetes/kubectl/</guid>
+      <description>kubectl cheatsheet Connection details To look at the connection details, we can either see the content of the ~/.kube/config file (on Linux) or run the following command:
+$ kubectl config view  Cluster info kubectl cluster-info  When not using the kubectl proxy, we need to authenticate to the API server when sending API requests. We can authenticate by providing a Bearer Token when issuing a curl, or by providing a set of keys and certificates.</description>
+    </item>
+    
+    <item>
+      <title>Test</title>
+      <link>https://rtfmdev.github.io/docs/miscellaneous/examples/test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rtfmdev.github.io/docs/miscellaneous/examples/test/</guid>
       <description>Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nulla vitae elit libero, a pharetra augue. Cras mattis consectetur purus sit amet fermentum.
 Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas faucibus mollis interdum. Cras mattis consectetur purus sit amet fermentum.</description>
     </item>
     
     <item>
       <title>With Table of Contents</title>
-      <link>https://rtfmdev.github.io/docs/introduction/examples/with-toc/</link>
+      <link>https://rtfmdev.github.io/docs/miscellaneous/examples/with-toc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://rtfmdev.github.io/docs/introduction/examples/with-toc/</guid>
+      <guid>https://rtfmdev.github.io/docs/miscellaneous/examples/with-toc/</guid>
       <description>Caput vino delphine in tamen vias Cognita laeva illo fracta Lorem markdownum pavent auras, surgit nunc cingentibus libet Laomedonque que est. Pastor An arbor filia foedat, ne fugit aliter, per. Helicona illas et callida neptem est Oresitrophos caput, dentibus est venit. Tenet reddite famuli praesentem fortibus, quaeque vis foret si frondes gelidos gravidae circumtulit inpulit armenta nativum.
  Te at cruciabere vides rubentis manebo Maturuit in praetemptat ruborem ignara postquam habitasse Subitarum supplevit quoque fontesque venabula spretis modo Montis tot est mali quasque gravis Quinquennem domus arsit ipse Pellem turis pugnabant locavit  Natus quaerere Pectora et sine mulcere, coniuge dum tincta incurvae.</description>
     </item>
     
     <item>
       <title>Without Table of Contents</title>
-      <link>https://rtfmdev.github.io/docs/introduction/examples/without-toc/</link>
+      <link>https://rtfmdev.github.io/docs/miscellaneous/examples/without-toc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://rtfmdev.github.io/docs/introduction/examples/without-toc/</guid>
+      <guid>https://rtfmdev.github.io/docs/miscellaneous/examples/without-toc/</guid>
       <description>At me ipso nepotibus nunc celebratior genus Tanto oblite Lorem markdownum pectora novis patenti igne sua opus aurae feras materiaque illic demersit imago et aristas questaque posset. Vomit quoque suo inhaesuro clara. Esse cumque, per referri triste. Ut exponit solisque communis in tendens vincetis agisque iamque huic bene ante vetat omina Thebae rates. Aeacus servat admonitu concidit, ad resimas vultus et rugas vultu dignamque Siphnon.
 Quam iugulum regia simulacra, plus meruit humo pecorumque haesit, ab discedunt dixit: ritu pharetramque.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://rtfmdev.github.io/docs/introduction/examples/shortcodes/</link>
+      <link>https://rtfmdev.github.io/docs/miscellaneous/examples/shortcodes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://rtfmdev.github.io/docs/introduction/examples/shortcodes/</guid>
-      <description>Shortcodes Expand shortcode Default {{&amp;lt; expand &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /expand &amp;gt;}}  Expand ↕  Markdown content Lorem markdownum insigne&amp;hellip;    With Custom Label {{&amp;lt; expand &amp;#34;Custom Label&amp;#34; &amp;#34;...&amp;#34; &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /expand &amp;gt;}}  Custom Label ...  Markdown content Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa protulit, sed sed aere valvis inhaesuro Pallas animam: qui quid, ignes.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://rtfmdev.github.io/docs/miscellaneous/shortcodes/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://rtfmdev.github.io/docs/miscellaneous/shortcodes/</guid>
+      <guid>https://rtfmdev.github.io/docs/miscellaneous/examples/shortcodes/</guid>
       <description>Shortcodes Expand shortcode Default {{&amp;lt; expand &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /expand &amp;gt;}}  Expand ↕  Markdown content Lorem markdownum insigne&amp;hellip;    With Custom Label {{&amp;lt; expand &amp;#34;Custom Label&amp;#34; &amp;#34;...&amp;#34; &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /expand &amp;gt;}}  Custom Label ...  Markdown content Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa protulit, sed sed aere valvis inhaesuro Pallas animam: qui quid, ignes.</description>
     </item>
     
@@ -89,6 +90,45 @@ Quam iugulum regia simulacra, plus meruit humo pecorumque haesit, ab discedunt d
 its template engine. It is an extremely lightweight engine that provides a very
 small amount of logic. In our experience that it is just the right amount of
 logic to be able to create a good static website.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://rtfmdev.github.io/docs/kubernetes/configMaps/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rtfmdev.github.io/docs/kubernetes/configMaps/</guid>
+      <description> ConfigMaps and Screts </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://rtfmdev.github.io/docs/kubernetes/helm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rtfmdev.github.io/docs/kubernetes/helm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://rtfmdev.github.io/docs/kubernetes/ingress/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rtfmdev.github.io/docs/kubernetes/ingress/</guid>
+      <description>Ingress &amp;quot;An Ingress is a collection of rules that allow inbound connections to reach the cluster Services.&amp;quot;  To allow the inbound connection to reach the cluster Services, Ingress configures a Layer 7 HTTP/HTTPS load balancer for Services and provides the following:
+TLS (Transport Layer Security) Name-based virtual hosting Fanout routing Loadbalancing Custom rules.  With Ingress, users do not connect directly to a Service. Users reach the Ingress endpoint, and, from there, the request is forwarded to the desired Service.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://rtfmdev.github.io/docs/kubernetes/volume_types/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rtfmdev.github.io/docs/kubernetes/volume_types/</guid>
+      <description>#Volume Types
+A directory which is mounted inside a Pod is backed by the underlying Volume Type. A Volume Type decides the properties of the directory, like size, content, default access modes, etc. Some examples of Volume Types are:
+emptyDir An empty Volume is created for the Pod as soon as it is scheduled on the worker node. The Volume&amp;rsquo;s life is tightly coupled with the Pod. If the Pod is terminated, the content of emptyDir is deleted forever.</description>
     </item>
     
     <item>

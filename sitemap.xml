@@ -3,35 +3,43 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://rtfmdev.github.io/docs/introduction/</loc>
+    <loc>https://rtfmdev.github.io/docs/devops-tools/</loc>
   </url>
   
   <url>
-    <loc>https://rtfmdev.github.io/docs/introduction/examples/test/</loc>
+    <loc>https://rtfmdev.github.io/docs/kubernetes/kubectl/</loc>
   </url>
   
   <url>
-    <loc>https://rtfmdev.github.io/docs/introduction/examples/with-toc/</loc>
+    <loc>https://rtfmdev.github.io/docs/miscellaneous/examples/test/</loc>
   </url>
   
   <url>
-    <loc>https://rtfmdev.github.io/docs/introduction/kubernetes/</loc>
+    <loc>https://rtfmdev.github.io/docs/miscellaneous/examples/with-toc/</loc>
   </url>
   
   <url>
-    <loc>https://rtfmdev.github.io/docs/introduction/examples/without-toc/</loc>
+    <loc>https://rtfmdev.github.io/docs/AWS/</loc>
   </url>
   
   <url>
-    <loc>https://rtfmdev.github.io/docs/introduction/examples/</loc>
+    <loc>https://rtfmdev.github.io/docs/kubernetes/</loc>
   </url>
   
   <url>
-    <loc>https://rtfmdev.github.io/docs/introduction/examples/shortcodes/</loc>
+    <loc>https://rtfmdev.github.io/docs/miscellaneous/examples/without-toc/</loc>
   </url>
   
   <url>
-    <loc>https://rtfmdev.github.io/docs/miscellaneous/shortcodes/</loc>
+    <loc>https://rtfmdev.github.io/docs/miscellaneous/examples/</loc>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/docs/miscellaneous/examples/shortcodes/</loc>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/docs/linux/</loc>
   </url>
   
   <url>
@@ -116,6 +124,26 @@
   <url>
     <loc>https://rtfmdev.github.io/tags/themes/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/docs/kubernetes/configMaps/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/docs/kubernetes/helm/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/docs/kubernetes/ingress/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/docs/kubernetes/volume_types/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
