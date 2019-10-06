@@ -76,7 +76,7 @@ TLS (Transport Layer Security) Name-based virtual hosting Fanout routing Loadbal
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://rtfmdev.github.io/docs/kubernetes/helm/</guid>
-      <description> Helm </description>
+      <description>Helm Helm package manager</description>
     </item>
     
     <item>
