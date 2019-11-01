@@ -23,10 +23,6 @@
   </url>
   
   <url>
-    <loc>https://rtfmdev.github.io/docs/kubernetes/networking/</loc>
-  </url>
-  
-  <url>
     <loc>https://rtfmdev.github.io/docs/miscellaneous/examples/without-toc/</loc>
   </url>
   
@@ -123,12 +119,12 @@
   </url>
   
   <url>
-    <loc>https://rtfmdev.github.io/tags/golang/</loc>
+    <loc>https://rtfmdev.github.io/categories/golang/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rtfmdev.github.io/categories/golang/</loc>
+    <loc>https://rtfmdev.github.io/tags/golang/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url>
   
@@ -158,12 +154,7 @@
   </url>
   
   <url>
-    <loc>https://rtfmdev.github.io/docs/kubernetes/networking/cni_providers/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rtfmdev.github.io/docs/kubernetes/networking/networking/</loc>
+    <loc>https://rtfmdev.github.io/docs/kubernetes/networking/</loc>
     <priority>0</priority>
   </url>
   
