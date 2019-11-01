@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>RTFM DevOps</title>
@@ -55,6 +55,18 @@ TLS (Transport Layer Security) Name-based virtual hosting Fanout routing Loadbal
       
       <guid>https://rtfmdev.github.io/docs/kubernetes/configMaps/</guid>
       <description> ConfigMaps and Secrets </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://rtfmdev.github.io/docs/kubernetes/monitoring/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rtfmdev.github.io/docs/kubernetes/monitoring/</guid>
+      <description>Services Monitoring Workflow Services Monitoring Workflow consists of three main components:
+Collection agent, Metrics Server, and Dashboards.  Typical workflow, including most common components:
+ Monitoring agent collects node metrics. cAdvisor collects containers and pods metrics. Monitoring Aggregation service collects data from its own agent and cAdvisor. Data is stored in the monitoring system’s storage. Monitoring aggregation service exposes metrics through APIs and dashboards.  A Few Notes:
+ Prometheus is the official monitoring server sponsored and incubated by CNCF.</description>
     </item>
     
     <item>

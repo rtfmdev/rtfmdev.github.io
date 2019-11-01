@@ -12,7 +12,7 @@ img-src 'self' https://jeremylikness.visualstudio.com https://www.google-analyti
 object-src 'none'; 
 style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://use.fontawesome.com https://fonts.googleapis.com https://www.google.com https://platform.twitter.com *.twimg.com disqus.com disquscdn.com *.disqus.com *.disquscdn.com; 
 script-src 'self' 'unsafe-inline' https://gist.github.com https://platform.twitter.com https://cdn.syndication.twimg.com *.amazon-adsystem.com https://www.google-analytics.com https://cdn.jsdelivr.net cse.google.com https://www.google.com https://pagead2.googlesyndication.com https://adservice.google.com https://www.googletagservices.com jsfiddle.net www.instagram.com disqus.com disquscdn.com *.disqus.com *.disquscdn.com;">
-<title>Docs | RTFM DevOps</title>
+<title>Monitoring | RTFM DevOps</title>
 
 
 <link rel="stylesheet" href="/book.min.89885fa0429ec73067282f26fc0c6d38cfc617a443ec4e835d47b821c52c6e92.css" integrity="sha256-iYhfoEKexzBnKC8m/AxtOM/GF6RD7E6DXUe4IcUsbpI=">
@@ -25,7 +25,6 @@ script-src 'self' 'unsafe-inline' https://gist.github.com https://platform.twitt
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 
 
-<link rel="alternate" type="application/rss+xml" href="https://rtfmdev.github.io/docs/index.xml" title="RTFM DevOps" />
 <!--
 Made with rtfm template
 https://github.com/denzalman/rtfm-template
@@ -198,7 +197,7 @@ https://github.com/denzalman/rtfm-template
       
         <li>
 
-  <a href="/docs/kubernetes/monitoring/" >
+  <a href="/docs/kubernetes/monitoring/"  class="active">
       Monitoring
   </a>
 
@@ -432,10 +431,78 @@ https://github.com/denzalman/rtfm-template
   <label for="menu-control">
     <img src="/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>Docs</strong>
+  <strong>Monitoring</strong>
 </header>
       
-<article class="markdown"></article>
+<article class="markdown">
+
+<h2 id="services-monitoring-workflow">Services Monitoring Workflow</h2>
+
+<p>Services Monitoring Workflow consists of three main components:</p>
+
+<pre><code>Collection agent, Metrics Server, and Dashboards. 
+</code></pre>
+
+<p>Typical workflow, including most common components:</p>
+
+<ul>
+<li>Monitoring agent collects node metrics.</li>
+<li>cAdvisor collects containers and pods metrics.</li>
+<li>Monitoring Aggregation service collects data from its own agent and cAdvisor.</li>
+<li>Data is stored in the monitoring system’s storage.</li>
+<li>Monitoring aggregation service exposes metrics through APIs and dashboards.</li>
+</ul>
+
+<p><strong>A Few Notes:</strong></p>
+
+<ul>
+<li><p>Prometheus is the official monitoring server sponsored and incubated by CNCF. It integrates directly with cAdvisor. You don’t need to install a 3rd party agent to retrieve additional metrics about your containers. However, if you need deeper insights about each node, you need to install an agent of your choice — see Prometheus integrations and third-party exporters page.</p></li>
+
+<li><p>Almost all monitoring systems piggyback on Kubernetes scheduling and orchestration. For example, their agents are installed as DeomonSets and depend on Kubernetes scheduler to have an instance scheduled on each node.</p></li>
+
+<li><p>Most monitoring agents depend on Kubelet to collect container relevant metrics, which in turn depends on cAdvisor. Very few agents collect container relevant details independently.
+Most monitoring aggregation services depend on agents pushing metrics to them. Prometheus is an exception. It pulls metrics out of the installed agents.</p></li>
+</ul>
+
+<h2 id="what-to-monitor">What to monitor</h2>
+
+<p>Ideal Services Workflow depends on this factors:
+- collection of relevant metrics
+- perception of continuous changes inside the k8s cluster.</p>
+
+<p>A good pipeline should focus on collecting relevant metrics. There are plenty of agents that can collect OS and process-level metrics. But you will find very few out there that can collect details about containers running at a given node, such as the number of running containers, container state, docker engine metrics, etc. cAdvisor is the best agent for this job.</p>
+
+<p>Perception of continuous changes means that the monitoring pipeline is aware of different pods, containers instances and can relate them to their parent entities, i.e. Deployment, Statefulsets, Namespace, etc. It also means that the metrics server is aware of system-wide metrics that should be visible to users, such as the number of pending pods, nodes status, etc.</p>
+
+<h2 id="tl-dr">TL;DR</h2>
+
+<ul>
+<li>You need to differentiate between core metrics pipeline and the services pipeline.</li>
+<li>You should pick the best pipeline that works for your needs.</li>
+<li>The community official metrics collector tool is Prometheus.</li>
+<li>Use <a href="https://github.com/grafana/kubernetes-app">Grafana Dashboards for visualization</a>. But not for alerting.</li>
+</ul>
+</article>
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "rtfmdev" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
       
       
@@ -443,6 +510,19 @@ https://github.com/denzalman/rtfm-template
 
     
   
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#services-monitoring-workflow">Services Monitoring Workflow</a></li>
+<li><a href="#what-to-monitor">What to monitor</a></li>
+<li><a href="#tl-dr">TL;DR</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
 
 
   </main>

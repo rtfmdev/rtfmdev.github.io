@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Introduction on RTFM DevOps</title>
@@ -122,11 +122,55 @@ logic to be able to create a good static website.&lt;/p&gt;</description>
     
     <item>
       <title></title>
+      <link>https://rtfmdev.github.io/docs/devops-tools/one-liners/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rtfmdev.github.io/docs/devops-tools/one-liners/</guid>
+      <description>sed &amp;#34;s/TEMPLATE_TEXT/1.$BUILD_NUMBER/g&amp;#34; filename.json.template &amp;gt; filename.</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://rtfmdev.github.io/docs/kubernetes/configMaps/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://rtfmdev.github.io/docs/kubernetes/configMaps/</guid>
       <description> ConfigMaps and Secrets </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://rtfmdev.github.io/docs/kubernetes/monitoring/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rtfmdev.github.io/docs/kubernetes/monitoring/</guid>
+      <description>Services Monitoring Workflow Services Monitoring Workflow consists of three main components:
+Collection agent, Metrics Server, and Dashboards.  Typical workflow, including most common components:
+ Monitoring agent collects node metrics. cAdvisor collects containers and pods metrics. Monitoring Aggregation service collects data from its own agent and cAdvisor. Data is stored in the monitoring system’s storage. Monitoring aggregation service exposes metrics through APIs and dashboards.  A Few Notes:
+ Prometheus is the official monitoring server sponsored and incubated by CNCF.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://rtfmdev.github.io/docs/kubernetes/networking/cni_providers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rtfmdev.github.io/docs/kubernetes/networking/cni_providers/</guid>
+      <description>Comparing Kubernetes CNI Providers: Flannel, Calico, Canal, and Weave Introduction #!/bin/bash
+myip=$(curl http://169.254.169.254/latest/meta-data/public-ipv4)
+link=&amp;ldquo;https://api.telegram.org/bot492487795:AAHJwCfNcgYXUVqJMcGAMMCdebGM_3ak__0/sendMessage&amp;quot;
+curl -X POST -H &amp;ldquo;Content-Type: application/json&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://rtfmdev.github.io/docs/kubernetes/networking/networking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rtfmdev.github.io/docs/kubernetes/networking/networking/</guid>
+      <description>About Flanel: https://blog.laputa.io/kubernetes-flannel-networking-6a1cb1f8ec7c
+A ServiceAccount is required to login. A ClusterRoleBinding is used to assign the new ServiceAccount (admin-user) the role of cluster-admin on the cluster.
+cat &amp;lt;&amp;lt;EOF | kubectl create -f - apiVersion: v1 kind: ServiceAccount metadata: name: admin-user namespace: kube-system --- apiVersion: rbac.authorization.k8s.io/v1beta1 kind: ClusterRoleBinding metadata: name: admin-user roleRef: apiGroup: rbac.authorization.k8s.io kind: ClusterRole name: cluster-admin subjects: - kind: ServiceAccount name: admin-user namespace: kube-system EOF This means they can control all aspects of Kubernetes.</description>
     </item>
     
     <item>
@@ -147,6 +191,24 @@ emptyDir An empty Volume is created for the Pod as soon as it is scheduled on th
       <guid>https://rtfmdev.github.io/docs/miscellaneous/server/</guid>
       <description>Nimium sacravere cetera exorata multifidasque satia Datum perierunt nato Lorem markdownum. Sit en turpe, recessit nominibus et sanguis totis. Unaque cognitius docuit sensimus mutasse terra flammas. Nec nunc sustinet Coeranon figura Erecthida saepe gestu vel: quod mei. Docto interdum quasi labefactus nocentius miserrimus pars cum missi matrem, ipse fletus illo super.
  Metuunt non paene iniectis licuit Extemplo iugulum relictis reddidit caput Frustra adspiceres viae Non fluctibus civiliter pater procedit non Deos spumis ille aderam semper Stygios quantum Orgia hoc  Dare hirtus cervice Cecropis Si veteris alas proelia, sic remotis in portus nisi minimae acerris carina: et ne.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://rtfmdev.github.io/docs/miscellaneous/to-read/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rtfmdev.github.io/docs/miscellaneous/to-read/</guid>
+      <description>The Kubernetes Scheduler
+Imperative vs. Declarative — a Kubernetes Tutorial
+Deploy a Kubernetes Cluster with Cluster Monitoring in Amazon EC2 using Rancher
+10 Advanced Tricks with Docker
+50 Useful Docker Tutorials, From Beginner to Advanced
+Знакомство с Kubernetes
+Security as Standard in the Land of Kubernetes.
+10 Data Structure, Algorithms, and Programming Courses to Crack Any Coding Interview
+CRUD App using Vue.js and Django
+Comparing Kubernetes CNI Providers: Flannel, Calico, Canal, and Weave</description>
     </item>
     
   </channel>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RTFM DevOps</title>
+    <link>https://rtfmdev.github.io/docs/kubernetes/networking/</link>
+    <description>Recent content on RTFM DevOps</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://rtfmdev.github.io/docs/kubernetes/networking/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://rtfmdev.github.io/docs/kubernetes/networking/cni_providers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rtfmdev.github.io/docs/kubernetes/networking/cni_providers/</guid>
+      <description>Comparing Kubernetes CNI Providers: Flannel, Calico, Canal, and Weave Introduction #!/bin/bash
+myip=$(curl http://169.254.169.254/latest/meta-data/public-ipv4)
+link=&amp;ldquo;https://api.telegram.org/bot492487795:AAHJwCfNcgYXUVqJMcGAMMCdebGM_3ak__0/sendMessage&amp;quot;
+curl -X POST -H &amp;ldquo;Content-Type: application/json&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://rtfmdev.github.io/docs/kubernetes/networking/networking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rtfmdev.github.io/docs/kubernetes/networking/networking/</guid>
+      <description>About Flanel: https://blog.laputa.io/kubernetes-flannel-networking-6a1cb1f8ec7c
+A ServiceAccount is required to login. A ClusterRoleBinding is used to assign the new ServiceAccount (admin-user) the role of cluster-admin on the cluster.
+cat &amp;lt;&amp;lt;EOF | kubectl create -f - apiVersion: v1 kind: ServiceAccount metadata: name: admin-user namespace: kube-system --- apiVersion: rbac.authorization.k8s.io/v1beta1 kind: ClusterRoleBinding metadata: name: admin-user roleRef: apiGroup: rbac.authorization.k8s.io kind: ClusterRole name: cluster-admin subjects: - kind: ServiceAccount name: admin-user namespace: kube-system EOF This means they can control all aspects of Kubernetes.</description>
+    </item>
+    
+  </channel>
+</rss>

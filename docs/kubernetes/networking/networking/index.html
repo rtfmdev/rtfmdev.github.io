@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; default-src 'self'; child-src 'self'; 
+font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com https://public.slidesharecdn.com  https://cdn.jsdelivr.net jsdelivr.net jsdelivr.net disqus.com disquscdn.com *.disqus.com *.disquscdn.com; 
+form-action 'self' https://syndication.twitter.com/ https://platform.twitter.com disqus.com disquscdn.com *.disqus.com *.disquscdn.com; 
+frame-src 'self' https://cse.google.com https://player.vimeo.com www.youtube.com www.youtube-nocookie.com https://platform.twitter.com https://syndication.twitter.com jsfiddle.net www.instagram.com https://kuula.co https://www.slideshare.net https://www.google.com https://googleads.g.doubleclick.net disqus.com disquscdn.com *.disqus.com *.disquscdn.com; 
+img-src 'self' https://jeremylikness.visualstudio.com https://www.google-analytics.com https://stats.g.doubleclick.net https://pagead2.googlesyndication.com *.google.com *.gstatic.com *.amazon-adsystem.com https://www.googleapis.com https://images-na.ssl-images-amazon.com https://platform.twitter.com *.twimg.com https://syndication.twitter.com data: https://files.kuula.io disqus.com disquscdn.com *.disqus.com *.disquscdn.com; 
+object-src 'none'; 
+style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://use.fontawesome.com https://fonts.googleapis.com https://www.google.com https://platform.twitter.com *.twimg.com disqus.com disquscdn.com *.disqus.com *.disquscdn.com; 
+script-src 'self' 'unsafe-inline' https://gist.github.com https://platform.twitter.com https://cdn.syndication.twimg.com *.amazon-adsystem.com https://www.google-analytics.com https://cdn.jsdelivr.net cse.google.com https://www.google.com https://pagead2.googlesyndication.com https://adservice.google.com https://www.googletagservices.com jsfiddle.net www.instagram.com disqus.com disquscdn.com *.disqus.com *.disquscdn.com;">
+<title>Networking | RTFM DevOps</title>
+
+
+<link rel="stylesheet" href="/book.min.89885fa0429ec73067282f26fc0c6d38cfc617a443ec4e835d47b821c52c6e92.css" integrity="sha256-iYhfoEKexzBnKC8m/AxtOM/GF6RD7E6DXUe4IcUsbpI=">
+
+
+<script defer src="/search.min.881894e4f1d97d0da31e8b3dacad1670dc5d3ce23e2e8f95f0ebee2f67d0a4b9.js" integrity="sha256-iBiU5PHZfQ2jHos9rK0WcNxdPOI&#43;Lo&#43;V8OvuL2fQpLk="></script>
+
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with rtfm template
+https://github.com/denzalman/rtfm-template
+-->
+  
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+
+<h2 class="book-brand">
+  <a href="https://rtfmdev.github.io/"><img src="/rtfm.png" alt="Logo" /><span>RTFM DevOps</span>
+  </a>
+</h2>
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+    
+
+  
+  
+
+
+
+
+
+ 
+  
+    
+
+  <ul>
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/docs/AWS/" >
+      A W S
+  </a>
+
+
+    
+
+    
+
+  <ul>
+    
+  </ul>
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/docs/kubernetes/" >
+      Kubernetes
+  </a>
+
+
+    
+
+    
+
+  <ul>
+    
+      
+        <li>
+
+  <a href="/docs/kubernetes/kubectl/" >
+      Kubectl
+  </a>
+
+</li>
+      
+    
+      
+        
+
+  <li  class="book-section-flat" >
+    
+      <span>Networking</span>
+    
+
+    
+
+  <ul>
+    
+      
+        <li>
+
+  <a href="/docs/kubernetes/networking/cni_providers/" >
+      Cni Providers
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/docs/kubernetes/networking/networking/"  class="active">
+      Networking
+  </a>
+
+</li>
+      
+    
+  </ul>
+
+
+  </li>
+
+
+      
+    
+      
+        <li>
+
+  <a href="/docs/kubernetes/ingress/" >
+      Ingress
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/docs/kubernetes/helm/" >
+      Helm
+  </a>
+
+</li>
+      
+    
+      
+    
+      
+        <li>
+
+  <a href="/docs/kubernetes/configMaps/" >
+      Config Maps
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/docs/kubernetes/monitoring/" >
+      Monitoring
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/docs/kubernetes/volume_types/" >
+      Volume Types
+  </a>
+
+</li>
+      
+    
+  </ul>
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/docs/linux/" >
+      Linux
+  </a>
+
+
+    
+
+    
+
+  <ul>
+    
+  </ul>
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/docs/devops-tools/" >
+      Devops Tools
+  </a>
+
+
+    
+
+    
+
+  <ul>
+    
+      
+        <li>
+
+  <a href="/docs/devops-tools/one-liners/" >
+      One Liners
+  </a>
+
+</li>
+      
+    
+  </ul>
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/docs/miscellaneous/" >
+      Miscellaneous
+  </a>
+
+
+    
+
+    
+
+  <ul>
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/docs/miscellaneous/examples/" >
+      Examples
+  </a>
+
+
+    
+
+    
+
+  <ul>
+    
+      
+        <li>
+
+  <a href="/docs/miscellaneous/examples/test/" >
+      Test
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/docs/miscellaneous/examples/with-toc/" >
+      With Table of Contents
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/docs/miscellaneous/examples/without-toc/" >
+      Without Table of Contents
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/docs/miscellaneous/examples/shortcodes/" >
+      Shortcodes
+  </a>
+
+</li>
+      
+    
+  </ul>
+
+
+  </li>
+
+
+      
+    
+      
+        <li>
+
+  <a href="/docs/miscellaneous/server/" >
+      Server
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/docs/miscellaneous/to-read/" >
+      To Read
+  </a>
+
+</li>
+      
+    
+  </ul>
+
+
+  </li>
+
+
+      
+    
+  </ul>
+
+
+  
+
+
+
+
+
+
+
+
+
+<a href ="/posts/">Blog</a></br></br>
+<a href ="/DenSalmanovCVen.pdf">My CV</a>
+
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>Networking</strong>
+</header>
+      
+<article class="markdown">
+
+<p>About Flanel:
+<a href="https://blog.laputa.io/kubernetes-flannel-networking-6a1cb1f8ec7c">https://blog.laputa.io/kubernetes-flannel-networking-6a1cb1f8ec7c</a></p>
+
+<p>A ServiceAccount is required to login. A ClusterRoleBinding is used to assign the new ServiceAccount (admin-user) the role of cluster-admin on the cluster.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">cat &lt;&lt;EOF | kubectl create -f <span style="color:#e6db74">- 
+</span><span style="color:#e6db74">apiVersion: v1</span>
+kind: ServiceAccount
+metadata:
+  name: admin-user
+  namespace: kube-system
+---
+apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: ClusterRoleBinding
+metadata:
+  name: admin-user
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+- kind: ServiceAccount
+  name: admin-user
+  namespace: kube-system
+EOF</code></pre></div>
+<p>This means they can control all aspects of Kubernetes. With ClusterRoleBinding and RBAC, different level of permissions can be defined based on security requirements. More information on creating a user for the Dashboard can be found in the Dashboard documentation.</p>
+
+<p>Once the ServiceAccount has been created, the token to login can be found with:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl -n kube-system describe secret <span style="color:#66d9ef">$(</span>kubectl -n kube-system get secret | grep admin-user | awk <span style="color:#e6db74">&#39;{print $1}&#39;</span><span style="color:#66d9ef">)</span></code></pre></div>
+<p>cluster-ip.yaml</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">apiVersion: v1
+kind: Service
+metadata:
+  name: webapp1-clusterip-svc
+  labels:
+    app: webapp1-clusterip
+spec:
+  ports:
+  - port: <span style="color:#ae81ff">80</span>
+  selector:
+    app: webapp1-clusterip
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: webapp1-clusterip-deployment
+spec:
+  replicas: <span style="color:#ae81ff">2</span>
+  template:
+    metadata:
+      labels:
+        app: webapp1-clusterip
+    spec:
+      containers:
+      - name: webapp1-clusterip-pod
+        image: katacoda/docker-http-server:latest
+        ports:
+        - containerPort: <span style="color:#ae81ff">80</span>
+---</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export CLUSTER_IP<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>kubectl get services/webapp1-clusterip-svc -o go-template<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;{{(index .spec.clusterIP)}}&#39;</span><span style="color:#66d9ef">)</span></code></pre></div>
+<p>clusterip-target.yaml</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">apiVersion: v1
+kind: Service
+metadata:
+  name: webapp1-clusterip-targetport-svc
+  labels:
+    app: webapp1-clusterip-targetport
+spec:
+  ports:
+  - port: <span style="color:#ae81ff">8080</span>
+    targetPort: <span style="color:#ae81ff">80</span>
+  selector:
+    app: webapp1-clusterip-targetport
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: webapp1-clusterip-targetport-deployment
+spec:
+  replicas: <span style="color:#ae81ff">2</span>
+  template:
+    metadata:
+      labels:
+        app: webapp1-clusterip-targetport
+    spec:
+      containers:
+      - name: webapp1-clusterip-targetport-pod
+        image: katacoda/docker-http-server:latest
+        ports:
+        - containerPort: <span style="color:#ae81ff">80</span>
+---</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export CLUSTER_IP<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>kubectl get services/webapp1-clusterip-targetport-svc -o go-template<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;{{(index .spec.clusterIP)}}&#39;</span><span style="color:#66d9ef">)</span></code></pre></div>
+<p>nodeport.yaml</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">apiVersion: v1
+kind: Service
+metadata:
+  name: webapp1-nodeport-svc
+  labels:
+    app: webapp1-nodeport
+spec:
+  type: NodePort
+  ports:
+  - port: <span style="color:#ae81ff">80</span>
+    nodePort: <span style="color:#ae81ff">30080</span>
+  selector:
+    app: webapp1-nodeport
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: webapp1-nodeport-deployment
+spec:
+  replicas: <span style="color:#ae81ff">2</span>
+  template:
+    metadata:
+      labels:
+        app: webapp1-nodeport
+    spec:
+      containers:
+      - name: webapp1-nodeport-pod
+        image: katacoda/docker-http-server:latest
+        ports:
+        - containerPort: <span style="color:#ae81ff">80</span>
+---</code></pre></div>
+<p>externalip.yaml</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">apiVersion: v1
+kind: Service
+metadata:
+  name: webapp1-externalip-svc
+  labels:
+    app: webapp1-externalip
+spec:
+  ports:
+  - port: <span style="color:#ae81ff">80</span>
+  externalIPs:
+  - <span style="color:#ae81ff">172.17.0.82</span>
+  selector:
+    app: webapp1-externalip
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: webapp1-externalip-deployment
+spec:
+  replicas: <span style="color:#ae81ff">2</span>
+  template:
+    metadata:
+      labels:
+        app: webapp1-externalip
+    spec:
+      containers:
+      - name: webapp1-externalip-pod
+        image: katacoda/docker-http-server:latest
+        ports:
+        - containerPort: <span style="color:#ae81ff">80</span>
+---</code></pre></div>
+<h3 id="cloudprovider-yaml">cloudprovider.yaml</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">apiVersion: extensions/v1beta1
+kind: DaemonSet
+metadata:
+  name: kube-keepalived-vip
+  namespace: kube-system
+spec:
+  template:
+    metadata:
+      labels:
+        name: kube-keepalived-vip
+    spec:
+      hostNetwork: <span style="color:#66d9ef">true</span>
+      containers:
+        - image: gcr.io/google_containers/kube-keepalived-vip:<span style="color:#ae81ff">0.9</span>
+          name: kube-keepalived-vip
+          imagePullPolicy: Always
+          securityContext:
+            privileged: <span style="color:#66d9ef">true</span>
+          volumeMounts:
+            - mountPath: /lib/modules
+              name: modules
+              readOnly: <span style="color:#66d9ef">true</span>
+            - mountPath: /dev
+              name: dev
+          <span style="color:#75715e"># use downward API</span>
+          env:
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+          <span style="color:#75715e"># to use unicast</span>
+          args:
+          - --services-configmap=kube-system/vip-configmap
+          <span style="color:#75715e"># unicast uses the ip of the nodes instead of multicast</span>
+          <span style="color:#75715e"># this is useful if running in cloud providers (like AWS)</span>
+          <span style="color:#75715e">#- --use-unicast=true</span>
+      volumes:
+        - name: modules
+          hostPath:
+            path: /lib/modules
+        - name: dev
+          hostPath:
+            path: /dev
+      nodeSelector:
+        <span style="color:#75715e"># type: worker # adjust this to match your worker nodes</span>
+---
+<span style="color:#75715e">## We also create an empty ConfigMap to hold our config</span>
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: vip-configmap
+  namespace: kube-system
+data:
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: keepalived-cloud-provider
+  name: keepalived-cloud-provider
+  namespace: kube-system
+spec:
+  replicas: <span style="color:#ae81ff">1</span>
+  revisionHistoryLimit: <span style="color:#ae81ff">2</span>
+  selector:
+    matchLabels:
+      app: keepalived-cloud-provider
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      annotations:
+        scheduler.alpha.kubernetes.io/critical-pod: <span style="color:#e6db74">&#34;&#34;</span>
+        scheduler.alpha.kubernetes.io/tolerations: <span style="color:#e6db74">&#39;[{&#34;key&#34;:&#34;CriticalAddonsOnly&#34;, &#34;operator&#34;:&#34;Exists&#34;}]&#39;</span>
+      labels:
+        app: keepalived-cloud-provider
+    spec:
+      containers:
+      - name: keepalived-cloud-provider
+        image: quay.io/munnerz/keepalived-cloud-provider:<span style="color:#ae81ff">0.0.1</span>
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: KEEPALIVED_NAMESPACE
+          value: kube-system
+        - name: KEEPALIVED_CONFIG_MAP
+          value: vip-configmap
+        - name: KEEPALIVED_SERVICE_CIDR
+          value: <span style="color:#ae81ff">10.10.0.0</span>/<span style="color:#ae81ff">26</span> <span style="color:#75715e"># pick a CIDR that is explicitly reserved for keepalived</span>
+        volumeMounts:
+        - name: certs
+          mountPath: /etc/ssl/certs
+        resources:
+          requests:
+            cpu: 200m
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: <span style="color:#ae81ff">10252</span>
+            host: <span style="color:#ae81ff">127.0.0.1</span>
+          initialDelaySeconds: <span style="color:#ae81ff">15</span>
+          timeoutSeconds: <span style="color:#ae81ff">15</span>
+          failureThreshold: <span style="color:#ae81ff">8</span>
+      volumes:
+      - name: certs
+        hostPath:
+          path: /etc/ssl/certs</code></pre></div>
+<h3 id="loadbalancer-yaml">loadbalancer.yaml</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">apiVersion: v1
+kind: Service
+metadata:
+  name: webapp1-loadbalancer-svc
+  labels:
+    app: webapp1-loadbalancer
+spec:
+  type: LoadBalancer
+  ports:
+  - port: <span style="color:#ae81ff">80</span>
+  selector:
+    app: webapp1-loadbalancer
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: webapp1-loadbalancer-deployment
+spec:
+  replicas: <span style="color:#ae81ff">2</span>
+  template:
+    metadata:
+      labels:
+        app: webapp1-loadbalancer
+    spec:
+      containers:
+      - name: webapp1-loadbalancer-pod
+        image: katacoda/docker-http-server:latest
+        ports:
+        - containerPort: <span style="color:#ae81ff">80</span>
+---</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export LoadBalancerIP<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>kubectl get services/webapp1-loadbalancer-svc -o go-template<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;{{(index .status.loadBalancer.ingress 0).ip}}&#39;</span><span style="color:#66d9ef">)</span></code></pre></div></article>
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "rtfmdev" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+      
+      
+    </div>
+
+    
+  
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#cloudprovider-yaml">cloudprovider.yaml</a></li>
+<li><a href="#loadbalancer-yaml">loadbalancer.yaml</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+  </main>
+
+  
+  
+</body>
+
+</html>

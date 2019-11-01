@@ -1,10 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <url>
-    <loc>https://rtfmdev.github.io/docs/devops-tools/</loc>
-  </url>
   
   <url>
     <loc>https://rtfmdev.github.io/docs/kubernetes/kubectl/</loc>
@@ -24,6 +20,10 @@
   
   <url>
     <loc>https://rtfmdev.github.io/docs/kubernetes/</loc>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/docs/kubernetes/networking/</loc>
   </url>
   
   <url>
@@ -48,6 +48,10 @@
   
   <url>
     <loc>https://rtfmdev.github.io/docs/kubernetes/helm/</loc>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/docs/devops-tools/</loc>
   </url>
   
   <url>
@@ -139,7 +143,27 @@
   </url>
   
   <url>
+    <loc>https://rtfmdev.github.io/docs/devops-tools/one-liners/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://rtfmdev.github.io/docs/kubernetes/configMaps/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/docs/kubernetes/monitoring/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/docs/kubernetes/networking/cni_providers/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/docs/kubernetes/networking/networking/</loc>
     <priority>0</priority>
   </url>
   
@@ -150,6 +174,11 @@
   
   <url>
     <loc>https://rtfmdev.github.io/docs/miscellaneous/server/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/docs/miscellaneous/to-read/</loc>
     <priority>0</priority>
   </url>
   
