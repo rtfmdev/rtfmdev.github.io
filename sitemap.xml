@@ -144,6 +144,11 @@
   </url>
   
   <url>
+    <loc>https://rtfmdev.github.io/docs/docker/commans/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://rtfmdev.github.io/docs/kubernetes/configMaps/</loc>
     <priority>0</priority>
   </url>
