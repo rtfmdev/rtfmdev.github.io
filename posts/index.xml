@@ -42,6 +42,7 @@
 :)
 :)
 :)
+:)
 &lt;a href=&#34;https://github.com/denzalman/hugo-build-action/releases/tag/v0.2&#34;&gt;https://github.com/denzalman/hugo-build-action/releases/tag/v0.2&lt;/a&gt;
 Hugo uses the excellent &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt; &lt;a href=&#34;https://golang.org/pkg/html/template/&#34;&gt;html/template&lt;/a&gt; library for
 its template engine. It is an extremely lightweight engine that provides a very
