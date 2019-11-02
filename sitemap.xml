@@ -3,11 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://rtfmdev.github.io/docs/docker/</loc>
+  </url>
+  
+  <url>
     <loc>https://rtfmdev.github.io/docs/kubernetes/kubectl/</loc>
   </url>
   
   <url>
     <loc>https://rtfmdev.github.io/docs/miscellaneous/examples/test/</loc>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/docs/docker/commans/</loc>
   </url>
   
   <url>
@@ -19,10 +27,6 @@
   </url>
   
   <url>
-    <loc>https://rtfmdev.github.io/docs/kubernetes/</loc>
-  </url>
-  
-  <url>
     <loc>https://rtfmdev.github.io/docs/AWS/useful-tips/</loc>
   </url>
   
@@ -31,7 +35,7 @@
   </url>
   
   <url>
-    <loc>https://rtfmdev.github.io/docs/miscellaneous/examples/</loc>
+    <loc>https://rtfmdev.github.io/docs/kubernetes/</loc>
   </url>
   
   <url>
@@ -44,6 +48,10 @@
   
   <url>
     <loc>https://rtfmdev.github.io/docs/kubernetes/ingress/</loc>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/docs/miscellaneous/examples/</loc>
   </url>
   
   <url>
@@ -144,11 +152,6 @@
   
   <url>
     <loc>https://rtfmdev.github.io/docs/devops-tools/one-liners/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rtfmdev.github.io/docs/docker/commans/</loc>
     <priority>0</priority>
   </url>
   

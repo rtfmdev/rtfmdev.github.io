@@ -12,13 +12,13 @@ img-src 'self' https://jeremylikness.visualstudio.com https://www.google-analyti
 object-src 'none'; 
 style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://use.fontawesome.com https://fonts.googleapis.com https://www.google.com https://platform.twitter.com *.twimg.com disqus.com disquscdn.com *.disqus.com *.disquscdn.com; 
 script-src 'self' 'unsafe-inline' https://gist.github.com https://platform.twitter.com https://cdn.syndication.twimg.com *.amazon-adsystem.com https://www.google-analytics.com https://cdn.jsdelivr.net cse.google.com https://www.google.com https://pagead2.googlesyndication.com https://adservice.google.com https://www.googletagservices.com jsfiddle.net www.instagram.com disqus.com disquscdn.com *.disqus.com *.disquscdn.com;">
-<title>Commans | RTFM DevOps</title>
+<title>Useful Tips | RTFM DevOps</title>
 
 
 <link rel="stylesheet" href="/book.min.89885fa0429ec73067282f26fc0c6d38cfc617a443ec4e835d47b821c52c6e92.css" integrity="sha256-iYhfoEKexzBnKC8m/AxtOM/GF6RD7E6DXUe4IcUsbpI=">
 
 
-<script defer src="/search.min.47a34f2a7d34189955428ee92637878f4847f68c22d1718374df25e25cfe8ffc.js" integrity="sha256-R6NPKn00GJlVQo7pJjeHj0hH9owi0XGDdN8l4lz&#43;j/w="></script>
+<script defer src="/search.min.41326387141057f6a7473d2a5ed9afe444dcd1f4244151ef73ebca64307b44e6.js" integrity="sha256-QTJjhxQQV/anRz0qXtmv5ETc0fQkQVHvc&#43;vKZDB7ROY="></script>
 
 
 
@@ -71,7 +71,43 @@ https://github.com/denzalman/rtfm-template
       
         
 
-  <li  class="book-section-flat" >
+  <li >
+    
+      
+
+  <a href="/docs/docker/" >
+      Docker
+  </a>
+
+
+    
+
+    
+
+  <ul>
+    
+      
+        <li>
+
+  <a href="/docs/docker/commans/"  class="active">
+      Useful Tips
+  </a>
+
+</li>
+      
+    
+  </ul>
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li >
     
       
 
@@ -376,16 +412,6 @@ https://github.com/denzalman/rtfm-template
 
       
     
-      
-        <li>
-
-  <a href="/docs/docker/commans/"  class="active">
-      Commans
-  </a>
-
-</li>
-      
-    
   </ul>
 
 
@@ -421,31 +447,32 @@ https://github.com/denzalman/rtfm-template
   <label for="menu-control">
     <img src="/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>Commans</strong>
+  <strong>Useful Tips</strong>
 </header>
       
 <article class="markdown">
 
-<p>docker container ls == docker ps
+<h2 id="docker-commands-cheat-sheet">Docker commands cheat-sheet</h2>
+
+<h4 id="containers">Containers</h4>
+
+<pre><code>docker container ls == docker ps
 docker container top {cont_name} - top command for cont
 docker container inspect {cont_name} - json with all cont parameters
-docker container inspect {cont_name} &ndash;format &lsquo;{{ .NetworkSettings.IPAddress}}&rsquo;</p>
+docker container inspect {cont_name} --format '{{ .NetworkSettings.IPAddress}}'
+docekr container stats (like watch but for containers)
+docker container start -&gt; start stopped cont
+docker container post {cont_name} -&gt; shows shared ports
+</code></pre>
 
-<p>docekr container stats (like watch but for containers)</p>
+<h4 id="network">Network</h4>
 
-<p>docker container start -&gt; start stopped cont</p>
-
-<p>docker container post {cont_name} -&gt; shows shared ports</p>
-
-<h4 id="network">network</h4>
-
-<p>docker network ls
+<pre><code>docker network ls
 docker network inspect {network_name}
-docker network create &ndash;driver
+docker network create --driver
 docker network connect {network_name}
-docker network disconnect {network_name}</p>
-
-<p>Libnetwork and CNM</p>
+docker network disconnect {network_name}
+</code></pre>
 </article>
 <div id="disqus_thread"></div>
 <script type="application/javascript">
@@ -474,23 +501,6 @@ docker network disconnect {network_name}</p>
 
     
   
-
-  <aside class="book-toc level-3 fixed">
-    <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#network">network</a></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
-</nav>
-  </aside>
 
 
   </main>
