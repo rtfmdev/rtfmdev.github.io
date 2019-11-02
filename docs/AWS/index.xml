@@ -10,5 +10,14 @@
 	<atom:link href="https://rtfmdev.github.io/docs/AWS/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Useful Tips</title>
+      <link>https://rtfmdev.github.io/docs/AWS/useful-tips/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rtfmdev.github.io/docs/AWS/useful-tips/</guid>
+      <description> Useful tips for AWS Services </description>
+    </item>
+    
   </channel>
 </rss>
