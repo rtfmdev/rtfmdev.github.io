@@ -19,14 +19,6 @@
   </url>
   
   <url>
-    <loc>https://rtfmdev.github.io/docs/miscellaneous/examples/test/</loc>
-  </url>
-  
-  <url>
-    <loc>https://rtfmdev.github.io/docs/miscellaneous/examples/with-toc/</loc>
-  </url>
-  
-  <url>
     <loc>https://rtfmdev.github.io/docs/AWS/</loc>
   </url>
   
@@ -39,15 +31,7 @@
   </url>
   
   <url>
-    <loc>https://rtfmdev.github.io/docs/miscellaneous/examples/without-toc/</loc>
-  </url>
-  
-  <url>
     <loc>https://rtfmdev.github.io/docs/kubernetes/</loc>
-  </url>
-  
-  <url>
-    <loc>https://rtfmdev.github.io/docs/miscellaneous/examples/shortcodes/</loc>
   </url>
   
   <url>
@@ -56,10 +40,6 @@
   
   <url>
     <loc>https://rtfmdev.github.io/docs/kubernetes/ingress/</loc>
-  </url>
-  
-  <url>
-    <loc>https://rtfmdev.github.io/docs/miscellaneous/examples/</loc>
   </url>
   
   <url>
@@ -179,11 +159,6 @@
   
   <url>
     <loc>https://rtfmdev.github.io/docs/kubernetes/volume_types/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rtfmdev.github.io/docs/miscellaneous/server/</loc>
     <priority>0</priority>
   </url>
   
