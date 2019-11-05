@@ -12,7 +12,7 @@ img-src 'self' https://jeremylikness.visualstudio.com https://www.google-analyti
 object-src 'none'; 
 style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://use.fontawesome.com https://fonts.googleapis.com https://www.google.com https://platform.twitter.com *.twimg.com disqus.com disquscdn.com *.disqus.com *.disquscdn.com; 
 script-src 'self' 'unsafe-inline' https://gist.github.com https://platform.twitter.com https://cdn.syndication.twimg.com *.amazon-adsystem.com https://www.google-analytics.com https://cdn.jsdelivr.net cse.google.com https://www.google.com https://pagead2.googlesyndication.com https://adservice.google.com https://www.googletagservices.com jsfiddle.net www.instagram.com disqus.com disquscdn.com *.disqus.com *.disquscdn.com;">
-<title>Lorem ipsum dolor sit amet | RTFM DevOps</title>
+<title>Git Tricks | RTFM DevOps</title>
 
 
 <link rel="stylesheet" href="/book.min.89885fa0429ec73067282f26fc0c6d38cfc617a443ec4e835d47b821c52c6e92.css" integrity="sha256-iYhfoEKexzBnKC8m/AxtOM/GF6RD7E6DXUe4IcUsbpI=">
@@ -285,7 +285,7 @@ https://github.com/denzalman/rtfm-template
       
         <li>
 
-  <a href="/docs/devops-tools/git/" >
+  <a href="/docs/devops-tools/git/"  class="active">
       Git Tricks
   </a>
 
@@ -452,60 +452,40 @@ https://github.com/denzalman/rtfm-template
 </script>
     </aside>
 
-    <div class="book-posts">
+    <div class="book-page">
       <header class="flex align-center justify-between book-header">
   <label for="menu-control">
     <img src="/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>Lorem ipsum dolor sit amet</strong>
+  <strong>Git Tricks</strong>
 </header>
       
+<article class="markdown">
 
-<header class="markdown">
-  <h1>Lorem ipsum dolor sit amet</h1>
-  <h5>
-    <strong>Oct 1, 2019</strong>
-  </h5>
-</header>
-<article class="markdown"><p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+<h3 id="merge-with-squash">Merge with squash</h3>
 
-<p>Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+<p>Merge from branch with squash will erase all commits history in the branch</p>
 
-<pre><code>{{ partial &quot;header.html&quot; . }}
+<pre><code># Work in feature/1 branch
+git branch &quot;feature/1&quot;
+git checkout &quot;feature/1&quot;
 
-&lt;section id=content&gt;
-  &lt;h1&gt;{{ if .Params.heading }} {{ .Params.heading }} {{ else }} {{ .Title }} {{ end }}&lt;/h1&gt;
+# Move to the master branch.
+git checkout master
 
-  {{ if .Params.date }}
-    &lt;div id=sub-header&gt;
-      {{ .Date.Format (.Site.Params.dateform | default &quot;January 2006&quot;) }} · {{ .ReadingTime }} minute read
-    &lt;/div&gt;
-  {{ end }}
+# Merge the &quot;feature/1&quot; branch and squash the commits.
+git merge --squash feature/1
 
-  &lt;div class=&quot;entry-content&quot;&gt;
-    {{ .Content }}
-  &lt;/div&gt;
+# Resolve conflicts
 
-  &lt;div id=links&gt;
-    {{ if .PrevInSection }}
-      &lt;a class=&quot;basic-alignment left&quot; href=&quot;{{.PrevInSection.Permalink}}&quot;&gt;&amp;laquo; {{.PrevInSection.Title}}&lt;/a&gt;
-    {{ end }}
-    {{ if .NextInSection }}
-      &lt;a class=&quot;basic-alignment left&quot; href=&quot;{{.NextInSection.Permalink}}&quot;&gt;{{.NextInSection.Title}} &amp;raquo;&lt;/a&gt;
-    {{ end }}
-  &lt;/div&gt;
-&lt;/section&gt;
+# Commit your changes and add a single commit message for all your commits.
+# You can omit the &quot;-m&quot; to have a template popping up based on your previous commit messages.
+git commit -m &quot;Feature 1 : 1, 2 et 3&quot;
 
-{{ partial &quot;footer.html&quot; . }}
+# Delete the &quot;feature/1&quot; branch that is no longer needed.
+git branch -D feature/1
 </code></pre>
-
-<p>Sed posuere consectetur est at lobortis. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Etiam porta sem malesuada magna mollis euismod.</p>
-
-<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla. Etiam porta sem malesuada magna mollis euismod.</p>
-
-<p>Nullam quis risus eget urna mollis ornare vel eu leo. Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum. Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas sed diam eget risus varius blandit sit amet non magna.</p></article>
+</article>
 <div id="disqus_thread"></div>
 <script type="application/javascript">
     var disqus_config = function () {
@@ -533,6 +513,20 @@ https://github.com/denzalman/rtfm-template
 
     
   
+
+  <aside class="book-toc level-true fixed">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#merge-with-squash">Merge with squash</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
 
 
   </main>

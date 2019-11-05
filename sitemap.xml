@@ -11,11 +11,15 @@
   </url>
   
   <url>
-    <loc>https://rtfmdev.github.io/docs/miscellaneous/examples/test/</loc>
+    <loc>https://rtfmdev.github.io/docs/docker/commans/</loc>
   </url>
   
   <url>
-    <loc>https://rtfmdev.github.io/docs/docker/commans/</loc>
+    <loc>https://rtfmdev.github.io/docs/devops-tools/git/</loc>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/docs/miscellaneous/examples/test/</loc>
   </url>
   
   <url>
@@ -24,6 +28,10 @@
   
   <url>
     <loc>https://rtfmdev.github.io/docs/AWS/</loc>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/docs/devops-tools/one-liners/</loc>
   </url>
   
   <url>
@@ -64,6 +72,10 @@
   
   <url>
     <loc>https://rtfmdev.github.io/docs/kubernetes/advanced_tools/</loc>
+  </url>
+  
+  <url>
+    <loc>https://rtfmdev.github.io/docs/miscellaneous/to-read/</loc>
   </url>
   
   <url>
@@ -151,11 +163,6 @@
   </url>
   
   <url>
-    <loc>https://rtfmdev.github.io/docs/devops-tools/one-liners/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://rtfmdev.github.io/docs/kubernetes/configMaps/</loc>
     <priority>0</priority>
   </url>
@@ -177,11 +184,6 @@
   
   <url>
     <loc>https://rtfmdev.github.io/docs/miscellaneous/server/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rtfmdev.github.io/docs/miscellaneous/to-read/</loc>
     <priority>0</priority>
   </url>
   
