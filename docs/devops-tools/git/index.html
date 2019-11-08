@@ -18,7 +18,7 @@ script-src 'self' 'unsafe-inline' https://gist.github.com https://platform.twitt
 <link rel="stylesheet" href="/book.min.89885fa0429ec73067282f26fc0c6d38cfc617a443ec4e835d47b821c52c6e92.css" integrity="sha256-iYhfoEKexzBnKC8m/AxtOM/GF6RD7E6DXUe4IcUsbpI=">
 
 
-<script defer src="/search.min.43a213d1da462e1e0690e07859272148ff80c61b36d4dffa6fad80d83bd45130.js" integrity="sha256-Q6IT0dpGLh4GkOB4WSchSP&#43;Axhs21N/6b62A2DvUUTA="></script>
+<script defer src="/search.min.3e8646aaf91ac71ec4ffd52d3f02bc7b467a3c43ab7a97b8ed20d4fb13f88a00.js" integrity="sha256-PoZGqvkaxx7E/9UtPwK8e0Z6PEOrepe47SDU&#43;xP4igA="></script>
 
 
 
@@ -386,30 +386,31 @@ https://github.com/denzalman/rtfm-template
       
 <article class="markdown">
 
+<h1 id="git-tips-and-tricks">Git tips and tricks</h1>
+
+<p>Sometimes you have to make very rare manipulations with your git repo and can&rsquo;t remember how exactly it works&hellip; so I&rsquo;m collecting here such useful git use cases.</p>
+
 <h3 id="merge-with-squash">Merge with squash</h3>
 
 <p>Merge from branch with squash will erase all commits history in the branch</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Work in feature/1 branch</span>
+git branch <span style="color:#e6db74">&#34;feature/1&#34;</span>
+git checkout <span style="color:#e6db74">&#34;feature/1&#34;</span>
 
-<pre><code># Work in feature/1 branch
-git branch &quot;feature/1&quot;
-git checkout &quot;feature/1&quot;
-
-# Move to the master branch.
+<span style="color:#75715e"># Move to the master branch.</span>
 git checkout master
 
-# Merge the &quot;feature/1&quot; branch and squash the commits.
+<span style="color:#75715e"># Merge the &#34;feature/1&#34; branch and squash the commits.</span>
 git merge --squash feature/1
 
-# Resolve conflicts
+<span style="color:#75715e"># Resolve conflicts</span>
 
-# Commit your changes and add a single commit message for all your commits.
-# You can omit the &quot;-m&quot; to have a template popping up based on your previous commit messages.
-git commit -m &quot;Feature 1 : 1, 2 et 3&quot;
+<span style="color:#75715e"># Commit your changes and add a single commit message for all your commits.</span>
+<span style="color:#75715e"># You can omit the &#34;-m&#34; to have a template popping up based on your previous commit messages.</span>
+git commit -m <span style="color:#e6db74">&#34;Feature 1 : 1, 2 et 3&#34;</span>
 
-# Delete the &quot;feature/1&quot; branch that is no longer needed.
-git branch -D feature/1
-</code></pre>
-</article>
+<span style="color:#75715e"># Delete the &#34;feature/1&#34; branch that is no longer needed.</span>
+git branch -D feature/1</code></pre></div></article>
 <div id="disqus_thread"></div>
 <script type="application/javascript">
     var disqus_config = function () {
@@ -441,7 +442,7 @@ git branch -D feature/1
   <aside class="book-toc level-true fixed">
     <nav id="TableOfContents">
 <ul>
-<li>
+<li><a href="#git-tips-and-tricks">Git tips and tricks</a>
 <ul>
 <li>
 <ul>

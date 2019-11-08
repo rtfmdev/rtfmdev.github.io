@@ -16,8 +16,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://rtfmdev.github.io/docs/devops-tools/git/</guid>
-      <description>Merge with squash Merge from branch with squash will erase all commits history in the branch
-# Work in feature/1 branch git branch &amp;quot;feature/1&amp;quot; git checkout &amp;quot;feature/1&amp;quot; # Move to the master branch. git checkout master # Merge the &amp;quot;feature/1&amp;quot; branch and squash the commits. git merge --squash feature/1 # Resolve conflicts # Commit your changes and add a single commit message for all your commits. # You can omit the &amp;quot;-m&amp;quot; to have a template popping up based on your previous commit messages.</description>
+      <description>Git tips and tricks Sometimes you have to make very rare manipulations with your git repo and can&amp;rsquo;t remember how exactly it works&amp;hellip; so I&amp;rsquo;m collecting here such useful git use cases.
+Merge with squash Merge from branch with squash will erase all commits history in the branch
+# Work in feature/1 branch git branch &amp;#34;feature/1&amp;#34; git checkout &amp;#34;feature/1&amp;#34; # Move to the master branch. git checkout master # Merge the &amp;#34;feature/1&amp;#34; branch and squash the commits.</description>
     </item>
     
     <item>

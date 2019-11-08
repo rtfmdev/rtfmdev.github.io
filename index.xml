@@ -27,7 +27,8 @@ $ kubectl config view Cluster info kubectl cluster-info When not using the kubec
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://rtfmdev.github.io/docs/docker/commans/</guid>
-      <description> Docker commands cheat-sheet Containers docker container ls == docker ps docker container top {cont_name} - top command for cont docker container inspect {cont_name} - json with all cont parameters docker container inspect {cont_name} --format &#39;{{ .NetworkSettings.IPAddress}}&#39; docekr container stats (like watch but for containers) docker container start -&amp;gt; start stopped cont docker container post {cont_name} -&amp;gt; shows shared ports  Network docker network ls docker network inspect {network_name} docker network create --driver docker network connect {network_name} docker network disconnect {network_name}  </description>
+      <description>Docker commands cheat-sheet https://docs.docker.com
+Containers docker container ls # docker ps docker container top {cont_name} # top command for cont docker container inspect {cont_name} # json with all cont parameters docker container inspect {cont_name} --format &amp;#39;{{ .NetworkSettings.IPAddress}}&amp;#39; docekr container stats # like watch command but for containers docker container start # start stopped cont docker container post {cont_name} # shows shared ports Network docker network ls docker network inspect {network_name} docker network create --driver docker network connect {network_name} docker network disconnect {network_name} Delete all running and stopped containers docker container rm -f $(docker ps -aq) Print the last container’s logs docker container logs --tail 100 web Docker commands list app Docker Application assemble Framework-aware builds builder Manage builds cluster Manage Docker clusters (Docker Enterprise) config Manage Docker configs context Manage contexts engine Manage the docker Engine image Manage images network</description>
     </item>
     
     <item>
@@ -36,8 +37,9 @@ $ kubectl config view Cluster info kubectl cluster-info When not using the kubec
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://rtfmdev.github.io/docs/devops-tools/git/</guid>
-      <description>Merge with squash Merge from branch with squash will erase all commits history in the branch
-# Work in feature/1 branch git branch &amp;quot;feature/1&amp;quot; git checkout &amp;quot;feature/1&amp;quot; # Move to the master branch. git checkout master # Merge the &amp;quot;feature/1&amp;quot; branch and squash the commits. git merge --squash feature/1 # Resolve conflicts # Commit your changes and add a single commit message for all your commits. # You can omit the &amp;quot;-m&amp;quot; to have a template popping up based on your previous commit messages.</description>
+      <description>Git tips and tricks Sometimes you have to make very rare manipulations with your git repo and can&amp;rsquo;t remember how exactly it works&amp;hellip; so I&amp;rsquo;m collecting here such useful git use cases.
+Merge with squash Merge from branch with squash will erase all commits history in the branch
+# Work in feature/1 branch git branch &amp;#34;feature/1&amp;#34; git checkout &amp;#34;feature/1&amp;#34; # Move to the master branch. git checkout master # Merge the &amp;#34;feature/1&amp;#34; branch and squash the commits.</description>
     </item>
     
     <item>

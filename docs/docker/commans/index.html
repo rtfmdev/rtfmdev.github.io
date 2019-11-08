@@ -18,7 +18,7 @@ script-src 'self' 'unsafe-inline' https://gist.github.com https://platform.twitt
 <link rel="stylesheet" href="/book.min.89885fa0429ec73067282f26fc0c6d38cfc617a443ec4e835d47b821c52c6e92.css" integrity="sha256-iYhfoEKexzBnKC8m/AxtOM/GF6RD7E6DXUe4IcUsbpI=">
 
 
-<script defer src="/search.min.43a213d1da462e1e0690e07859272148ff80c61b36d4dffa6fad80d83bd45130.js" integrity="sha256-Q6IT0dpGLh4GkOB4WSchSP&#43;Axhs21N/6b62A2DvUUTA="></script>
+<script defer src="/search.min.3e8646aaf91ac71ec4ffd52d3f02bc7b467a3c43ab7a97b8ed20d4fb13f88a00.js" integrity="sha256-PoZGqvkaxx7E/9UtPwK8e0Z6PEOrepe47SDU&#43;xP4igA="></script>
 
 
 
@@ -388,25 +388,48 @@ https://github.com/denzalman/rtfm-template
 
 <h2 id="docker-commands-cheat-sheet">Docker commands cheat-sheet</h2>
 
+<p><a href="Docker Docs and manuals">https://docs.docker.com</a></p>
+
 <h4 id="containers">Containers</h4>
-
-<pre><code>docker container ls == docker ps
-docker container top {cont_name} - top command for cont
-docker container inspect {cont_name} - json with all cont parameters
-docker container inspect {cont_name} --format '{{ .NetworkSettings.IPAddress}}'
-docekr container stats (like watch but for containers)
-docker container start -&gt; start stopped cont
-docker container post {cont_name} -&gt; shows shared ports
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker container ls <span style="color:#75715e"># docker ps</span>
+docker container top <span style="color:#f92672">{</span>cont_name<span style="color:#f92672">}</span> <span style="color:#75715e"># top command for cont</span>
+docker container inspect <span style="color:#f92672">{</span>cont_name<span style="color:#f92672">}</span> <span style="color:#75715e"># json with all cont parameters</span>
+docker container inspect <span style="color:#f92672">{</span>cont_name<span style="color:#f92672">}</span> --format <span style="color:#e6db74">&#39;{{ .NetworkSettings.IPAddress}}&#39;</span>
+docekr container stats <span style="color:#75715e"># like watch command but for containers</span>
+docker container start <span style="color:#75715e"># start stopped cont</span>
+docker container post <span style="color:#f92672">{</span>cont_name<span style="color:#f92672">}</span> <span style="color:#75715e"># shows shared ports</span></code></pre></div>
 <h4 id="network">Network</h4>
-
-<pre><code>docker network ls
-docker network inspect {network_name}
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker network ls
+docker network inspect <span style="color:#f92672">{</span>network_name<span style="color:#f92672">}</span>
 docker network create --driver
-docker network connect {network_name}
-docker network disconnect {network_name}
-</code></pre>
+docker network connect <span style="color:#f92672">{</span>network_name<span style="color:#f92672">}</span>
+docker network disconnect <span style="color:#f92672">{</span>network_name<span style="color:#f92672">}</span></code></pre></div>
+<h4 id="delete-all-running-and-stopped-containers">Delete all running and stopped containers</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker container rm -f <span style="color:#66d9ef">$(</span>docker ps -aq<span style="color:#66d9ef">)</span></code></pre></div>
+<h4 id="print-the-last-container-s-logs">Print the last container’s logs</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker container logs --tail <span style="color:#ae81ff">100</span> web</code></pre></div>
+<h4 id="docker-commands-list">Docker commands list</h4>
+
+<p><strong>app</strong>         Docker Application
+<strong>assemble</strong>    Framework-aware builds
+<strong>builder</strong>     Manage builds
+<strong>cluster</strong>     Manage Docker clusters (Docker Enterprise)
+<strong>config</strong>      Manage Docker configs
+<strong>context</strong>     Manage contexts
+<strong>engine</strong>      Manage the docker Engine
+<strong>image</strong>       Manage images
+<strong>network</strong><br />
+<strong>node</strong>        Manage Swarm nodes
+<strong>plugin</strong>      Manage plugins
+<strong>registry</strong>    Manage Docker registries
+<strong>secret</strong>
+<strong>service</strong>
+<strong>stack</strong>       Manage Docker stacks
+<strong>swarm</strong>
+<strong>system</strong>      Manage Docker
+<strong>template</strong>    Quickly scaffold services
+<strong>trust</strong>
+<strong>volume</strong>      Manage volumes</p>
 </article>
 <div id="disqus_thread"></div>
 <script type="application/javascript">
