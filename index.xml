@@ -95,7 +95,8 @@ TLS (Transport Layer Security) Name-based virtual hosting Fanout routing Loadbal
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://rtfmdev.github.io/docs/miscellaneous/to-read/</guid>
-      <description>The Kubernetes Scheduler
+      <description>Useful Links r/devops
+Books My current have-to-be-read list The Kubernetes Scheduler
 Imperative vs. Declarative — a Kubernetes Tutorial
 Deploy a Kubernetes Cluster with Cluster Monitoring in Amazon EC2 using Rancher
 10 Advanced Tricks with Docker
@@ -103,8 +104,7 @@ Deploy a Kubernetes Cluster with Cluster Monitoring in Amazon EC2 using Rancher
 Знакомство с Kubernetes
 Security as Standard in the Land of Kubernetes.
 10 Data Structure, Algorithms, and Programming Courses to Crack Any Coding Interview
-CRUD App using Vue.js and Django
-Comparing Kubernetes CNI Providers: Flannel, Calico, Canal, and Weave</description>
+CRUD App using Vue.</description>
     </item>
     
     <item>

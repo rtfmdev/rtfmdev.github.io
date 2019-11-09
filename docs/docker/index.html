@@ -18,7 +18,7 @@ script-src 'self' 'unsafe-inline' https://gist.github.com https://platform.twitt
 <link rel="stylesheet" href="/book.min.89885fa0429ec73067282f26fc0c6d38cfc617a443ec4e835d47b821c52c6e92.css" integrity="sha256-iYhfoEKexzBnKC8m/AxtOM/GF6RD7E6DXUe4IcUsbpI=">
 
 
-<script defer src="/search.min.a6cad3cada5bcdcd8ae69d47da1ce024a88c022f3fd7c62a668b0fbd6131a377.js" integrity="sha256-psrTytpbzc2K5p1H2hzgJKiMAi8/18YqZosPvWExo3c="></script>
+<script defer src="/search.min.22a92c41e86c81d856375f3d4486a01d5700e2e52a0c51ad85376721b7e53fa3.js" integrity="sha256-IqksQehsgdhWN189RIagHVcA4uUqDFGthTdnIbflP6M="></script>
 
 
 
@@ -389,13 +389,13 @@ https://github.com/denzalman/rtfm-template
 
 <h1 id="docker">Docker</h1>
 
-<h3 id="portainer">Portainer</h3>
+<h2 id="portainer">Portainer</h2>
 
 <p><strong>Portainer</strong> - is very useful GUI for managing Docker&rsquo;s hosts and clusters. Simply open port 9000 on your host, run container and open in your browser host_ip:9000, create user and manage all your containers.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker container run -d <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>  -p <span style="color:#ae81ff">9000</span>:9000 <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>  -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer</code></pre></div>
-<h3 id="install-docker">Install Docker</h3>
+<h2 id="install-docker">Install Docker</h2>
 
 <p>The Docker installation package available in the official Ubuntu repository may not be the latest version. To ensure we get the latest version, we’ll install Docker from the official Docker repository. To do that, we’ll add a new package source, add the GPG key from Docker to ensure the downloads are valid, and then install the package.</p>
 
@@ -433,7 +433,37 @@ sudo apt install docker-ce</code></pre></div>
 <p><strong>Understanding containers has to cover things like chroot, the container file system and layers, cgroup isolation, and talk about the pros/cons of containers.</strong></p>
 
 <p>An explanation of how these work without a discussion of cgroups and how that facilitates process/memory/network isolation is going to sound weak to an interviewer. So read up on how cgroups are implemented in the kernel. Then learn about the different ways lxc containers work vs docker containers. Then learn about emerging container specification standards. Why are they happening? Understand what’s going on both under the hood in the kernel and the shifts happening in the industry.</p>
-</article>
+
+<h2 id="chroot">chroot</h2>
+
+<p>A <em>chroot</em> environment provides functionality similar to that of a virtual machine, but it is a lighter solution. The captive system doesn’t need a hypervisor to be installed and configured, such as VirtualBox or Virtual Machine Manager. Nor does it need to have a kernel installed in the captive system. The captive system shares your existing kernel.</p>
+
+<h3 id="creating-chroot-environment">Creating chroot environment</h3>
+
+<p>We need a directory to act as the root directory of the chroot environment. So that we have a shorthand way of referring to that directory we’ll create a variable and store the name of the directory in it. Here we’re setting up a variable to store a path to the “testroot” directory. It doesn’t matter if this directory doesn’t exist yet, we’re going to create it soon. If the directory does exist, it should be empty.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">chr<span style="color:#f92672">=</span>/home/dave/testroot
+mkdir -p $chr</code></pre></div>
+<p>We need to create directories to hold the portions of the operating system our <em>chroot</em> environment will require. We’re going to set up a minimalist Linux environment that uses Bash as the interactive shell. We’ll also include the touch, rm, and ls commands. That will allow us to use all Bash’s built-in commands and touch, rm, and ls. We’ll be able to create, list and remove files, and use Bash. And—in this simple example—that’s all.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir -p $chr/<span style="color:#f92672">{</span>bin,lib,lib64<span style="color:#f92672">}</span>
+
+cd $chr</code></pre></div>
+<p>Let’s copy the binaries that we need in our minimalist Linux environment from your regular “/bin” directory into our chroot “/bin” directory. The -v (verbose) option makes cp tell us what it is doing as it performs each copy action.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cp -v /bin/<span style="color:#f92672">{</span>bash,touch,ls,rm<span style="color:#f92672">}</span> $chr</code></pre></div>
+<h3 id="dependencies">Dependencies</h3>
+
+<p>These binaries will have dependencies. We need to discover what they are and copy those files into our environment. This way, for example we can add all dependencies for /bin/bash:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">list<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>ldd /bin/bash | egrep -o <span style="color:#e6db74">&#39;/lib.*\.[0-9]&#39;</span><span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">for</span> i in $list; <span style="color:#66d9ef">do</span> cp -v --parents <span style="color:#e6db74">&#34;</span>$i<span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>chr<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>; <span style="color:#66d9ef">done</span></code></pre></div>
+<p>Use that technique to capture the dependencies of each of the other commands. Or you can write one more loop through all your apps.</p>
+
+<h3 id="chroot-command">chroot command</h3>
+
+<p>The last of our dependencies are copied into our chroot environment. We’re finally ready to use the chroot command. This command sets the root of the chroot environment, and specifies which application to run as the shell.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo chroot $chr /bin/bash</code></pre></div>
+<p>Our chroot environment is now active. The terminal window prompt has changed, and the interactive shell is the being handled by the bash shell in our environment.</p>
+
+<p>Use exit to leave the chroot environment:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">exit</code></pre></div></article>
 
       
       
@@ -447,10 +477,13 @@ sudo apt install docker-ce</code></pre></div>
 <ul>
 <li><a href="#docker">Docker</a>
 <ul>
-<li>
-<ul>
 <li><a href="#portainer">Portainer</a></li>
 <li><a href="#install-docker">Install Docker</a></li>
+<li><a href="#chroot">chroot</a>
+<ul>
+<li><a href="#creating-chroot-environment">Creating chroot environment</a></li>
+<li><a href="#dependencies">Dependencies</a></li>
+<li><a href="#chroot-command">chroot command</a></li>
 </ul></li>
 </ul></li>
 </ul>
