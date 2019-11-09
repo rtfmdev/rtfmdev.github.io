@@ -18,7 +18,7 @@ script-src 'self' 'unsafe-inline' https://gist.github.com https://platform.twitt
 <link rel="stylesheet" href="/book.min.89885fa0429ec73067282f26fc0c6d38cfc617a443ec4e835d47b821c52c6e92.css" integrity="sha256-iYhfoEKexzBnKC8m/AxtOM/GF6RD7E6DXUe4IcUsbpI=">
 
 
-<script defer src="/search.min.e5ae3628d091acf0f2d96ebcc17b8a7741608d245a690b77334125640c9839c3.js" integrity="sha256-5a42KNCRrPDy2W68wXuKd0FgjSRaaQt3M0ElZAyYOcM="></script>
+<script defer src="/search.min.a6cad3cada5bcdcd8ae69d47da1ce024a88c022f3fd7c62a668b0fbd6131a377.js" integrity="sha256-psrTytpbzc2K5p1H2hzgJKiMAi8/18YqZosPvWExo3c="></script>
 
 
 
@@ -389,10 +389,51 @@ https://github.com/denzalman/rtfm-template
 
 <h1 id="docker">Docker</h1>
 
-<p>Portainer - is very useful GUI for managing Docker&rsquo;s hosts and clusters. Simply open port 9000 on your host, run container and open in your browser host_ip:9000, create user and manage all your containers.</p>
+<h3 id="portainer">Portainer</h3>
+
+<p><strong>Portainer</strong> - is very useful GUI for managing Docker&rsquo;s hosts and clusters. Simply open port 9000 on your host, run container and open in your browser host_ip:9000, create user and manage all your containers.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker container run -d <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>  -p <span style="color:#ae81ff">9000</span>:9000 <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>  -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer</code></pre></div></article>
+</span><span style="color:#ae81ff"></span>  -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer</code></pre></div>
+<h3 id="install-docker">Install Docker</h3>
+
+<p>The Docker installation package available in the official Ubuntu repository may not be the latest version. To ensure we get the latest version, we’ll install Docker from the official Docker repository. To do that, we’ll add a new package source, add the GPG key from Docker to ensure the downloads are valid, and then install the package.</p>
+
+<p>First, update your existing list of packages:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt update</code></pre></div>
+<p>Next, install a few prerequisite packages which let apt use packages over HTTPS:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt install apt-transport-https ca-certificates curl software-properties-common</code></pre></div>
+<p>Then add the GPG key for the official Docker repository to your system:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</code></pre></div>
+<p>Add the Docker repository to APT sources:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo add-apt-repository <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span><span style="color:#e6db74">&#34;deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable&#34;</span></code></pre></div>
+<p>Next, update the package database with the Docker packages from the newly added repo and install Docker:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt update
+sudo apt install docker-ce</code></pre></div>
+<p>Docker should now be installed, the daemon started, and the process enabled to start on boot. Check that it’s running:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo systemctl status docker</code></pre></div>
+<p>The output should be similar to the following, showing that the service is active and running:</p>
+
+<p>Output</p>
+
+<pre><code>● docker.service - Docker Application Container Engine
+   Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2018-07-05 15:08:39 UTC; 2min 55s ago
+     Docs: https://docs.docker.com
+ Main PID: 10096 (dockerd)
+    Tasks: 16
+   CGroup: /system.slice/docker.service
+           ├─10096 /usr/bin/dockerd -H fd://
+           └─10113 docker-containerd --config /var/run/docker/containerd/containerd.toml
+</code></pre>
+
+<p>Installing Docker now gives you not just the Docker service (daemon) but also the docker command line utility, or the Docker client.</p>
+
+<p><strong>Understanding containers has to cover things like chroot, the container file system and layers, cgroup isolation, and talk about the pros/cons of containers.</strong></p>
+
+<p>An explanation of how these work without a discussion of cgroups and how that facilitates process/memory/network isolation is going to sound weak to an interviewer. So read up on how cgroups are implemented in the kernel. Then learn about the different ways lxc containers work vs docker containers. Then learn about emerging container specification standards. Why are they happening? Understand what’s going on both under the hood in the kernel and the shifts happening in the industry.</p>
+</article>
 
       
       
@@ -404,7 +445,14 @@ https://github.com/denzalman/rtfm-template
   <aside class="book-toc level-3 fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#docker">Docker</a></li>
+<li><a href="#docker">Docker</a>
+<ul>
+<li>
+<ul>
+<li><a href="#portainer">Portainer</a></li>
+<li><a href="#install-docker">Install Docker</a></li>
+</ul></li>
+</ul></li>
 </ul>
 </nav>
   </aside>
