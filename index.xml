@@ -38,7 +38,7 @@ Merge with squash Merge from branch with squash will erase all commits history i
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://rtfmdev.github.io/docs/dev-tools/python/</guid>
-      <description>Lambda, map, reduce, filter # Lambda foo = lambda n: n**2 if n % 2 == 0 else n**3 foo(5) # Output: 125 # Map col = [6, 10, 12, 15, 19] mapped = map(lambda x: x*10, col) # mapped = [60, 100, 120, 150, 190] # Filter filtered = filter(lambda x: x % 2 == 0 and x &amp;gt; 7, col) # filtered = [10, 12] # Reduce from functools import reduce reduced = reduce(lambda x, y: x * y + 10, col) # reduced = 242450 globals() localas() type(&amp;lt;object&amp;gt;) -&amp;gt; &amp;lt;ClassName&amp;gt; isinstance(&amp;lt;object&amp;gt;, &amp;lt;ClassName&amp;gt;) -&amp;gt; Boolean globals() -&amp;gt; dict with global vars locals() -&amp;gt; dict with local vars  Context managers with open(&amp;#34;example.</description>
+      <description>Lambda, map, reduce, filter # Lambda foo = lambda n: n**2 if n % 2 == 0 else n**3 foo(5) # Output: 125 # Map col = [6, 10, 12, 15, 19] mapped = map(lambda x: x*10, col) # mapped = [60, 100, 120, 150, 190] # Filter filtered = filter(lambda x: x % 2 == 0 and x &amp;gt; 7, col) # filtered = [10, 12] # Reduce from functools import reduce reduced = reduce(lambda x, y: x * y + 10, col) # reduced = 242450 globals() locals() type(&amp;lt;object&amp;gt;) -&amp;gt; &amp;lt;ClassName&amp;gt; isinstance(&amp;lt;object&amp;gt;, &amp;lt;ClassName&amp;gt;) -&amp;gt; Boolean globals() -&amp;gt; dict with global vars locals() -&amp;gt; dict with local vars  Context managers with open(&amp;#34;example.</description>
     </item>
     
     <item>
