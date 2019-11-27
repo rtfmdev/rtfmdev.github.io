@@ -12,13 +12,13 @@ img-src 'self' https://jeremylikness.visualstudio.com https://www.google-analyti
 object-src 'none'; 
 style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://use.fontawesome.com https://fonts.googleapis.com https://www.google.com https://platform.twitter.com *.twimg.com disqus.com disquscdn.com *.disqus.com *.disquscdn.com; 
 script-src 'self' 'unsafe-inline' https://gist.github.com https://platform.twitter.com https://cdn.syndication.twimg.com *.amazon-adsystem.com https://www.google-analytics.com https://cdn.jsdelivr.net cse.google.com https://www.google.com https://pagead2.googlesyndication.com https://adservice.google.com https://www.googletagservices.com jsfiddle.net www.instagram.com disqus.com disquscdn.com *.disqus.com *.disquscdn.com;">
-<title>Volume Types | RTFM DevOps</title>
+<title>Bash oneliners | RTFM DevOps</title>
 
 
 <link rel="stylesheet" href="/book.min.89885fa0429ec73067282f26fc0c6d38cfc617a443ec4e835d47b821c52c6e92.css" integrity="sha256-iYhfoEKexzBnKC8m/AxtOM/GF6RD7E6DXUe4IcUsbpI=">
 
 
-<script defer src="/search.min.42c77bb48d749fb51b72cc4439da7e7125d3e51fa74bd86ff8cc227b720ad5c9.js" integrity="sha256-Qsd7tI10n7UbcsxEOdp&#43;cSXT5R&#43;nS9hv&#43;Mwie3IK1ck="></script>
+<script defer src="/search.min.e470e781383da35c7c4ff99a8697302f0d4feef36348d3b67257265be6baea86.js" integrity="sha256-5HDngTg9o1x8T/mahpcwLw1P7vNjSNO2clcmW&#43;a66oY="></script>
 
 
 
@@ -147,104 +147,6 @@ https://github.com/denzalman/rtfm-template
     
       
 
-  <a href="/docs/kubernetes/" >
-      Kubernetes
-  </a>
-
-
-    
-
-    
-
-  <ul>
-    
-      
-        <li>
-
-  <a href="/docs/kubernetes/kubectl/" >
-      Kubectl
-  </a>
-
-</li>
-      
-    
-      
-        <li>
-
-  <a href="/docs/kubernetes/ingress/" >
-      Ingress
-  </a>
-
-</li>
-      
-    
-      
-        <li>
-
-  <a href="/docs/kubernetes/helm/" >
-      Helm
-  </a>
-
-</li>
-      
-    
-      
-    
-      
-        <li>
-
-  <a href="/docs/kubernetes/configMaps/" >
-      Config Maps
-  </a>
-
-</li>
-      
-    
-      
-        <li>
-
-  <a href="/docs/kubernetes/monitoring/" >
-      Monitoring
-  </a>
-
-</li>
-      
-    
-      
-        <li>
-
-  <a href="/docs/kubernetes/networking/" >
-      Networking
-  </a>
-
-</li>
-      
-    
-      
-        <li>
-
-  <a href="/docs/kubernetes/volume_types/"  class="active">
-      Volume Types
-  </a>
-
-</li>
-      
-    
-  </ul>
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li >
-    
-      
-
   <a href="/docs/linux/" >
       Linux
   </a>
@@ -271,8 +173,8 @@ https://github.com/denzalman/rtfm-template
     
       
 
-  <a href="/docs/devops-tools/" >
-      Devops Tools
+  <a href="/docs/dev-tools/" >
+      Dev Tools
   </a>
 
 
@@ -285,7 +187,7 @@ https://github.com/denzalman/rtfm-template
       
         <li>
 
-  <a href="/docs/devops-tools/git/" >
+  <a href="/docs/dev-tools/git/" >
       Git Tricks
   </a>
 
@@ -295,7 +197,19 @@ https://github.com/denzalman/rtfm-template
       
         <li>
 
-  <a href="/docs/devops-tools/one-liners/" >
+  <a href="/docs/dev-tools/python/" >
+      Python
+  </a>
+
+</li>
+      
+    
+      
+    
+      
+        <li>
+
+  <a href="/docs/dev-tools/one-liners/"  class="active">
       Bash oneliners
   </a>
 
@@ -381,74 +295,16 @@ https://github.com/denzalman/rtfm-template
   <label for="menu-control">
     <img src="/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>Volume Types</strong>
+  <strong>Bash oneliners</strong>
 </header>
       
 <article class="markdown">
 
-<h1 id="volume-types">Volume Types</h1>
+<h3 id="replase-text-in-template">Replase text in template</h3>
 
-<p>A directory which is mounted inside a Pod is backed by the underlying Volume Type. A Volume Type decides the properties of the directory, like size, content, default access modes, etc. Some examples of Volume Types are:</p>
-
-<p><strong>emptyDir</strong>
-An empty Volume is created for the Pod as soon as it is scheduled on the worker node. The Volume&rsquo;s life is tightly coupled with the Pod. If the Pod is terminated, the content of emptyDir is deleted forever.</p>
-
-<p><strong>hostPath</strong>
-With the hostPath Volume Type, we can share a directory from the host to the Pod. If the Pod is terminated, the content of the Volume is still available on the host.</p>
-
-<p><strong>gcePersistentDisk</strong>
-With the gcePersistentDisk Volume Type, we can mount a Google Compute Engine (GCE) persistent disk into a Pod.</p>
-
-<p><strong>awsElasticBlockStore</strong>
-With the awsElasticBlockStore Volume Type, we can mount an AWS EBS Volume into a Pod.</p>
-
-<p><strong>azureDisk</strong>
-With azureDisk we can mount a Microsoft Azure Data Disk into a Pod.</p>
-
-<p><strong>azureFile</strong>
-With azureFile we can mount a Microsoft Azure File Volume into a Pod.</p>
-
-<p><strong>cephfs</strong>
-With cephfs, an existing CephFS volume can be mounted into a Pod. When a Pod terminates, the volume is unmounted and the contents of the volume are preserved.</p>
-
-<p><strong>nfs</strong>
-With nfs, we can mount an NFS share into a Pod.</p>
-
-<p><strong>iscsi</strong>
-With iscsi, we can mount an iSCSI share into a Pod.</p>
-
-<p><strong>secret</strong>
-With the secret Volume Type, we can pass sensitive information, such as passwords, to Pods.</p>
-
-<p><strong>configMap</strong>
-With configMap objects, we can provide configuration data, or shell commands and arguments into a Pod.</p>
-
-<p><strong>persistentVolumeClaim</strong>
-We can attach a PersistentVolume to a Pod using a persistentVolumeClaim.</p>
-
-<h2 id="persistentvolumes">PersistentVolumes</h2>
-
-<p>In a typical IT environment, storage is managed by the storage/system administrators. The end user will just receive instructions to use the storage but is not involved with the underlying storage management.</p>
-
-<p>In the containerized world, we would like to follow similar rules, but it becomes challenging, given the many Volume Types we have seen earlier. Kubernetes resolves this problem with the PersistentVolume (PV) subsystem, which provides APIs for users and administrators to manage and consume persistent storage. To manage the Volume, it uses the PersistentVolume API resource type, and to consume it, it uses the PersistentVolumeClaim API resource type.</p>
-
-<p>A Persistent Volume is a network-attached storage in the cluster, which is provisioned by the administrator.</p>
-
-<p>PersistentVolumes can be dynamically provisioned based on the StorageClass resource. A StorageClass contains pre-defined provisioners and parameters to create a PersistentVolume. Using PersistentVolumeClaims, a user sends the request for dynamic PV creation, which gets wired to the StorageClass resource.</p>
-
-<p>Some of the Volume Types that support managing storage using PersistentVolumes are:</p>
-
-<pre><code>GCEPersistentDisk
-AWSElasticBlockStore
-AzureFile
-AzureDisk
-CephFS
-NFS
-iSCSI
-</code></pre>
-
-<p>You can learn more details about Volume Types in the <a href="https://kubernetes.io/docs/concepts/storage/volumes/">Kubernetes documentation</a>.</p>
-</article>
+<p>Replase TEMPLATE_TEXT with $BUILD_NUMBER var inside filename.json.template and save it into filename.json</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sed <span style="color:#e6db74">&#34;s/TEMPLATE_TEXT/1.</span>$BUILD_NUMBER<span style="color:#e6db74">/g&#34;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    filename.json.template &gt; filename.json</code></pre></div></article>
 <div id="disqus_thread"></div>
 <script type="application/javascript">
     var disqus_config = function () {
@@ -477,12 +333,15 @@ iSCSI
     
   
 
-  <aside class="book-toc level-3 fixed">
+  <aside class="book-toc level-true fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#volume-types">Volume Types</a>
+<li>
 <ul>
-<li><a href="#persistentvolumes">PersistentVolumes</a></li>
+<li>
+<ul>
+<li><a href="#replase-text-in-template">Replase text in template</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>

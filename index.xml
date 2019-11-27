@@ -12,16 +12,6 @@
     
     
     <item>
-      <title></title>
-      <link>https://rtfmdev.github.io/docs/kubernetes/kubectl/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://rtfmdev.github.io/docs/kubernetes/kubectl/</guid>
-      <description>kubectl cheatsheet Connection details To look at the connection details, we can either see the content of the ~/.kube/config file (on Linux) or run the following command:
-$ kubectl config view Cluster info kubectl cluster-info When not using the kubectl proxy, we need to authenticate to the API server when sending API requests. We can authenticate by providing a Bearer Token when issuing a curl, or by providing a set of keys and certificates.</description>
-    </item>
-    
-    <item>
       <title>Cheatsheet</title>
       <link>https://rtfmdev.github.io/docs/docker/commans/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -33,23 +23,22 @@ Containers docker container ls # docker ps docker container top {cont_name} # to
     
     <item>
       <title>Git Tricks</title>
-      <link>https://rtfmdev.github.io/docs/devops-tools/git/</link>
+      <link>https://rtfmdev.github.io/docs/dev-tools/git/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://rtfmdev.github.io/docs/devops-tools/git/</guid>
+      <guid>https://rtfmdev.github.io/docs/dev-tools/git/</guid>
       <description>Git tips and tricks Sometimes you have to make very rare manipulations with your git repo and can&amp;rsquo;t remember how exactly it works&amp;hellip; so I&amp;rsquo;m collecting here such useful git use cases.
 Merge with squash Merge from branch with squash will erase all commits history in the branch
 # Work in feature/1 branch git branch &amp;#34;feature/1&amp;#34; git checkout &amp;#34;feature/1&amp;#34; # Move to the master branch. git checkout master # Merge the &amp;#34;feature/1&amp;#34; branch and squash the commits.</description>
     </item>
     
     <item>
-      <title>Bash oneliners</title>
-      <link>https://rtfmdev.github.io/docs/devops-tools/one-liners/</link>
+      <title>Python</title>
+      <link>https://rtfmdev.github.io/docs/dev-tools/python/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://rtfmdev.github.io/docs/devops-tools/one-liners/</guid>
-      <description>Replase text in template Replase TEMPLATE_TEXT with $BUILD_NUMBER var inside filename.json.template and save it into filename.json
-sed &amp;#34;s/TEMPLATE_TEXT/1.$BUILD_NUMBER/g&amp;#34; \  filename.json.template &amp;gt; filename.</description>
+      <guid>https://rtfmdev.github.io/docs/dev-tools/python/</guid>
+      <description>Lambda, map, reduce, filter # Lambda foo = lambda n: n**2 if n % 2 == 0 else n**3 foo(5) # Output: 125 # Map col = [6, 10, 12, 15, 19] mapped = map(lambda x: x*10, col) # mapped = [60, 100, 120, 150, 190] # Filter filtered = filter(lambda x: x % 2 == 0 and x &amp;gt; 7, col) # filtered = [10, 12] # Reduce from functools import reduce reduced = reduce(lambda x, y: x * y + 10, col) # reduced = 242450 globals() localas() type(&amp;lt;object&amp;gt;) -&amp;gt; &amp;lt;ClassName&amp;gt; isinstance(&amp;lt;object&amp;gt;, &amp;lt;ClassName&amp;gt;) -&amp;gt; Boolean globals() -&amp;gt; dict with global vars locals() -&amp;gt; dict with local vars  Context managers with open(&amp;#34;example.</description>
     </item>
     
     <item>
@@ -62,31 +51,22 @@ sed &amp;#34;s/TEMPLATE_TEXT/1.$BUILD_NUMBER/g&amp;#34; \  filename.json.templat
     </item>
     
     <item>
-      <title></title>
-      <link>https://rtfmdev.github.io/docs/kubernetes/ingress/</link>
+      <title>Javascript</title>
+      <link>https://rtfmdev.github.io/docs/dev-tools/javascript/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://rtfmdev.github.io/docs/kubernetes/ingress/</guid>
-      <description>Ingress &amp;quot;An Ingress is a collection of rules that allow inbound connections to reach the cluster Services.&amp;quot;  To allow the inbound connection to reach the cluster Services, Ingress configures a Layer 7 HTTP/HTTPS load balancer for Services and provides the following:
-TLS (Transport Layer Security) Name-based virtual hosting Fanout routing Loadbalancing Custom rules.  With Ingress, users do not connect directly to a Service. Users reach the Ingress endpoint, and, from there, the request is forwarded to the desired Service.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://rtfmdev.github.io/docs/kubernetes/helm/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://rtfmdev.github.io/docs/kubernetes/helm/</guid>
-      <description>Helm Helm package manager</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://rtfmdev.github.io/docs/kubernetes/advanced_tools/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://rtfmdev.github.io/docs/kubernetes/advanced_tools/</guid>
+      <guid>https://rtfmdev.github.io/docs/dev-tools/javascript/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Bash oneliners</title>
+      <link>https://rtfmdev.github.io/docs/dev-tools/one-liners/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rtfmdev.github.io/docs/dev-tools/one-liners/</guid>
+      <description>Replase text in template Replase TEMPLATE_TEXT with $BUILD_NUMBER var inside filename.json.template and save it into filename.json
+sed &amp;#34;s/TEMPLATE_TEXT/1.$BUILD_NUMBER/g&amp;#34; \  filename.json.template &amp;gt; filename.</description>
     </item>
     
     <item>
@@ -144,48 +124,6 @@ Hugo uses the excellent &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt;
 its template engine. It is an extremely lightweight engine that provides a very
 small amount of logic. In our experience that it is just the right amount of
 logic to be able to create a good static website.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://rtfmdev.github.io/docs/kubernetes/configMaps/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://rtfmdev.github.io/docs/kubernetes/configMaps/</guid>
-      <description> ConfigMaps and Secrets </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://rtfmdev.github.io/docs/kubernetes/monitoring/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://rtfmdev.github.io/docs/kubernetes/monitoring/</guid>
-      <description>Services Monitoring Workflow Services Monitoring Workflow consists of three main components:
-Collection agent, Metrics Server, and Dashboards.  Typical workflow, including most common components:
- Monitoring agent collects node metrics. cAdvisor collects containers and pods metrics. Monitoring Aggregation service collects data from its own agent and cAdvisor. Data is stored in the monitoring system’s storage. Monitoring aggregation service exposes metrics through APIs and dashboards.  A Few Notes:
- Prometheus is the official monitoring server sponsored and incubated by CNCF.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://rtfmdev.github.io/docs/kubernetes/networking/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://rtfmdev.github.io/docs/kubernetes/networking/</guid>
-      <description>About Flanel: https://blog.laputa.io/kubernetes-flannel-networking-6a1cb1f8ec7c
-A ServiceAccount is required to login. A ClusterRoleBinding is used to assign the new ServiceAccount (admin-user) the role of cluster-admin on the cluster.
-cat &amp;lt;&amp;lt;EOF | kubectl create -f - apiVersion: v1 kind: ServiceAccount metadata: name: admin-user namespace: kube-system --- apiVersion: rbac.authorization.k8s.io/v1beta1 kind: ClusterRoleBinding metadata: name: admin-user roleRef: apiGroup: rbac.authorization.k8s.io kind: ClusterRole name: cluster-admin subjects: - kind: ServiceAccount name: admin-user namespace: kube-system EOF This means they can control all aspects of Kubernetes.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://rtfmdev.github.io/docs/kubernetes/volume_types/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://rtfmdev.github.io/docs/kubernetes/volume_types/</guid>
-      <description>Volume Types A directory which is mounted inside a Pod is backed by the underlying Volume Type. A Volume Type decides the properties of the directory, like size, content, default access modes, etc. Some examples of Volume Types are:
-emptyDir An empty Volume is created for the Pod as soon as it is scheduled on the worker node. The Volume&amp;rsquo;s life is tightly coupled with the Pod. If the Pod is terminated, the content of emptyDir is deleted forever.</description>
     </item>
     
   </channel>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dev Tools on RTFM DevOps</title>
+    <link>https://rtfmdev.github.io/docs/dev-tools/</link>
+    <description>Recent content in Dev Tools on RTFM DevOps</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://rtfmdev.github.io/docs/dev-tools/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Git Tricks</title>
+      <link>https://rtfmdev.github.io/docs/dev-tools/git/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rtfmdev.github.io/docs/dev-tools/git/</guid>
+      <description>Git tips and tricks Sometimes you have to make very rare manipulations with your git repo and can&amp;rsquo;t remember how exactly it works&amp;hellip; so I&amp;rsquo;m collecting here such useful git use cases.
+Merge with squash Merge from branch with squash will erase all commits history in the branch
+# Work in feature/1 branch git branch &amp;#34;feature/1&amp;#34; git checkout &amp;#34;feature/1&amp;#34; # Move to the master branch. git checkout master # Merge the &amp;#34;feature/1&amp;#34; branch and squash the commits.</description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://rtfmdev.github.io/docs/dev-tools/python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rtfmdev.github.io/docs/dev-tools/python/</guid>
+      <description>Lambda, map, reduce, filter # Lambda foo = lambda n: n**2 if n % 2 == 0 else n**3 foo(5) # Output: 125 # Map col = [6, 10, 12, 15, 19] mapped = map(lambda x: x*10, col) # mapped = [60, 100, 120, 150, 190] # Filter filtered = filter(lambda x: x % 2 == 0 and x &amp;gt; 7, col) # filtered = [10, 12] # Reduce from functools import reduce reduced = reduce(lambda x, y: x * y + 10, col) # reduced = 242450 globals() localas() type(&amp;lt;object&amp;gt;) -&amp;gt; &amp;lt;ClassName&amp;gt; isinstance(&amp;lt;object&amp;gt;, &amp;lt;ClassName&amp;gt;) -&amp;gt; Boolean globals() -&amp;gt; dict with global vars locals() -&amp;gt; dict with local vars  Context managers with open(&amp;#34;example.</description>
+    </item>
+    
+    <item>
+      <title>Javascript</title>
+      <link>https://rtfmdev.github.io/docs/dev-tools/javascript/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rtfmdev.github.io/docs/dev-tools/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bash oneliners</title>
+      <link>https://rtfmdev.github.io/docs/dev-tools/one-liners/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rtfmdev.github.io/docs/dev-tools/one-liners/</guid>
+      <description>Replase text in template Replase TEMPLATE_TEXT with $BUILD_NUMBER var inside filename.json.template and save it into filename.json
+sed &amp;#34;s/TEMPLATE_TEXT/1.$BUILD_NUMBER/g&amp;#34; \  filename.json.template &amp;gt; filename.</description>
+    </item>
+    
+  </channel>
+</rss>

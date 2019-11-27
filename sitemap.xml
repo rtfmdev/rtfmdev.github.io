@@ -7,15 +7,11 @@
   </url>
   
   <url>
-    <loc>https://rtfmdev.github.io/docs/kubernetes/kubectl/</loc>
-  </url>
-  
-  <url>
     <loc>https://rtfmdev.github.io/docs/docker/commans/</loc>
   </url>
   
   <url>
-    <loc>https://rtfmdev.github.io/docs/devops-tools/git/</loc>
+    <loc>https://rtfmdev.github.io/docs/dev-tools/git/</loc>
   </url>
   
   <url>
@@ -23,7 +19,7 @@
   </url>
   
   <url>
-    <loc>https://rtfmdev.github.io/docs/devops-tools/one-liners/</loc>
+    <loc>https://rtfmdev.github.io/docs/dev-tools/python/</loc>
   </url>
   
   <url>
@@ -31,7 +27,7 @@
   </url>
   
   <url>
-    <loc>https://rtfmdev.github.io/docs/kubernetes/</loc>
+    <loc>https://rtfmdev.github.io/docs/dev-tools/javascript/</loc>
   </url>
   
   <url>
@@ -39,19 +35,11 @@
   </url>
   
   <url>
-    <loc>https://rtfmdev.github.io/docs/kubernetes/ingress/</loc>
+    <loc>https://rtfmdev.github.io/docs/dev-tools/one-liners/</loc>
   </url>
   
   <url>
-    <loc>https://rtfmdev.github.io/docs/kubernetes/helm/</loc>
-  </url>
-  
-  <url>
-    <loc>https://rtfmdev.github.io/docs/devops-tools/</loc>
-  </url>
-  
-  <url>
-    <loc>https://rtfmdev.github.io/docs/kubernetes/advanced_tools/</loc>
+    <loc>https://rtfmdev.github.io/docs/dev-tools/</loc>
   </url>
   
   <url>
@@ -140,26 +128,6 @@
   <url>
     <loc>https://rtfmdev.github.io/tags/themes/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rtfmdev.github.io/docs/kubernetes/configMaps/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rtfmdev.github.io/docs/kubernetes/monitoring/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rtfmdev.github.io/docs/kubernetes/networking/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rtfmdev.github.io/docs/kubernetes/volume_types/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
