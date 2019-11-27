@@ -18,7 +18,7 @@ script-src 'self' 'unsafe-inline' https://gist.github.com https://platform.twitt
 <link rel="stylesheet" href="/book.min.89885fa0429ec73067282f26fc0c6d38cfc617a443ec4e835d47b821c52c6e92.css" integrity="sha256-iYhfoEKexzBnKC8m/AxtOM/GF6RD7E6DXUe4IcUsbpI=">
 
 
-<script defer src="/search.min.717cc3cbf5666aa151bccc5593df3d2c1ee58cded352b9ca8a34c43dcf37639f.js" integrity="sha256-cXzDy/VmaqFRvMxVk989LB7ljN7TUrnKijTEPc83Y58="></script>
+<script defer src="/search.min.42c77bb48d749fb51b72cc4439da7e7125d3e51fa74bd86ff8cc227b720ad5c9.js" integrity="sha256-Qsd7tI10n7UbcsxEOdp&#43;cSXT5R&#43;nS9hv&#43;Mwie3IK1ck="></script>
 
 
 
@@ -415,48 +415,29 @@ git branch -D feature/1</code></pre></div>
 
 <h3 id="soft">Soft</h3>
 
-<p>Let’s say you have done a few tiny commits and you want them to all be put into 1 more descriptive commit.</p>
+<p>You&rsquo;ve done a few tiny commits and want them all be put into one commit:</p>
 
-<p><strong>A -&gt; B -&gt; C -&gt; D</strong></p>
-
-<pre><code>git reset — soft A
+<p><strong>A -&gt; B -&gt; C -&gt; D  || A with ALL (B,C,D) -&gt; E</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git reset --soft A
 git commit -m “my new merged commit”
-git push origin branch
-</code></pre>
-
-<p>We now have a new commit, E but it contains all of the files that were committed in B, C, D.
-<strong>A-&gt;E</strong></p>
+git push origin branch</code></pre></div>
+<p>New commit E contains all of the files that were committed in B, C, D.</p>
 
 <h3 id="mixed">Mixed</h3>
 
 <p>You’ve just pushed a few commits, but you want to go back and remove a couple of files in a previous commit.</p>
 
-<p><strong>A-&gt;B-&gt;C</strong></p>
-
-<pre><code>git reset --mixed A
-</code></pre>
-
-<p>Your branch head and index is pointing at A</p>
-
-<pre><code>git status
-</code></pre>
-
-<p>This will show that all of your changes in B and C are there, but are untracked</p>
-
-<p>Now you are free to add the files that you wish to add into a new commit</p>
-
-<pre><code>git add &lt;files&gt;
-git commit -m &quot;updated commit&quot;
-git push origin branch
-</code></pre>
-
-<p><strong>A-&gt;D</strong></p>
-
-<p>Your head is now at the new commit D, and any files that you’ve not staged will still be in your working tree, ready to add into another commit or to do what you want with.</p>
+<p><strong>A -&gt; B-&gt; C -&gt; D || A with ANY (B,C,D) -&gt; E</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git reset --mixed A</code></pre></div>
+<p>Your branch head and index is pointing at A and all of your changes in B, C and D are there, but are untracked. Now you are free to add the files that you wish to add into a new commit.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git add &lt;files&gt;
+git commit -m <span style="color:#e6db74">&#34;updated commit&#34;</span>
+git push origin branch</code></pre></div>
+<p>The head is now at the new commit E, and any files that you’ve not staged will still be in your working tree, ready to add into another commit or to do what you want with.</p>
 
 <h3 id="hard">Hard</h3>
 
-<p>Do it only if you want to go back a few commits and get rid of every change you’ve made since.</p>
+<p>Do it only if you want to <strong>go back a few commits and get rid of every change</strong> you’ve made since.</p>
 
 <pre><code>git reset --hard A
 git push origin branchname --force
