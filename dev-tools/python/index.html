@@ -786,9 +786,8 @@
 pyenv install <span class="m">3</span>.8.0
 pyenv global <span class="m">3</span>.8.0
 </pre></div></li>
-<li>Add the following to your configuration file (<strong>.zshrc</strong> for me, possibly <strong>.bash_profile</strong> for you):</li>
-</ul>
-<p><div class="codehilite"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/Users/denis/.pyenv/shims:</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}</span><span class="s2">&quot;</span>
+<li>Add the following to your configuration file (<strong>.zshrc</strong> for me, possibly <strong>.bash_profile</strong> for you):
+<div class="codehilite"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/Users/denis/.pyenv/shims:</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}</span><span class="s2">&quot;</span>
 <span class="nb">export</span> <span class="nv">PYENV_SHELL</span><span class="o">=</span>zsh
 <span class="nb">source</span> <span class="s1">&#39;/usr/local/Cellar/pyenv/1.2.15/libexec/../completions/pyenv.zsh&#39;</span>
 <span class="nb">command</span> pyenv rehash <span class="m">2</span>&gt;/dev/null
@@ -807,7 +806,8 @@ pyenv<span class="o">()</span> <span class="o">{</span>
   <span class="k">esac</span>
 <span class="o">}</span>
 </pre></div>
-Now we know for certain that we're using Python 3.8.0 and pip will update alongside it without any manual aliasing between versions.</p>
+Now we know for certain that we're using Python 3.8.0 and pip will update alongside it without any manual aliasing between versions.</li>
+</ul>
 <h2 id="lambda-map-reduce-filter">Lambda, map, reduce, filter<a class="headerlink" href="#lambda-map-reduce-filter" title="Permanent link">Link</a></h2>
 <div class="codehilite"><pre><span></span><span class="c1"># Lambda</span>
 <span class="n">foo</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">n</span><span class="p">:</span> <span class="n">n</span><span class="o">**</span><span class="mi">2</span> <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">n</span><span class="o">**</span><span class="mi">3</span>
