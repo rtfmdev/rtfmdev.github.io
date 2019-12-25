@@ -13,6 +13,8 @@
         <meta name="description" content="Devops manual, howto, cheatseet, tips and notes">
       
       
+        <link rel="canonical" href="https://rtfmdoc.github.io/docker/commans/">
+      
       
         <meta name="author" content="Den Zalman">
       
@@ -35,18 +37,18 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="/assets/images/favicon.png">
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
-        <title>RTFM for Dev and Ops</title>
+        <title>Cheatsheet</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/application.1b62728e.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
       
-        <link rel="stylesheet" href="/assets/stylesheets/application-palette.a8b3c06d.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
       
       
         
@@ -55,7 +57,7 @@
       
     
     
-      <script src="/assets/javascripts/modernizr.268332fc.js"></script>
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
     
     
       
@@ -64,14 +66,14 @@
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="/assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
-      <link rel="manifest" href="/manifest.webmanifest">
+      <link rel="manifest" href="../../manifest.webmanifest">
     
     
-      <link rel="stylesheet" href="/_extra/css/mermaid.css">
+      <link rel="stylesheet" href="../../_extra/css/mermaid.css">
     
-      <link rel="stylesheet" href="/_extra/css/flowchart.css">
+      <link rel="stylesheet" href="../../_extra/css/flowchart.css">
     
     
       
@@ -118,6 +120,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#docker-commands-cheat-sheet" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -140,7 +146,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                
+                Cheatsheet
               
             </span>
           
@@ -209,7 +215,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/." title="Main page" class="md-nav__link">
+    <a href="../.." title="Main page" class="md-nav__link">
       Main page
     </a>
   </li>
@@ -240,7 +246,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/AWS_services/" title="AWS services" class="md-nav__link">
+    <a href="../../AWS_services/" title="AWS services" class="md-nav__link">
       AWS services
     </a>
   </li>
@@ -252,7 +258,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/AWS_services/useful-tips/" title="Useful Tips" class="md-nav__link">
+    <a href="../../AWS_services/useful-tips/" title="Useful Tips" class="md-nav__link">
       Useful Tips
     </a>
   </li>
@@ -288,7 +294,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/dev-tools/git/" title="Git Tricks" class="md-nav__link">
+    <a href="../../dev-tools/git/" title="Git Tricks" class="md-nav__link">
       Git Tricks
     </a>
   </li>
@@ -300,7 +306,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/dev-tools/javascript/" title="Javascript" class="md-nav__link">
+    <a href="../../dev-tools/javascript/" title="Javascript" class="md-nav__link">
       Javascript
     </a>
   </li>
@@ -312,7 +318,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/dev-tools/mongo/" title="MongoDB" class="md-nav__link">
+    <a href="../../dev-tools/mongo/" title="MongoDB" class="md-nav__link">
       MongoDB
     </a>
   </li>
@@ -324,7 +330,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/dev-tools/one-liners/" title="Bash oneliners" class="md-nav__link">
+    <a href="../../dev-tools/one-liners/" title="Bash oneliners" class="md-nav__link">
       Bash oneliners
     </a>
   </li>
@@ -336,7 +342,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/dev-tools/python/" title="Python" class="md-nav__link">
+    <a href="../../dev-tools/python/" title="Python" class="md-nav__link">
       Python
     </a>
   </li>
@@ -348,7 +354,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/dev-tools/terraform/" title="Terraform" class="md-nav__link">
+    <a href="../../dev-tools/terraform/" title="Terraform" class="md-nav__link">
       Terraform
     </a>
   </li>
@@ -363,10 +369,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Docker
@@ -384,7 +392,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/docker/" title="Docker tips" class="md-nav__link">
+    <a href="../" title="Docker tips" class="md-nav__link">
       Docker tips
     </a>
   </li>
@@ -394,11 +402,104 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="/docker/commans/" title="Cheatsheet" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Cheatsheet
+      </label>
+    
+    <a href="./" title="Cheatsheet" class="md-nav__link md-nav__link--active">
       Cheatsheet
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#run-busybox-inside-docker-compose" class="md-nav__link">
+    Run busybox inside docker-compose
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#containers" class="md-nav__link">
+    Containers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network" class="md-nav__link">
+    Network
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reset" class="md-nav__link">
+    Reset
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#delete-all-running-and-stopped-containers" class="md-nav__link">
+    Delete all running and stopped containers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unused-cont-prune-on-current-host" class="md-nav__link">
+    Unused cont prune on current host
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-docker-prune-on-current-host" class="md-nav__link">
+    Full docker prune on current host
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#print-last-containers-logs" class="md-nav__link">
+    Print last container’s logs
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -432,7 +533,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/kubernetes/advanced_tools/" title="Advanced tools" class="md-nav__link">
+    <a href="../../kubernetes/advanced_tools/" title="Advanced tools" class="md-nav__link">
       Advanced tools
     </a>
   </li>
@@ -444,7 +545,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/kubernetes/configMaps/" title="ConfigMaps and Secrets" class="md-nav__link">
+    <a href="../../kubernetes/configMaps/" title="ConfigMaps and Secrets" class="md-nav__link">
       ConfigMaps and Secrets
     </a>
   </li>
@@ -456,7 +557,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/kubernetes/helm/" title="Helm" class="md-nav__link">
+    <a href="../../kubernetes/helm/" title="Helm" class="md-nav__link">
       Helm
     </a>
   </li>
@@ -468,7 +569,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/kubernetes/ingress/" title="Ingress" class="md-nav__link">
+    <a href="../../kubernetes/ingress/" title="Ingress" class="md-nav__link">
       Ingress
     </a>
   </li>
@@ -480,7 +581,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/kubernetes/kubectl/" title="kubectl cheatsheet" class="md-nav__link">
+    <a href="../../kubernetes/kubectl/" title="kubectl cheatsheet" class="md-nav__link">
       kubectl cheatsheet
     </a>
   </li>
@@ -492,7 +593,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/kubernetes/monitoring/" title="Monitoring" class="md-nav__link">
+    <a href="../../kubernetes/monitoring/" title="Monitoring" class="md-nav__link">
       Monitoring
     </a>
   </li>
@@ -504,7 +605,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/kubernetes/networking/" title="Networking" class="md-nav__link">
+    <a href="../../kubernetes/networking/" title="Networking" class="md-nav__link">
       Networking
     </a>
   </li>
@@ -516,7 +617,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/kubernetes/volume_types/" title="Volume Types" class="md-nav__link">
+    <a href="../../kubernetes/volume_types/" title="Volume Types" class="md-nav__link">
       Volume Types
     </a>
   </li>
@@ -552,7 +653,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/linux/" title="Linux" class="md-nav__link">
+    <a href="../../linux/" title="Linux" class="md-nav__link">
       Linux
     </a>
   </li>
@@ -588,7 +689,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/miscellaneous/" title="Notes" class="md-nav__link">
+    <a href="../../miscellaneous/" title="Notes" class="md-nav__link">
       Notes
     </a>
   </li>
@@ -600,7 +701,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/miscellaneous/bookshelf/" title="Bookshelf" class="md-nav__link">
+    <a href="../../miscellaneous/bookshelf/" title="Bookshelf" class="md-nav__link">
       Bookshelf
     </a>
   </li>
@@ -612,7 +713,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/miscellaneous/makdocs/" title="Makdocs helper" class="md-nav__link">
+    <a href="../../miscellaneous/makdocs/" title="Makdocs helper" class="md-nav__link">
       Makdocs helper
     </a>
   </li>
@@ -630,12 +731,144 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#run-busybox-inside-docker-compose" class="md-nav__link">
+    Run busybox inside docker-compose
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#containers" class="md-nav__link">
+    Containers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network" class="md-nav__link">
+    Network
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reset" class="md-nav__link">
+    Reset
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#delete-all-running-and-stopped-containers" class="md-nav__link">
+    Delete all running and stopped containers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unused-cont-prune-on-current-host" class="md-nav__link">
+    Unused cont prune on current host
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-docker-prune-on-current-host" class="md-nav__link">
+    Full docker prune on current host
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#print-last-containers-logs" class="md-nav__link">
+    Print last container’s logs
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
+                
+                
+                <h1 id="docker-commands-cheat-sheet">Docker commands cheat-sheet<a class="headerlink" href="#docker-commands-cheat-sheet" title="Permanent link">Link</a></h1>
+<p><a href="https://docs.docker.com">Docker docs and manuals</a></p>
+<h2 id="run-busybox-inside-docker-compose">Run busybox inside docker-compose<a class="headerlink" href="#run-busybox-inside-docker-compose" title="Permanent link">Link</a></h2>
+<div class="codehilite"><pre><span></span>docker run --rm -it --network &lt;NETWORK_NAME&gt; busybox
+</pre></div>
 
+
+<h2 id="containers">Containers<a class="headerlink" href="#containers" title="Permanent link">Link</a></h2>
+<div class="codehilite"><pre><span></span>docker container ls <span class="c1"># docker ps</span>
+docker container top <span class="o">{</span>cont_name<span class="o">}</span> <span class="c1"># top command for cont</span>
+docker container inspect <span class="o">{</span>cont_name<span class="o">}</span> <span class="c1"># json with all cont parameters</span>
+docker container inspect <span class="o">{</span>cont_name<span class="o">}</span> --format <span class="s1">&#39;{{ .NetworkSettings.IPAddress}}&#39;</span>
+docekr container stats <span class="c1"># like watch command but for containers</span>
+docker container start <span class="c1"># start stopped cont</span>
+docker container post <span class="o">{</span>cont_name<span class="o">}</span> <span class="c1"># shows shared ports</span>
+</pre></div>
+
+<h2 id="network">Network<a class="headerlink" href="#network" title="Permanent link">Link</a></h2>
+<div class="codehilite"><pre><span></span>docker network ls
+docker network inspect <span class="o">{</span>network_name<span class="o">}</span>
+docker network create --driver
+docker network connect <span class="o">{</span>network_name<span class="o">}</span>
+docker network disconnect <span class="o">{</span>network_name<span class="o">}</span>
+</pre></div>
+
+<h2 id="reset">Reset<a class="headerlink" href="#reset" title="Permanent link">Link</a></h2>
+<h3 id="delete-all-running-and-stopped-containers">Delete all running and stopped containers<a class="headerlink" href="#delete-all-running-and-stopped-containers" title="Permanent link">Link</a></h3>
+<div class="codehilite"><pre><span></span>docker container rm -f <span class="k">$(</span>docker ps -aq<span class="k">)</span>
+</pre></div>
+
+<h3 id="unused-cont-prune-on-current-host">Unused cont prune on current host<a class="headerlink" href="#unused-cont-prune-on-current-host" title="Permanent link">Link</a></h3>
+<div class="codehilite"><pre><span></span>docker system prune --all --force --volumes
+</pre></div>
+
+<h3 id="full-docker-prune-on-current-host">Full docker prune on current host<a class="headerlink" href="#full-docker-prune-on-current-host" title="Permanent link">Link</a></h3>
+<div class="codehilite"><pre><span></span>docker stop <span class="k">$(</span>docker container ls -a -q<span class="k">)</span> <span class="o">&amp;&amp;</span> docker system prune -a -f --volumes
+</pre></div>
+
+<h2 id="print-last-containers-logs">Print last container’s logs<a class="headerlink" href="#print-last-containers-logs" title="Permanent link">Link</a></h2>
+<div class="codehilite"><pre><span></span>docker container logs --tail <span class="m">100</span> web
+</pre></div>
+                
+                  
+                
+                
+              
               
                 
 
@@ -648,6 +881,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../" title="Docker tips" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Docker tips
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../kubernetes/advanced_tools/" title="Advanced tools" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Advanced tools
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -665,7 +933,7 @@
       </div>
       
   <div class="md-footer-social">
-    <link rel="stylesheet" href="/assets/fonts/font-awesome.css">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
     
       <a href="https://github.com/denzalman" class="md-footer-social__link fa fa-github"></a>
     
@@ -681,13 +949,13 @@
       
     </div>
     
-      <script src="/assets/javascripts/application.808e90bb.js"></script>
+      <script src="../../assets/javascripts/application.808e90bb.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"/"}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
-        <script src="/_extra/js/mermaid.min.js"></script>
+        <script src="../../_extra/js/mermaid.min.js"></script>
       
-        <script src="/_extra/js/mermaid.init.js"></script>
+        <script src="../../_extra/js/mermaid.init.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

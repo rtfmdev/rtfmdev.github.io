@@ -1,0 +1,979 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Devops manual, howto, cheatseet, tips and notes">
+      
+      
+        <link rel="canonical" href="https://rtfmdoc.github.io/docker/">
+      
+      
+        <meta name="author" content="Den Zalman">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>Docker tips</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.1b62728e.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+      <link rel="manifest" href="../manifest.webmanifest">
+    
+    
+      <link rel="stylesheet" href="../_extra/css/mermaid.css">
+    
+      <link rel="stylesheet" href="../_extra/css/flowchart.css">
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-XXXXXXXX-X", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#docker-tips-and-tricks" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://rtfmdoc.github.io/" title="RTFM for Dev and Ops" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              RTFM for Dev and Ops
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Docker tips
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://rtfmdoc.github.io/" title="RTFM for Dev and Ops" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    RTFM for Dev and Ops
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Main page" class="md-nav__link">
+      Main page
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      AWS services
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        AWS services
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../AWS_services/" title="AWS services" class="md-nav__link">
+      AWS services
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../AWS_services/useful-tips/" title="Useful Tips" class="md-nav__link">
+      Useful Tips
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Dev tools
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Dev tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dev-tools/git/" title="Git Tricks" class="md-nav__link">
+      Git Tricks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dev-tools/javascript/" title="Javascript" class="md-nav__link">
+      Javascript
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dev-tools/mongo/" title="MongoDB" class="md-nav__link">
+      MongoDB
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dev-tools/one-liners/" title="Bash oneliners" class="md-nav__link">
+      Bash oneliners
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dev-tools/python/" title="Python" class="md-nav__link">
+      Python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dev-tools/terraform/" title="Terraform" class="md-nav__link">
+      Terraform
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Docker
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Docker
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Docker tips
+      </label>
+    
+    <a href="./" title="Docker tips" class="md-nav__link md-nav__link--active">
+      Docker tips
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#portainer" class="md-nav__link">
+    Portainer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-docker" class="md-nav__link">
+    Install Docker
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chroot" class="md-nav__link">
+    chroot
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-chroot-environment" class="md-nav__link">
+    Creating chroot environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    Dependencies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chroot-command" class="md-nav__link">
+    chroot command
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="commans/" title="Cheatsheet" class="md-nav__link">
+      Cheatsheet
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Kubernetes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Kubernetes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kubernetes/advanced_tools/" title="Advanced tools" class="md-nav__link">
+      Advanced tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kubernetes/configMaps/" title="ConfigMaps and Secrets" class="md-nav__link">
+      ConfigMaps and Secrets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kubernetes/helm/" title="Helm" class="md-nav__link">
+      Helm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kubernetes/ingress/" title="Ingress" class="md-nav__link">
+      Ingress
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kubernetes/kubectl/" title="kubectl cheatsheet" class="md-nav__link">
+      kubectl cheatsheet
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kubernetes/monitoring/" title="Monitoring" class="md-nav__link">
+      Monitoring
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kubernetes/networking/" title="Networking" class="md-nav__link">
+      Networking
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kubernetes/volume_types/" title="Volume Types" class="md-nav__link">
+      Volume Types
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Linux
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Linux
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux/" title="Linux" class="md-nav__link">
+      Linux
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Miscellaneous
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Miscellaneous
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../miscellaneous/" title="Notes" class="md-nav__link">
+      Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../miscellaneous/bookshelf/" title="Bookshelf" class="md-nav__link">
+      Bookshelf
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../miscellaneous/makdocs/" title="Makdocs helper" class="md-nav__link">
+      Makdocs helper
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#portainer" class="md-nav__link">
+    Portainer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-docker" class="md-nav__link">
+    Install Docker
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chroot" class="md-nav__link">
+    chroot
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-chroot-environment" class="md-nav__link">
+    Creating chroot environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    Dependencies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chroot-command" class="md-nav__link">
+    chroot command
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="docker-tips-and-tricks">Docker tips and tricks<a class="headerlink" href="#docker-tips-and-tricks" title="Permanent link">Link</a></h1>
+<h2 id="portainer">Portainer<a class="headerlink" href="#portainer" title="Permanent link">Link</a></h2>
+<p><strong>Portainer</strong> - is very useful GUI for managing Docker's hosts and clusters. Simply open port 9000 on your host, run container and open in your browser host_ip:9000, create user and manage all your containers.
+<div class="codehilite"><pre><span></span>docker container run -d <span class="se">\</span>
+  -p <span class="m">9000</span>:9000 <span class="se">\</span>
+  -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer
+</pre></div></p>
+<h2 id="install-docker">Install Docker<a class="headerlink" href="#install-docker" title="Permanent link">Link</a></h2>
+<p>The Docker installation package available in the official Ubuntu repository may not be the latest version. To ensure we get the latest version, we’ll install Docker from the official Docker repository. To do that, we’ll add a new package source, add the GPG key from Docker to ensure the downloads are valid, and then install the package.</p>
+<p>First, update your existing list of packages:</p>
+<div class="codehilite"><pre><span></span>sudo apt update
+</pre></div>
+
+<p>Next, install a few prerequisite packages which let apt use packages over HTTPS:</p>
+<div class="codehilite"><pre><span></span>sudo apt install apt-transport-https ca-certificates curl software-properties-common
+</pre></div>
+
+<p>Then add the GPG key for the official Docker repository to your system:</p>
+<div class="codehilite"><pre><span></span>curl -fsSL https://download.docker.com/linux/ubuntu/gpg <span class="p">|</span> sudo apt-key add -
+</pre></div>
+
+<p>Add the Docker repository to APT sources:</p>
+<div class="codehilite"><pre><span></span>sudo add-apt-repository <span class="se">\</span>
+<span class="s2">&quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable&quot;</span>
+</pre></div>
+
+<p>Next, update the package database with the Docker packages from the newly added repo and install Docker:</p>
+<div class="codehilite"><pre><span></span>sudo apt update
+sudo apt install docker-ce
+</pre></div>
+
+<p>Docker should now be installed, the daemon started, and the process enabled to start on boot. Check that it’s running:</p>
+<div class="codehilite"><pre><span></span>sudo systemctl status docker
+</pre></div>
+
+<p>The output should be similar to the following, showing that the service is active and running:</p>
+<p>Output:
+<div class="codehilite"><pre><span></span>● docker.service - Docker Application Container Engine
+   Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2018-07-05 15:08:39 UTC; 2min 55s ago
+     Docs: https://docs.docker.com
+ Main PID: 10096 (dockerd)
+    Tasks: 16
+   CGroup: /system.slice/docker.service
+           ├─10096 /usr/bin/dockerd -H fd://
+           └─10113 docker-containerd --config /var/run/docker/containerd/containerd.toml
+</pre></div></p>
+<p>Installing Docker now gives you not just the Docker service (daemon) but also the docker command line utility, or the Docker client.</p>
+<p><strong>Understanding containers has to cover things like chroot, the container file system and layers, cgroup isolation, and talk about the pros/cons of containers.</strong></p>
+<p>An explanation of how these work without a discussion of cgroups and how that facilitates process/memory/network isolation is going to sound weak to an interviewer. So read up on how cgroups are implemented in the kernel. Then learn about the different ways lxc containers work vs docker containers. Then learn about emerging container specification standards. Why are they happening? Understand what’s going on both under the hood in the kernel and the shifts happening in the industry.</p>
+<h2 id="chroot">chroot<a class="headerlink" href="#chroot" title="Permanent link">Link</a></h2>
+<p>A <em>chroot</em> environment provides functionality similar to that of a virtual machine, but it is a lighter solution. The captive system doesn’t need a hypervisor to be installed and configured, such as VirtualBox or Virtual Machine Manager. Nor does it need to have a kernel installed in the captive system. The captive system shares your existing kernel.</p>
+<h3 id="creating-chroot-environment">Creating chroot environment<a class="headerlink" href="#creating-chroot-environment" title="Permanent link">Link</a></h3>
+<p>We need a directory to act as the root directory of the chroot environment. So that we have a shorthand way of referring to that directory we’ll create a variable and store the name of the directory in it. Here we’re setting up a variable to store a path to the “testroot” directory. It doesn’t matter if this directory doesn’t exist yet, we’re going to create it soon. If the directory does exist, it should be empty.</p>
+<div class="codehilite"><pre><span></span><span class="nv">chr</span><span class="o">=</span>/home/dave/testroot
+mkdir -p <span class="nv">$chr</span>
+</pre></div>
+
+<p>We need to create directories to hold the portions of the operating system our <em>chroot</em> environment will require. We’re going to set up a minimalist Linux environment that uses Bash as the interactive shell. We’ll also include the touch, rm, and ls commands. That will allow us to use all Bash’s built-in commands and touch, rm, and ls. We’ll be able to create, list and remove files, and use Bash. And—in this simple example—that’s all.</p>
+<div class="codehilite"><pre><span></span>mkdir -p <span class="nv">$chr</span>/<span class="o">{</span>bin,lib,lib64<span class="o">}</span>
+
+<span class="nb">cd</span> <span class="nv">$chr</span>
+</pre></div>
+
+<p>Let’s copy the binaries that we need in our minimalist Linux environment from your regular “/bin” directory into our chroot “/bin” directory. The -v (verbose) option makes cp tell us what it is doing as it performs each copy action.</p>
+<div class="codehilite"><pre><span></span>cp -v /bin/<span class="o">{</span>bash,touch,ls,rm<span class="o">}</span> <span class="nv">$chr</span>
+</pre></div>
+
+<h3 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">Link</a></h3>
+<p>These binaries will have dependencies. We need to discover what they are and copy those files into our environment. This way, for example we can add all dependencies for /bin/bash:</p>
+<div class="codehilite"><pre><span></span><span class="nv">list</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>ldd /bin/bash <span class="p">|</span> egrep -o <span class="s1">&#39;/lib.*\.[0-9]&#39;</span><span class="k">)</span><span class="s2">&quot;</span>
+<span class="k">for</span> i in <span class="nv">$list</span><span class="p">;</span> <span class="k">do</span> cp -v --parents <span class="s2">&quot;</span><span class="nv">$i</span><span class="s2">&quot;</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">chr</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span> <span class="k">done</span>
+</pre></div>
+
+<p>Use that technique to capture the dependencies of each of the other commands. Or you can write one more loop through all your apps.</p>
+<h3 id="chroot-command">chroot command<a class="headerlink" href="#chroot-command" title="Permanent link">Link</a></h3>
+<p>The last of our dependencies are copied into our chroot environment. We’re finally ready to use the chroot command. This command sets the root of the chroot environment, and specifies which application to run as the shell.</p>
+<div class="codehilite"><pre><span></span>sudo chroot <span class="nv">$chr</span> /bin/bash
+</pre></div>
+
+<p>Our chroot environment is now active. The terminal window prompt has changed, and the interactive shell is the being handled by the bash shell in our environment.</p>
+<p>Use exit to leave the chroot environment:</p>
+<div class="codehilite"><pre><span></span><span class="nb">exit</span>
+</pre></div>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../dev-tools/terraform/" title="Terraform" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Terraform
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="commans/" title="Cheatsheet" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Cheatsheet
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 Den Zalman
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/denzalman" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/photofiles" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/denis-salmanov" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.808e90bb.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+        <script src="../_extra/js/mermaid.min.js"></script>
+      
+        <script src="../_extra/js/mermaid.init.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
