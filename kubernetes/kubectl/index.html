@@ -13,7 +13,7 @@
         <meta name="description" content="Devops manual, howto, cheatseet, tips and notes">
       
       
-        <link rel="canonical" href="https://rtfmdoc.github.io/kubernetes/kubectl/">
+        <link rel="canonical" href="https://rtfmdev.github.io/kubernetes/kubectl/">
       
       
         <meta name="author" content="Den Zalman">
@@ -114,6 +114,8 @@
       <defs>
         
         
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
       </defs>
     </svg>
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -129,9 +131,9 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://rtfmdoc.github.io/" title="RTFM for Dev and Ops" class="md-header-nav__button md-logo">
+        <a href="https://rtfmdev.github.io" title="RTFM for Dev and Ops" class="md-header-nav__button md-logo">
           
-            <i class="md-icon"></i>
+            <i class="md-icon">cloud</i>
           
         </a>
       </div>
@@ -181,6 +183,28 @@
         
       </div>
       
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/rtfmdev/rtfmdev.github.io/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    rtfmdev github
+  </div>
+</a>
+          </div>
+        </div>
+      
     </div>
   </nav>
 </header>
@@ -199,13 +223,33 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="https://rtfmdoc.github.io/" title="RTFM for Dev and Ops" class="md-nav__button md-logo">
+    <a href="https://rtfmdev.github.io" title="RTFM for Dev and Ops" class="md-nav__button md-logo">
       
-        <i class="md-icon"></i>
+        <i class="md-icon">cloud</i>
       
     </a>
     RTFM for Dev and Ops
   </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/rtfmdev/rtfmdev.github.io/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    rtfmdev github
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -594,6 +638,12 @@
       
       
       
+        <li class="md-nav__item">
+          <a href="#__comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
     </ul>
   
 </nav>
@@ -838,6 +888,12 @@
       
       
       
+        <li class="md-nav__item">
+          <a href="#__comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
     </ul>
   
 </nav>
@@ -850,55 +906,122 @@
             <article class="md-content__inner md-typeset">
               
                 
+                  <a href="https://github.com/kubernetes/kubectl.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
-                <h1 id="kubectl-cheatsheet">kubectl cheatsheet<a class="headerlink" href="#kubectl-cheatsheet" title="Permanent link">Link</a></h1>
-<h2 id="connection-details">Connection details<a class="headerlink" href="#connection-details" title="Permanent link">Link</a></h2>
+                
+                <h1 id="kubectl-cheatsheet">kubectl cheatsheet<a class="headerlink" href="#kubectl-cheatsheet" title="Permanent link">&para;</a></h1>
+<h2 id="connection-details">Connection details<a class="headerlink" href="#connection-details" title="Permanent link">&para;</a></h2>
 <p>To look at the connection details, we can either see the content of the <strong>~/.kube/config</strong> file (on Linux) or run the following command:</p>
-<div class="codehilite"><pre><span></span>$ kubectl config view
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ kubectl config view
 </pre></div>
+</td></tr></table>
 
-<h2 id="cluster-info">Cluster info<a class="headerlink" href="#cluster-info" title="Permanent link">Link</a></h2>
-<p><div class="codehilite"><pre><span></span>kubectl cluster-info
+<h2 id="cluster-info">Cluster info<a class="headerlink" href="#cluster-info" title="Permanent link">&para;</a></h2>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>kubectl cluster-info
 </pre></div>
+</td></tr></table>
 When not using the kubectl proxy, we need to authenticate to the API server when sending API requests. We can authenticate by providing a Bearer Token when issuing a curl, or by providing a set of keys and certificates.</p>
 <p>A Bearer Token is an access token which is generated by the authentication server (the API server on the master node) and given back to the client. Using that token, the client can connect back to the Kubernetes API server without providing further authentication details, and then, access resources. </p>
-<h2 id="get-the-token">Get the token:<a class="headerlink" href="#get-the-token" title="Permanent link">Link</a></h2>
-<div class="codehilite"><pre><span></span>$ <span class="nv">TOKEN</span><span class="o">=</span><span class="k">$(</span>kubectl describe secret -n kube-system <span class="k">$(</span>kubectl get secrets -n kube-system <span class="p">|</span> grep default <span class="p">|</span> cut -f1 -d <span class="s1">&#39; &#39;</span><span class="k">)</span> <span class="p">|</span> grep -E <span class="s1">&#39;^token&#39;</span> <span class="p">|</span> cut -f2 -d<span class="s1">&#39;:&#39;</span> <span class="p">|</span> tr -d <span class="s1">&#39;\t&#39;</span> <span class="p">|</span> tr -d <span class="s2">&quot; &quot;</span><span class="k">)</span>
+<h2 id="get-the-token">Get the token:<a class="headerlink" href="#get-the-token" title="Permanent link">&para;</a></h2>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ <span class="nv">TOKEN</span><span class="o">=</span><span class="k">$(</span>kubectl describe secret -n kube-system <span class="k">$(</span>kubectl get secrets -n kube-system <span class="p">|</span> grep default <span class="p">|</span> cut -f1 -d <span class="s1">&#39; &#39;</span><span class="k">)</span> <span class="p">|</span> grep -E <span class="s1">&#39;^token&#39;</span> <span class="p">|</span> cut -f2 -d<span class="s1">&#39;:&#39;</span> <span class="p">|</span> tr -d <span class="s1">&#39;\t&#39;</span> <span class="p">|</span> tr -d <span class="s2">&quot; &quot;</span><span class="k">)</span>
 </pre></div>
+</td></tr></table>
 
-<h2 id="get-the-api-server-endpoint">Get the API server endpoint:<a class="headerlink" href="#get-the-api-server-endpoint" title="Permanent link">Link</a></h2>
-<div class="codehilite"><pre><span></span>$ <span class="nv">APISERVER</span><span class="o">=</span><span class="k">$(</span>kubectl config view <span class="p">|</span> grep https <span class="p">|</span> cut -f <span class="m">2</span>- -d <span class="s2">&quot;:&quot;</span> <span class="p">|</span> tr -d <span class="s2">&quot; &quot;</span><span class="k">)</span>
+<h2 id="get-the-api-server-endpoint">Get the API server endpoint:<a class="headerlink" href="#get-the-api-server-endpoint" title="Permanent link">&para;</a></h2>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ <span class="nv">APISERVER</span><span class="o">=</span><span class="k">$(</span>kubectl config view <span class="p">|</span> grep https <span class="p">|</span> cut -f <span class="m">2</span>- -d <span class="s2">&quot;:&quot;</span> <span class="p">|</span> tr -d <span class="s2">&quot; &quot;</span><span class="k">)</span>
 </pre></div>
+</td></tr></table>
 
-<h2 id="access-the-api-server">Access the API server<a class="headerlink" href="#access-the-api-server" title="Permanent link">Link</a></h2>
-<div class="codehilite"><pre><span></span>$ curl <span class="nv">$APISERVER</span> --header <span class="s2">&quot;Authorization: Bearer </span><span class="nv">$TOKEN</span><span class="s2">&quot;</span> --insecure
+<h2 id="access-the-api-server">Access the API server<a class="headerlink" href="#access-the-api-server" title="Permanent link">&para;</a></h2>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ curl <span class="nv">$APISERVER</span> --header <span class="s2">&quot;Authorization: Bearer </span><span class="nv">$TOKEN</span><span class="s2">&quot;</span> --insecure
 </pre></div>
+</td></tr></table>
 
 <p>Instead of the access token, we can extract the client certificate, client key, and certificate authority data from the .kube/config file. Once extracted, they are encoded and then passed with a curl command for authentication. The new curl command looks similar to:</p>
-<div class="codehilite"><pre><span></span>$ curl <span class="nv">$APISERVER</span> --cert encoded-cert --key encoded-key --cacert encoded-ca
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ curl <span class="nv">$APISERVER</span> --cert encoded-cert --key encoded-key --cacert encoded-ca
 </pre></div>
+</td></tr></table>
 
-<h2 id="list-the-pods">List the Pods<a class="headerlink" href="#list-the-pods" title="Permanent link">Link</a></h2>
-<h4 id="along-with-their-attached-labels">Along with their attached Labels<a class="headerlink" href="#along-with-their-attached-labels" title="Permanent link">Link</a></h4>
+<h2 id="list-the-pods">List the Pods<a class="headerlink" href="#list-the-pods" title="Permanent link">&para;</a></h2>
+<h4 id="along-with-their-attached-labels">Along with their attached Labels<a class="headerlink" href="#along-with-their-attached-labels" title="Permanent link">&para;</a></h4>
 <p>With the -L option to the kubectl get pods command, we add extra columns in the output to list Pods with their attached Label keys and their values. In the following example, we are listing Pods with the Label keys <em>k8s-app</em> and <em>label2</em>:
-<div class="codehilite"><pre><span></span>$ kubectl get pods -L k8s-app,label2
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ kubectl get pods -L k8s-app,label2
 NAME                        READY   STATUS    RESTARTS   AGE   K8S-APP     LABEL2
 webserver-c8f4d5fbc-ggqkj   <span class="m">1</span>/1     Running   <span class="m">0</span>          16m   webserver
 webserver-c8f4d5fbc-hmh2t   <span class="m">1</span>/1     Running   <span class="m">0</span>          16m   webserver
 webserver-c8f4d5fbc-t2ntz   <span class="m">1</span>/1     Running   <span class="m">0</span>          16m   webserver
-</pre></div></p>
-<h4 id="pods-with-a-given-label">Pods with a given Label<a class="headerlink" href="#pods-with-a-given-label" title="Permanent link">Link</a></h4>
+</pre></div>
+</td></tr></table></p>
+<h4 id="pods-with-a-given-label">Pods with a given Label<a class="headerlink" href="#pods-with-a-given-label" title="Permanent link">&para;</a></h4>
 <p>To use a selector with the kubectl get pods command, we can use the -l option. In the following example, we are selecting all the Pods that have the <em>k8s-app</em> Label key set to value <em>webserver</em>:</p>
-<div class="codehilite"><pre><span></span>$ kubectl get pods -l k8s-app<span class="o">=</span>webserver
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ kubectl get pods -l k8s-app<span class="o">=</span>webserver
 NAME                        READY   STATUS    RESTARTS   AGE
 webserver-c8f4d5fbc-ggqkj   <span class="m">1</span>/1     Running   <span class="m">0</span>          23m
 webserver-c8f4d5fbc-hmh2t   <span class="m">1</span>/1     Running   <span class="m">0</span>          24m
 webserver-c8f4d5fbc-t2ntz   <span class="m">1</span>/1     Running   <span class="m">0</span>          23m
 </pre></div>
+</td></tr></table>
 
-<h2 id="look-at-a-pods-details">Look at a Pod's Details<a class="headerlink" href="#look-at-a-pods-details" title="Permanent link">Link</a></h2>
+<h2 id="look-at-a-pods-details">Look at a Pod's Details<a class="headerlink" href="#look-at-a-pods-details" title="Permanent link">&para;</a></h2>
 <p>We can look at an object's details using kubectl describe command. In the following example, you can see a Pod's description:
-<div class="codehilite"><pre><span></span>$ kubectl describe pod webserver-c8f4d5fbc-ggqkj
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ kubectl describe pod webserver-c8f4d5fbc-ggqkj
 Name:         webserver-c8f4d5fbc-ggqkj
 Namespace:    default
 Priority:     <span class="m">0</span>
@@ -948,11 +1071,24 @@ Events:
   Normal  Pulled     19m        kubelet, minikube  Container image <span class="s2">&quot;nginx:alpine&quot;</span> already present on machine
   Normal  Created    19m        kubelet, minikube  Created container webserver
   Normal  Started    19m        kubelet, minikube  Started container webserver
-</pre></div></p>
-<h2 id="exposing-an-application">Exposing an Application<a class="headerlink" href="#exposing-an-application" title="Permanent link">Link</a></h2>
+</pre></div>
+</td></tr></table></p>
+<h2 id="exposing-an-application">Exposing an Application<a class="headerlink" href="#exposing-an-application" title="Permanent link">&para;</a></h2>
 <p>For a NodePort ServiceType, Kubernetes opens up a static port on all the worker nodes. If we connect to that port from any node, we are proxied to the ClusterIP of the Service. Next, let's use the NodePort ServiceType while creating a Service.</p>
 <p>Create a webserver-svc.yaml file with the following content:
-<div class="codehilite"><pre><span></span><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Service</span>
 <span class="nt">metadata</span><span class="p">:</span>
   <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">web-service</span>
@@ -966,15 +1102,20 @@ Events:
   <span class="nt">selector</span><span class="p">:</span>
     <span class="nt">app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx</span> 
 </pre></div>
+</td></tr></table>
 Using kubectl, create the Service:
-<div class="codehilite"><pre><span></span>$ kubectl create -f webserver-svc.yaml
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ kubectl create -f webserver-svc.yaml
 service/web-service created
 </pre></div>
+</td></tr></table>
 A more direct method of creating a Service is by exposing the previously created Deployment (this method requires an existing Deployment).</p>
 <p>Expose a Deployment with the kubectl expose command:
-<div class="codehilite"><pre><span></span>$ kubectl expose deployment webserver --name<span class="o">=</span>web-service --type<span class="o">=</span>NodePort
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ kubectl expose deployment webserver --name<span class="o">=</span>web-service --type<span class="o">=</span>NodePort
 service/web-service exposed
-</pre></div></p>
+</pre></div>
+</td></tr></table></p>
 <p>Create an NGINX Pod</p>
 <p>kubectl run --generator=run-pod/v1 nginx --image=nginx</p>
 <p>Generate POD Manifest YAML file (-o yaml). Don't create it(--dry-run)</p>
@@ -997,6 +1138,22 @@ Create a deployment</p>
               
                 
 
+
+  <h2 id="__comments">Comments</h2>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = "https://rtfmdev.github.io/kubernetes/kubectl/";
+      this.page.identifier =
+        "/kubernetes/kubectl/";
+    };
+    (function() {
+      var d = document, s = d.createElement("script");
+      s.src = "//rtfmdev.disqus.com/embed.js";
+      s.setAttribute("data-timestamp", +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
 
               
             </article>

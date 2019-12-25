@@ -1,117 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-     <loc>https://rtfmdoc.github.io/</loc>
+     <loc>https://rtfmdev.github.io/</loc>
      <lastmod>2019-12-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://rtfmdoc.github.io/AWS_services/</loc>
+     <loc>https://rtfmdev.github.io/AWS_services/</loc>
      <lastmod>2019-12-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://rtfmdoc.github.io/AWS_services/useful-tips/</loc>
+     <loc>https://rtfmdev.github.io/AWS_services/useful-tips/</loc>
      <lastmod>2019-12-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://rtfmdoc.github.io/dev-tools/git/</loc>
+     <loc>https://rtfmdev.github.io/dev-tools/git/</loc>
      <lastmod>2019-12-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://rtfmdoc.github.io/dev-tools/javascript/</loc>
+     <loc>https://rtfmdev.github.io/dev-tools/javascript/</loc>
      <lastmod>2019-12-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://rtfmdoc.github.io/dev-tools/mongo/</loc>
+     <loc>https://rtfmdev.github.io/dev-tools/mongo/</loc>
      <lastmod>2019-12-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://rtfmdoc.github.io/dev-tools/one-liners/</loc>
+     <loc>https://rtfmdev.github.io/dev-tools/one-liners/</loc>
      <lastmod>2019-12-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://rtfmdoc.github.io/dev-tools/python/</loc>
+     <loc>https://rtfmdev.github.io/dev-tools/python/</loc>
      <lastmod>2019-12-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://rtfmdoc.github.io/dev-tools/terraform/</loc>
+     <loc>https://rtfmdev.github.io/dev-tools/terraform/</loc>
      <lastmod>2019-12-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://rtfmdoc.github.io/docker/</loc>
+     <loc>https://rtfmdev.github.io/docker/</loc>
      <lastmod>2019-12-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://rtfmdoc.github.io/docker/commans/</loc>
+     <loc>https://rtfmdev.github.io/docker/commans/</loc>
      <lastmod>2019-12-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://rtfmdoc.github.io/kubernetes/advanced_tools/</loc>
+     <loc>https://rtfmdev.github.io/kubernetes/advanced_tools/</loc>
      <lastmod>2019-12-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://rtfmdoc.github.io/kubernetes/configMaps/</loc>
+     <loc>https://rtfmdev.github.io/kubernetes/configMaps/</loc>
      <lastmod>2019-12-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://rtfmdoc.github.io/kubernetes/helm/</loc>
+     <loc>https://rtfmdev.github.io/kubernetes/helm/</loc>
      <lastmod>2019-12-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://rtfmdoc.github.io/kubernetes/ingress/</loc>
+     <loc>https://rtfmdev.github.io/kubernetes/ingress/</loc>
      <lastmod>2019-12-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://rtfmdoc.github.io/kubernetes/kubectl/</loc>
+     <loc>https://rtfmdev.github.io/kubernetes/kubectl/</loc>
      <lastmod>2019-12-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://rtfmdoc.github.io/kubernetes/monitoring/</loc>
+     <loc>https://rtfmdev.github.io/kubernetes/monitoring/</loc>
      <lastmod>2019-12-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://rtfmdoc.github.io/kubernetes/networking/</loc>
+     <loc>https://rtfmdev.github.io/kubernetes/networking/</loc>
      <lastmod>2019-12-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://rtfmdoc.github.io/kubernetes/volume_types/</loc>
+     <loc>https://rtfmdev.github.io/kubernetes/volume_types/</loc>
      <lastmod>2019-12-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://rtfmdoc.github.io/linux/</loc>
+     <loc>https://rtfmdev.github.io/linux/</loc>
      <lastmod>2019-12-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://rtfmdoc.github.io/miscellaneous/</loc>
+     <loc>https://rtfmdev.github.io/miscellaneous/</loc>
      <lastmod>2019-12-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://rtfmdoc.github.io/miscellaneous/bookshelf/</loc>
+     <loc>https://rtfmdev.github.io/miscellaneous/bookshelf/</loc>
      <lastmod>2019-12-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://rtfmdoc.github.io/miscellaneous/makdocs/</loc>
+     <loc>https://rtfmdev.github.io/miscellaneous/makdocs/</loc>
      <lastmod>2019-12-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
