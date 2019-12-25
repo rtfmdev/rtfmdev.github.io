@@ -10,7 +10,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="Nullam urna elit, malesuada eget finibus ut, ac tortor.">
+        <meta name="description" content="Mkdocs theme examples and help notes.">
       
       
         <link rel="canonical" href="https://rtfmdev.github.io/miscellaneous/makdocs/">
@@ -819,43 +819,6 @@ docs/
 </td></tr></table>
 This is <mark>marked line of text</mark> inside regular text</p>
 <p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd>My Special Key</kbd></span></p>
-<p>
-<div class="progress progress-0plus thin">
-<div class="progress-bar" style="width:0.00%">
-<p class="progress-label">0%</p>
-</div>
-</div>
-<div class="progress progress-0plus thin">
-<div class="progress-bar" style="width:5.00%">
-<p class="progress-label">5%</p>
-</div>
-</div>
-<div class="progress progress-20plus thin">
-<div class="progress-bar" style="width:25.00%">
-<p class="progress-label">25%</p>
-</div>
-</div>
-<div class="progress progress-40plus thin">
-<div class="progress-bar" style="width:45.00%">
-<p class="progress-label">45%</p>
-</div>
-</div>
-<div class="progress progress-60plus thin">
-<div class="progress-bar" style="width:65.00%">
-<p class="progress-label">65%</p>
-</div>
-</div>
-<div class="progress progress-80plus thin">
-<div class="progress-bar" style="width:85.00%">
-<p class="progress-label">85%</p>
-</div>
-</div>
-<div class="progress progress-100plus thin">
-<div class="progress-bar" style="width:100.00%">
-<p class="progress-label">100%</p>
-</div>
-</div>
-</p>
 <div>
 <div class="MathJax_Preview">
 \frac{n!}{k!(n-k)!} = \binom{n}{k}
@@ -882,65 +845,6 @@ This is <mark>marked line of text</mark> inside regular text</p>
 <h3 id="image-as-code">Image as code<a class="headerlink" href="#image-as-code" title="Permanent link">&para;</a></h3>
 <p><img alt="picture" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAOusbgAAAAqFBMVEU5eZdll66Yucjd7h7d7h7d7h5ll65ll65ll65ll65ll65ll65ll65ll65ll65ll65ll65ll65ll65ll65ll65ll65ll65ll65ll65ll65ll65ll65ll65ll65ll66YuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYucgXVONTAAABDklEQVRoge3XR3ICQRBE0b/Ce2+FAAnkLeb+N9MRNBvFR0H2vuJFT3dX5VAqV6q1eqPZane6vf5gOBpPprP5YnnD72t1u95s7+53+4fHp+eX17f3j8+v78PxdC5Qi+SWkNwykltBcqtIbg3JrSO5DSS3ieS2kNw2kttBcrtIbg/J7SO5AyR3iOSOkNwxkjtBcqdI7gzJnSO5CyR3WaD0T1xrv3Hjxo0bN27cuHHjxo0bN27c63Sx9ov1nbHOF+teYd1nrHeE9X6x+gZWv8Lqk1j9GWsuYM0jrDmINX+x5j5W3sDKOVj5CivXYeVJrByLlZ+xcnuB0n/5vxA3bty4cePGjRs3bty4cePGvUj3B2JzyvcNRmTGAAAAAElFTkSuQmCC" />
 
-### Grouping code blocks
-
-<superfences><input name="__tabs_%(index)s" type="radio" id="__tab_%(index)s_%(tab_index)s" %(state)s/>
-<label for="__tab_%(index)s_%(tab_index)s">Bash</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="ch">#!/bin/bash</span>
-
-<span class="nb">echo</span> <span class="s2">&quot;Hello world!&quot;</span>
-</pre></div>
-</td></tr></table></div></superfences>
-
-<superfences><input name="__tabs_%(index)s" type="radio" id="__tab_%(index)s_%(tab_index)s" %(state)s/>
-<label for="__tab_%(index)s_%(tab_index)s">C</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello world!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table></div></superfences>
-
-<superfences><input name="__tabs_%(index)s" type="radio" id="__tab_%(index)s_%(tab_index)s" %(state)s/>
-<label for="__tab_%(index)s_%(tab_index)s">C++</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Hello world!&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table></div></superfences>
-
-<superfences><input name="__tabs_%(index)s" type="radio" id="__tab_%(index)s_%(tab_index)s" %(state)s/>
-<label for="__tab_%(index)s_%(tab_index)s">C#</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
-
-<span class="k">class</span> <span class="nc">Program</span> <span class="p">{</span>
-  <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Hello world!&quot;</span><span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table></div></superfences>
 ### Highlighting specific lines
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
@@ -956,18 +860,6 @@ This is <mark>marked line of text</mark> inside regular text</p>
                 <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">],</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
 </pre></div>
 </td></tr></table>
-
-### Foot notes
-
-Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
-
-[^1]: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-[^2]:
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-    massa, nec semper lorem quam in massa.
-
-###
                 
                   
                 
@@ -1064,14 +956,6 @@ Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
         <script src="../../_extra/js/mermaid.init.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-      
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
-      
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-      
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script>
-      
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script>
       
     
   </body>
