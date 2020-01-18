@@ -323,6 +323,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#show-diff-between-branches" class="md-nav__link">
+    Show diff between branches
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#replace-master-with-better-branch" class="md-nav__link">
     Replace master with better branch
   </a>
@@ -779,6 +786,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#show-diff-between-branches" class="md-nav__link">
+    Show diff between branches
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#replace-master-with-better-branch" class="md-nav__link">
     Replace master with better branch
   </a>
@@ -893,6 +907,11 @@
                 
                 <h1 id="git-tips-and-tricks">Git tips and tricks<a class="headerlink" href="#git-tips-and-tricks" title="Permanent link">&para;</a></h1>
 <p>Sometimes you have to make very rare manipulations with your git repo, but can't remember how exactly it works. Here I'm collecting useful git use cases.</p>
+<h2 id="show-diff-between-branches">Show diff between branches<a class="headerlink" href="#show-diff-between-branches" title="Permanent link">&para;</a></h2>
+<p>This shows only the changes between current local branch and the remote master branch, and ignores any changes in the local branch that came from merge commits.
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git diff origin/master...
+</pre></div>
+</td></tr></table></p>
 <h2 id="replace-master-with-better-branch">Replace master with better branch<a class="headerlink" href="#replace-master-with-better-branch" title="Permanent link">&para;</a></h2>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2

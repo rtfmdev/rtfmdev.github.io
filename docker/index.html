@@ -875,7 +875,15 @@ sudo apt install docker-ce
 </pre></div>
 </td></tr></table></p>
 <p>Installing Docker now gives you not just the Docker service (daemon) but also the docker command line utility, or the Docker client.</p>
-<p><strong>Understanding containers has to cover things like chroot, the container file system and layers, cgroup isolation, and talk about the pros/cons of containers.</strong></p>
+<p>For more comfortable work from your user acc - create the docker group:
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo groupadd docker
+</pre></div>
+</td></tr></table></p>
+<p>Add your user to the docker group:</p>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo usermod -aG docker <span class="nv">$USER</span>
+</pre></div>
+</td></tr></table>
+<strong>Understanding containers has to cover things like chroot, the container file system and layers, cgroup isolation, and talk about the pros/cons of containers.</strong></p>
 <p>An explanation of how these work without a discussion of cgroups and how that facilitates process/memory/network isolation is going to sound weak to an interviewer. So read up on how cgroups are implemented in the kernel. Then learn about the different ways lxc containers work vs docker containers. Then learn about emerging container specification standards. Why are they happening? Understand what’s going on both under the hood in the kernel and the shifts happening in the industry.</p>
 <h2 id="chroot">chroot<a class="headerlink" href="#chroot" title="Permanent link">&para;</a></h2>
 <p>A <em>chroot</em> environment provides functionality similar to that of a virtual machine, but it is a lighter solution. The captive system doesn’t need a hypervisor to be installed and configured, such as VirtualBox or Virtual Machine Manager. Nor does it need to have a kernel installed in the captive system. The captive system shares your existing kernel.</p>
