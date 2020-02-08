@@ -734,9 +734,9 @@
                   <h1>ECS Fargate</h1>
                 
                 <h2 id="trapping-sig-inside-fargate-and-ecs-containers">Trapping SIG inside Fargate and ECS containers<a class="headerlink" href="#trapping-sig-inside-fargate-and-ecs-containers" title="Permanent link">&para;</a></h2>
-<p><strong>Dockerfile</strong>
-Wrap any container, which you want to trap signals inside.
+<p>Wrap any container, which you want to trap signals inside.
 In my example I use custom SIG handler for prevent Consul Agent sidecar's early shutdown. Timeout can be set through env variable EXIT_TIMEOUT.</p>
+<p><strong>Dockerfile</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -828,8 +828,13 @@ docker-entrypoint.sh <span class="s2">&quot;</span><span class="nv">$@</span><sp
 </code></pre></div>
 </td></tr></table>
 
-<p><strong>Pay attention!</strong> Fargate and ECS containers use different way for stop_timeout definition. Fargate defines it inside json task definition parameter, but ECS container make it through env variable ECS_CONTAINER_STOP_TIMEOUT inside container. 
-Also, be careful with these parameters and wrapper trap timeout value. It has to be equal or less than stop_timeout minus real time for container's graceful shutdown. </p>
+<div class="admonition warning">
+<p class="admonition-title">Pay attention!</p>
+<ul>
+<li>Fargate and ECS containers use different way for stop_timeout definition. Fargate defines it inside json task definition parameter, but ECS container make it through env variable ECS_CONTAINER_STOP_TIMEOUT inside it's container.</li>
+<li>Also, be careful with these parameters and wrapper trap timeout value. It has to be equal or less than stop_timeout minus real time for container's graceful shutdown.</li>
+</ul>
+</div>
                 
                   
                 
