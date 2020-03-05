@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.1">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.3">
     
     
       
@@ -46,7 +46,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.592ad16c.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
       
         <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -57,7 +57,7 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
+      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
     
     
       
@@ -333,6 +333,13 @@
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rebase-previous-n-to-one" class="md-nav__link">
+    Rebase previous N to one
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#undoing-last-commit" class="md-nav__link">
@@ -805,6 +812,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#rebase-previous-n-to-one" class="md-nav__link">
+    Rebase previous N to one
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#undoing-last-commit" class="md-nav__link">
     Undoing last commit
   </a>
@@ -933,6 +947,13 @@
                 
                 <h1 id="git-tips-and-tricks">Git tips and tricks<a class="headerlink" href="#git-tips-and-tricks" title="Permanent link">&para;</a></h1>
 <p>Sometimes you have to make very rare manipulations with your git repo, but can't remember how exactly it works. Here I'm collecting useful git use cases.</p>
+<h2 id="rebase-previous-n-to-one">Rebase previous N to one<a class="headerlink" href="#rebase-previous-n-to-one" title="Permanent link">&para;</a></h2>
+<p>If you need to unite last N commits on current brunch run this rebase command with your number of last commits</p>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>git rebase -i HEAD~4
+</code></pre></div>
+</td></tr></table>
+After it opens a rebase file, check here the last commit with "p" letter and other ones with "s" letter. Save it. And save next opened file with new commit message file too. These steps will do single commit with all changes from this N commits. <br> 
+It could be useful if you don't want to show in remote repo all the history of your commits on the branch. Or maybe want to hide some of them. </p>
 <h2 id="undoing-last-commit">Undoing last commit<a class="headerlink" href="#undoing-last-commit" title="Permanent link">&para;</a></h2>
 <p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>git reset --soft HEAD~1
 </code></pre></div>
@@ -1177,7 +1198,7 @@ you will have to add upstream and remote branch information:
       
     </div>
     
-      <script src="../../assets/javascripts/application.98c7b6b1.js"></script>
+      <script src="../../assets/javascripts/application.df00da5d.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
