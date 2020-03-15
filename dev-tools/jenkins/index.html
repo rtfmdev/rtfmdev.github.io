@@ -13,7 +13,7 @@
         <meta name="description" content="Devops manual, howto, cheatseet, tips and notes">
       
       
-        <link rel="canonical" href="https://rtfmdev.github.io/miscellaneous/bookshelf/">
+        <link rel="canonical" href="https://rtfmdev.github.io/dev-tools/jenkins/">
       
       
         <meta name="author" content="Den Zalman">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Bookshelf</title>
+        <title>Jenkins</title>
       
     
     
@@ -120,7 +120,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#useful-links" tabindex="0" class="md-skip">
+      <a href="#jenkins-tricks" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -146,7 +146,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Bookshelf
+                Jenkins
               
             </span>
           
@@ -285,10 +285,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Dev tools
@@ -306,7 +308,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dev-tools/git/" title="Git Tricks" class="md-nav__link">
+    <a href="../git/" title="Git Tricks" class="md-nav__link">
       Git Tricks
     </a>
   </li>
@@ -318,7 +320,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dev-tools/javascript/" title="Javascript" class="md-nav__link">
+    <a href="../javascript/" title="Javascript" class="md-nav__link">
       Javascript
     </a>
   </li>
@@ -328,11 +330,55 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../dev-tools/jenkins/" title="Jenkins" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Jenkins
+      </label>
+    
+    <a href="./" title="Jenkins" class="md-nav__link md-nav__link--active">
       Jenkins
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#kill-stacked-job" class="md-nav__link">
+    Kill stacked job
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -342,7 +388,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dev-tools/mongo/" title="MongoDB" class="md-nav__link">
+    <a href="../mongo/" title="MongoDB" class="md-nav__link">
       MongoDB
     </a>
   </li>
@@ -354,7 +400,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dev-tools/one-liners/" title="Bash oneliners" class="md-nav__link">
+    <a href="../one-liners/" title="Bash oneliners" class="md-nav__link">
       Bash oneliners
     </a>
   </li>
@@ -366,7 +412,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dev-tools/python/" title="Python" class="md-nav__link">
+    <a href="../python/" title="Python" class="md-nav__link">
       Python
     </a>
   </li>
@@ -378,7 +424,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dev-tools/terraform/" title="Terraform" class="md-nav__link">
+    <a href="../terraform/" title="Terraform" class="md-nav__link">
       Terraform
     </a>
   </li>
@@ -597,12 +643,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
     <label class="md-nav__link" for="nav-7">
       Miscellaneous
@@ -620,7 +664,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../" title="Notes" class="md-nav__link">
+    <a href="../../miscellaneous/" title="Notes" class="md-nav__link">
       Notes
     </a>
   </li>
@@ -630,65 +674,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Bookshelf
-      </label>
-    
-    <a href="./" title="Bookshelf" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../miscellaneous/bookshelf/" title="Bookshelf" class="md-nav__link">
       Bookshelf
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#useful-links" class="md-nav__link">
-    Useful Links
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#books" class="md-nav__link">
-    Books
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#my-current-have-to-be-read-list" class="md-nav__link">
-    My current have-to-be-read list
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-        <li class="md-nav__item">
-          <a href="#__comments" class="md-nav__link md-nav__link--active">
-            Comments
-          </a>
-        </li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -698,7 +688,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../makdocs/" title="Makdocs helper" class="md-nav__link">
+    <a href="../../miscellaneous/makdocs/" title="Makdocs helper" class="md-nav__link">
       Makdocs helper
     </a>
   </li>
@@ -723,27 +713,15 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#useful-links" class="md-nav__link">
-    Useful Links
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#books" class="md-nav__link">
-    Books
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#my-current-have-to-be-read-list" class="md-nav__link">
-    My current have-to-be-read list
+  <a href="#kill-stacked-job" class="md-nav__link">
+    Kill stacked job
   </a>
   
 </li>
@@ -771,22 +749,47 @@
               
                 
                 
-                  <h1>Bookshelf</h1>
-                
-                <h2 id="useful-links">Useful Links<a class="headerlink" href="#useful-links" title="Permanent link">&para;</a></h2>
-<p><a href="https://www.reddit.com/r/devops">r/devops</a></p>
-<h2 id="books">Books<a class="headerlink" href="#books" title="Permanent link">&para;</a></h2>
-<h2 id="my-current-have-to-be-read-list">My current have-to-be-read list<a class="headerlink" href="#my-current-have-to-be-read-list" title="Permanent link">&para;</a></h2>
-<p><a href="https://medium.com/@dominik.tornow/the-kubernetes-scheduler-cd429abac02f">The Kubernetes Scheduler</a></p>
-<p><a href="https://medium.com/payscale-tech/imperative-vs-declarative-a-kubernetes-tutorial-4be66c5d8914">Imperative vs. Declarative — a Kubernetes Tutorial</a></p>
-<p><a href="https://itnext.io/deploy-a-kubernetes-cluster-with-cluster-monitoring-in-amazon-ec2-using-rancher-6f6c475dba7f">Deploy a Kubernetes Cluster with Cluster Monitoring in Amazon EC2 using Rancher</a></p>
-<p><a href="https://medium.com/@jinnerbichler/10-advanced-tricks-with-docker-2ff191475aae">10 Advanced Tricks with Docker</a></p>
-<p><a href="https://dzone.com/articles/50-useful-docker-tutorials-for-it-professionals-fr">50 Useful Docker Tutorials, From Beginner to Advanced</a></p>
-<p><a href="https://ealebed.github.io/posts/2018/знакомство-с-kubernetes-часть-1-установка/">Знакомство с Kubernetes</a></p>
-<p><a href="https://www.freecodecamp.org/news/security-as-standard-in-the-land-of-kubernetes-50bfad74ca16/">Security as Standard in the Land of Kubernetes.</a></p>
-<p><a href="https://medium.com/hackernoon/10-data-structure-algorithms-and-programming-courses-to-crack-any-coding-interview-e1c50b30b927">10 Data Structure, Algorithms, and Programming Courses to Crack Any Coding Interview</a></p>
-<p><a href="https://medium.com/quick-code/crud-app-using-vue-js-and-django-516edf4e4217">CRUD App using Vue.js and Django</a></p>
-<p><a href="https://rancher.com/blog/2019/2019-03-21-comparing-kubernetes-cni-providers-flannel-calico-canal-and-weave/">Comparing Kubernetes CNI Providers: Flannel, Calico, Canal, and Weave</a></p>
+                <h1 id="jenkins-tricks">Jenkins tricks<a class="headerlink" href="#jenkins-tricks" title="Permanent link">&para;</a></h1>
+<h2 id="kill-stacked-job">Kill stacked job<a class="headerlink" href="#kill-stacked-job" title="Permanent link">&para;</a></h2>
+<p>Sometimes Jenkins job could stack without response, and can't be killed from the UI. Go to <strong>Manage Jenkins</strong> -&gt; <strong>Script Console</strong> and paste there one of these code-blocks. Change job name and build number to relevant ones and run it. </p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">Jenkins</span><span class="p">.</span><span class="na">instance</span><span class="p">.</span><span class="na">getItemByFullName</span><span class="p">(</span><span class="s">&quot;CI/rc-preprod&quot;</span><span class="p">)</span>
+                <span class="p">.</span><span class="na">getBuildByNumber</span><span class="p">(</span><span class="mi">895</span><span class="p">)</span>
+                <span class="p">.</span><span class="na">finish</span><span class="p">(</span>
+                    <span class="n">hudson</span><span class="p">.</span><span class="na">model</span><span class="p">.</span><span class="na">Result</span><span class="p">.</span><span class="na">ABORTED</span><span class="p">,</span>
+                    <span class="k">new</span> <span class="n">java</span><span class="p">.</span><span class="na">io</span><span class="p">.</span><span class="na">IOException</span><span class="p">(</span><span class="s">&quot;Aborting build&quot;</span><span class="p">)</span>
+                <span class="p">);</span>
+</code></pre></div>
+</td></tr></table>
+
+<p>or</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">jobname</span> <span class="o">=</span> <span class="s">&quot;CI/rc-preprod&quot;</span>
+<span class="n">def</span> <span class="n">buildnum</span> <span class="o">=</span> <span class="mi">895</span>
+<span class="n">def</span> <span class="n">job</span> <span class="o">=</span> <span class="n">Jenkins</span><span class="p">.</span><span class="na">instance</span><span class="p">.</span><span class="na">getItemByFullName</span><span class="p">(</span><span class="n">jobname</span><span class="p">)</span>
+ <span class="k">for</span> <span class="p">(</span><span class="n">build</span> <span class="n">in</span> <span class="n">job</span><span class="p">.</span><span class="na">builds</span><span class="p">)</span> <span class="p">{</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">buildnum</span> <span class="o">==</span> <span class="n">build</span><span class="p">.</span><span class="na">getNumber</span><span class="p">().</span><span class="na">toInteger</span><span class="p">()){</span>
+       <span class="k">if</span> <span class="p">(</span><span class="n">build</span><span class="p">.</span><span class="na">isBuilding</span><span class="p">()){</span>
+         <span class="n">build</span><span class="p">.</span><span class="na">doStop</span><span class="p">();</span>
+         <span class="n">build</span><span class="p">.</span><span class="na">doKill</span><span class="p">();</span>
+       <span class="p">}</span>
+     <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
                 
                   
                 
@@ -800,9 +803,9 @@
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = "https://rtfmdev.github.io/miscellaneous/bookshelf/";
+      this.page.url = "https://rtfmdev.github.io/dev-tools/jenkins/";
       this.page.identifier =
-        "/miscellaneous/bookshelf/";
+        "/dev-tools/jenkins/";
     };
     (function() {
       var d = document, s = d.createElement("script");
@@ -824,7 +827,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../" title="Notes" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../javascript/" title="Javascript" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -833,19 +836,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Notes
+                Javascript
               </span>
             </div>
           </a>
         
         
-          <a href="../makdocs/" title="Makdocs helper" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../mongo/" title="MongoDB" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Makdocs helper
+                MongoDB
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
