@@ -289,6 +289,68 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#time-based-autoscaling-on-fargate" class="md-nav__link">
+    Time-based autoscaling on Fargate
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-parameters" class="md-nav__link">
+    Set parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registerscalabletarget" class="md-nav__link">
+    RegisterScalableTarget
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#putscheduledaction" class="md-nav__link">
+    PutScheduledAction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deletescheduledaction" class="md-nav__link">
+    DeleteScheduledAction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#describescheduledactions" class="md-nav__link">
+    DescribeScheduledActions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    See also
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terraform-example" class="md-nav__link">
+    Terraform example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -720,6 +782,68 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#time-based-autoscaling-on-fargate" class="md-nav__link">
+    Time-based autoscaling on Fargate
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-parameters" class="md-nav__link">
+    Set parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registerscalabletarget" class="md-nav__link">
+    RegisterScalableTarget
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#putscheduledaction" class="md-nav__link">
+    PutScheduledAction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deletescheduledaction" class="md-nav__link">
+    DeleteScheduledAction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#describescheduledactions" class="md-nav__link">
+    DescribeScheduledActions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    See also
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terraform-example" class="md-nav__link">
+    Terraform example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -847,6 +971,192 @@ docker-entrypoint.sh <span class="s2">&quot;</span><span class="nv">$@</span><sp
 <li>Also, be careful with these parameters and wrapper trap timeout value. It has to be equal or less than stop_timeout minus real time for container's graceful shutdown.</li>
 </ul>
 </div>
+<h2 id="time-based-autoscaling-on-fargate">Time-based autoscaling on Fargate<a class="headerlink" href="#time-based-autoscaling-on-fargate" title="Permanent link">&para;</a></h2>
+<p>Sometimes we want to turn off our staging environments at night to save some money. If your infrastructure use a lot of Fargate containers - you can set there cron scheduler for every task you have. </br>
+Only have to remember about API calls limits. If you setup many timers to trigger at the same time - they could be throttled. AWS wont explain numbers about it, but after many checks and fails - we found out this number about 100. And AWS don't want to increase it... Maybe we are not big enough for them. :)</p>
+<h3 id="set-parameters">Set parameters<a class="headerlink" href="#set-parameters" title="Permanent link">&para;</a></h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ <span class="nb">export</span> <span class="nv">ECS_CLUSTER_NAME</span><span class="o">={</span>YOUR_ECS_CLUSTER_NAME<span class="o">}</span>
+$ <span class="nb">export</span> <span class="nv">ECS_SERVICE_NAME</span><span class="o">={</span>YOUR_ECS_SERVICE_NAME<span class="o">}</span>
+</code></pre></div>
+</td></tr></table>
+
+<h3 id="registerscalabletarget">RegisterScalableTarget<a class="headerlink" href="#registerscalabletarget" title="Permanent link">&para;</a></h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ aws application-autoscaling register-scalable-target --service-namespace ecs <span class="se">\</span>
+    --scalable-dimension ecs:service:DesiredCount <span class="se">\</span>
+    --resource-id service/<span class="si">${</span><span class="nv">ECS_CLUSTER_NAME</span><span class="si">}</span>/<span class="si">${</span><span class="nv">ECS_SERVICE_NAME</span><span class="si">}</span> <span class="se">\</span>
+    --min-capacity <span class="m">1</span> <span class="se">\</span>
+    --max-capacity <span class="m">3</span>
+</code></pre></div>
+</td></tr></table>
+
+<h3 id="putscheduledaction">PutScheduledAction<a class="headerlink" href="#putscheduledaction" title="Permanent link">&para;</a></h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ <span class="nb">export</span> <span class="nv">SCALE_OUT_ACTION_NAME</span><span class="o">=</span>fargate-time-based-scale-out
+
+<span class="c1"># configure scaling out</span>
+$ aws application-autoscaling put-scheduled-action --service-namespace ecs <span class="se">\</span>
+    --scalable-dimension ecs:service:DesiredCount <span class="se">\</span>
+    --resource-id service/<span class="si">${</span><span class="nv">ECS_CLUSTER_NAME</span><span class="si">}</span>/<span class="si">${</span><span class="nv">ECS_SERVICE_NAME</span><span class="si">}</span> <span class="se">\</span>
+    --scheduled-action-name <span class="si">${</span><span class="nv">SCALE_OUT_ACTION_NAME</span><span class="si">}</span> <span class="se">\</span>
+    --schedule <span class="s2">&quot;cron(50 23 * * ? *)&quot;</span> <span class="se">\ </span><span class="c1"># every day at 8:50am JST</span>
+    --scalable-target-action <span class="nv">MinCapacity</span><span class="o">=</span><span class="m">3</span>,MaxCapacity<span class="o">=</span><span class="m">10</span>
+</code></pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ <span class="nb">export</span> <span class="nv">SCALE_IN_ACTION_NAME</span><span class="o">=</span>fargate-time-based-scale-in
+
+<span class="c1"># configure scaling in</span>
+$ aws application-autoscaling put-scheduled-action --service-namespace ecs <span class="se">\</span>
+    --scalable-dimension ecs:service:DesiredCount <span class="se">\</span>
+    --resource-id service/<span class="si">${</span><span class="nv">ECS_CLUSTER_NAME</span><span class="si">}</span>/<span class="si">${</span><span class="nv">ECS_SERVICE_NAME</span><span class="si">}</span> <span class="se">\</span>
+    --scheduled-action-name <span class="si">${</span><span class="nv">SCALE_IN_ACTION_NAME</span><span class="si">}</span> <span class="se">\</span>
+    --schedule <span class="s2">&quot;cron(10 9 * * ? *)&quot;</span> <span class="se">\ </span><span class="c1"># every day at 6:10pm JST</span>
+    --scalable-target-action <span class="nv">MinCapacity</span><span class="o">=</span><span class="m">1</span>,MaxCapacity<span class="o">=</span><span class="m">1</span>
+</code></pre></div>
+</td></tr></table>
+
+<h3 id="deletescheduledaction">DeleteScheduledAction<a class="headerlink" href="#deletescheduledaction" title="Permanent link">&para;</a></h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ aws application-autoscaling delete-scheduled-action --service-namespace ecs <span class="se">\</span>
+    --scheduled-action-name <span class="si">${</span><span class="nv">SCALE_OUT_ACTION_NAME</span><span class="si">}</span> <span class="se">\</span>
+    --resource-id service/<span class="si">${</span><span class="nv">ECS_CLUSTER_NAME</span><span class="si">}</span>/<span class="si">${</span><span class="nv">ECS_SERVICE_NAME</span><span class="si">}</span> <span class="se">\</span>
+    --scalable-dimension ecs:service:DesiredCount
+</code></pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ aws application-autoscaling delete-scheduled-action --service-namespace ecs <span class="se">\</span>
+    --scheduled-action-name <span class="si">${</span><span class="nv">SCALE_IN_ACTION_NAME</span><span class="si">}</span> <span class="se">\</span>
+    --resource-id service/<span class="si">${</span><span class="nv">ECS_CLUSTER_NAME</span><span class="si">}</span>/<span class="si">${</span><span class="nv">ECS_SERVICE_NAME</span><span class="si">}</span> <span class="se">\</span>
+    --scalable-dimension ecs:service:DesiredCount
+</code></pre></div>
+</td></tr></table>
+
+<h3 id="describescheduledactions">DescribeScheduledActions<a class="headerlink" href="#describescheduledactions" title="Permanent link">&para;</a></h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ aws application-autoscaling describe-scheduled-actions --service-namespace ecs <span class="se">\</span>
+    --scheduled-action-names <span class="si">${</span><span class="nv">SCALE_IN_ACTION_NAME</span><span class="si">}</span> <span class="si">${</span><span class="nv">SCALE_OUT_ACTION_NAME</span><span class="si">}</span>
+</code></pre></div>
+</td></tr></table>
+
+<h3 id="see-also">See also<a class="headerlink" href="#see-also" title="Permanent link">&para;</a></h3>
+<p><a href="https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-scheduled-scaling.html">https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-scheduled-scaling.html</a></p>
+<h3 id="terraform-example">Terraform example<a class="headerlink" href="#terraform-example" title="Permanent link">&para;</a></h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kr">resource</span> <span class="s">&quot;aws_appautoscaling_target&quot; &quot;tgt&quot;</span> <span class=" -Punctuation">{</span>
+<span class="na">  service_namespace</span>  <span class="o">=</span> <span class="s2">&quot;ecs&quot;</span>
+<span class="na">  resource_id</span>        <span class="o">=</span> <span class="s2">&quot;service/${var.cluster}/${var.service}&quot;</span>
+<span class="na">  scalable_dimension</span> <span class="o">=</span> <span class="s2">&quot;ecs:service:DesiredCount&quot;</span>
+<span class="na">  role_arn</span>           <span class="o">=</span> <span class="s2">&quot;${var.role_arn}&quot;</span>
+<span class="na">  min_capacity</span>       <span class="o">=</span> <span class="m">1</span>
+<span class="na">  max_capacity</span>       <span class="o">=</span> <span class="m">1</span>
+
+<span class="na">  lifecycle</span> <span class="o">=</span> <span class=" -Punctuation">{</span>
+<span class="na">    create_before_destroy</span> <span class="o">=</span> <span class="kt">true</span>
+  <span class=" -Punctuation">}</span>
+<span class=" -Punctuation">}</span>
+
+<span class="na">// Night OFF (capacity 0) scheduler at 21:00 UTC</span> <span class="o">=</span> <span class="m">23</span><span class="err">:</span><span class="m">00</span> <span class="err">IST</span> 
+<span class="kr">resource</span> <span class="s">&quot;aws_appautoscaling_scheduled_action&quot; &quot;night_off&quot;</span> <span class=" -Punctuation">{</span>
+
+<span class="na">  name</span>               <span class="o">=</span> <span class="s2">&quot;${var.service}-night-off-timer&quot;</span>
+<span class="na">  service_namespace</span>  <span class="o">=</span> <span class="s2">&quot;ecs&quot;</span>
+<span class="na">  resource_id</span>        <span class="o">=</span> <span class="s2">&quot;service/${var.cluster}/${var.service}&quot;</span>
+<span class="na">  scalable_dimension</span> <span class="o">=</span> <span class="s2">&quot;ecs:service:DesiredCount&quot;</span>
+<span class="na">  schedule</span>           <span class="o">=</span> <span class="s2">&quot;cron(0 21 * * ? *)&quot;</span>
+
+  <span class="err">scalable_target_action</span> <span class=" -Punctuation">{</span>
+<span class="na">    min_capacity</span> <span class="o">=</span> <span class="m">0</span>
+<span class="na">    max_capacity</span> <span class="o">=</span> <span class="m">0</span>
+  <span class=" -Punctuation">}</span>
+
+<span class="na">  depends_on</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;aws_appautoscaling_target.tgt&quot;</span><span class="p">]</span>
+<span class=" -Punctuation">}</span>
+
+<span class="na">// Day ON scheduler (capacity 1) at 5:00 UTC</span> <span class="o">=</span> <span class="m">7</span><span class="err">:</span><span class="m">00</span> <span class="err">IST</span>
+<span class="kr">resource</span> <span class="s">&quot;aws_appautoscaling_scheduled_action&quot; &quot;day_on&quot;</span> <span class=" -Punctuation">{</span>
+<span class="na">  name</span>               <span class="o">=</span> <span class="s2">&quot;${var.service}-day-on-timer&quot;</span>
+<span class="na">  service_namespace</span>  <span class="o">=</span> <span class="s2">&quot;ecs&quot;</span>
+<span class="na">  resource_id</span>        <span class="o">=</span> <span class="s2">&quot;service/${var.cluster}/${var.service}&quot;</span>
+<span class="na">  scalable_dimension</span> <span class="o">=</span> <span class="s2">&quot;ecs:service:DesiredCount&quot;</span>
+<span class="na">  schedule</span>           <span class="o">=</span> <span class="s2">&quot;cron(0 5 * * ? *)&quot;</span>
+
+  <span class="err">scalable_target_action</span> <span class=" -Punctuation">{</span>
+<span class="na">    min_capacity</span> <span class="o">=</span> <span class="m">1</span>
+<span class="na">    max_capacity</span> <span class="o">=</span> <span class="m">1</span>
+  <span class=" -Punctuation">}</span>
+
+<span class="na">  depends_on</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;aws_appautoscaling_target.tgt&quot;</span><span class="p">]</span>
+<span class=" -Punctuation">}</span>
+</code></pre></div>
+</td></tr></table>
                 
                   
                 
