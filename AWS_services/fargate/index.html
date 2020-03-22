@@ -973,7 +973,7 @@ docker-entrypoint.sh <span class="s2">&quot;</span><span class="nv">$@</span><sp
 </div>
 <h2 id="time-based-autoscaling-on-fargate">Time-based autoscaling on Fargate<a class="headerlink" href="#time-based-autoscaling-on-fargate" title="Permanent link">&para;</a></h2>
 <p>Sometimes we want to turn off our staging environments at night to save some money. If your infrastructure use a lot of Fargate containers - you can set there cron scheduler for every task you have. </br>
-Only have to remember about API calls limits. If you setup many timers to trigger at the same time - they could be throttled. AWS wont explain numbers about it, but after many checks and fails - we found out this number about 100. And AWS don't want to increase it... Maybe we are not big enough for them. :)</p>
+Only have to remember about API Call limits. If you setup many timers to trigger at the same time - they could be throttled. AWS wont explain exact numbers, but after many checks and fails - we've found out that this number is about 100. And AWS don't want to increase it by our request to support team... Maybe we are not big enough for them. :)</p>
 <h3 id="set-parameters">Set parameters<a class="headerlink" href="#set-parameters" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ <span class="nb">export</span> <span class="nv">ECS_CLUSTER_NAME</span><span class="o">={</span>YOUR_ECS_CLUSTER_NAME<span class="o">}</span>
@@ -1123,7 +1123,7 @@ $ aws application-autoscaling put-scheduled-action --service-namespace ecs <span
   <span class=" -Punctuation">}</span>
 <span class=" -Punctuation">}</span>
 
-<span class="na">// Night OFF (capacity 0) scheduler at 21:00 UTC</span> <span class="o">=</span> <span class="m">23</span><span class="err">:</span><span class="m">00</span> <span class="err">IST</span> 
+<span class="err">//</span> <span class="err">Night</span> <span class="err">OFF</span> <span class="p">(</span><span class="err">capacity</span> <span class="m">0</span><span class="p">)</span> <span class="err">scheduler</span> <span class="err">at</span> <span class="m">21</span><span class="err">:</span><span class="m">00</span> <span class="err">UTC</span>
 <span class="kr">resource</span> <span class="s">&quot;aws_appautoscaling_scheduled_action&quot; &quot;night_off&quot;</span> <span class=" -Punctuation">{</span>
 
 <span class="na">  name</span>               <span class="o">=</span> <span class="s2">&quot;${var.service}-night-off-timer&quot;</span>
@@ -1140,7 +1140,7 @@ $ aws application-autoscaling put-scheduled-action --service-namespace ecs <span
 <span class="na">  depends_on</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;aws_appautoscaling_target.tgt&quot;</span><span class="p">]</span>
 <span class=" -Punctuation">}</span>
 
-<span class="na">// Day ON scheduler (capacity 1) at 5:00 UTC</span> <span class="o">=</span> <span class="m">7</span><span class="err">:</span><span class="m">00</span> <span class="err">IST</span>
+<span class="err">//</span> <span class="err">Day</span> <span class="err">ON</span> <span class="err">scheduler</span> <span class="p">(</span><span class="err">capacity</span> <span class="m">1</span><span class="p">)</span> <span class="err">at</span> <span class="m">5</span><span class="err">:</span><span class="m">00</span> <span class="err">UTC</span>
 <span class="kr">resource</span> <span class="s">&quot;aws_appautoscaling_scheduled_action&quot; &quot;day_on&quot;</span> <span class=" -Punctuation">{</span>
 <span class="na">  name</span>               <span class="o">=</span> <span class="s2">&quot;${var.service}-day-on-timer&quot;</span>
 <span class="na">  service_namespace</span>  <span class="o">=</span> <span class="s2">&quot;ecs&quot;</span>
