@@ -120,7 +120,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#tldr" tabindex="0" class="md-skip">
+      <a href="#nginx-proxy-pitfalls-related-with-dns-resolving" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -364,9 +364,113 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Nginx
+      </label>
+    
     <a href="./" title="Nginx" class="md-nav__link md-nav__link--active">
       Nginx
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tldr" class="md-nav__link">
+    TL;DR
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explanatory-example" class="md-nav__link">
+    Explanatory example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-the-solution" class="md-nav__link">
+    Finding the solution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-a-resolver-directive" class="md-nav__link">
+    Add a resolver directive
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-variables" class="md-nav__link">
+    Add variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caveats" class="md-nav__link">
+    Caveats
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upstreams" class="md-nav__link">
+    Upstreams
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#you-can-have-both-resolve-and-non-resolve-locations-for-same-domain" class="md-nav__link">
+    You can have both resolve and non-resolve locations for same domain
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tested-on" class="md-nav__link">
+    Tested on
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#further-research" class="md-nav__link">
+    Further research
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -693,6 +797,97 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tldr" class="md-nav__link">
+    TL;DR
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explanatory-example" class="md-nav__link">
+    Explanatory example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-the-solution" class="md-nav__link">
+    Finding the solution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-a-resolver-directive" class="md-nav__link">
+    Add a resolver directive
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-variables" class="md-nav__link">
+    Add variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caveats" class="md-nav__link">
+    Caveats
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upstreams" class="md-nav__link">
+    Upstreams
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#you-can-have-both-resolve-and-non-resolve-locations-for-same-domain" class="md-nav__link">
+    You can have both resolve and non-resolve locations for same domain
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tested-on" class="md-nav__link">
+    Tested on
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#further-research" class="md-nav__link">
+    Further research
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -704,130 +899,113 @@
               
                 
                 
-                <p>===============================================
-NGINX proxy pitfalls related with DNS resolving
-===============================================</p>
+                <h1 id="nginx-proxy-pitfalls-related-with-dns-resolving">NGINX proxy pitfalls related with DNS resolving<a class="headerlink" href="#nginx-proxy-pitfalls-related-with-dns-resolving" title="Permanent link">&para;</a></h1>
 <p>If you're using <code>proxy_pass</code> and your endpoint's IPs can vary in time, please read this article to avoid misunderstandings about how nginx works.</p>
 <p>.. contents::</p>
-<h1 id="tldr">TL;DR<a class="headerlink" href="#tldr" title="Permanent link">&para;</a></h1>
+<h2 id="tldr">TL;DR<a class="headerlink" href="#tldr" title="Permanent link">&para;</a></h2>
 <p>If you want to force nginx resolve your endpoints, you should:</p>
 <ul>
-<li>Use variables within <code>proxy_pass</code> directive, e.g. <code>proxy_pass https://$endpoint/;</code>, where <code>$endpoint</code> can be manually setted or extracted from location regexp. <code>Read more &lt;https://github.com/DmitryFillo/nginx-proxy-pitfalls#add-variables&gt;</code>_.</li>
-<li>Make sure that your endpoint isn't used in the another locations w/o variables, because in this case resolving won't work. To fix this move endpoint domain to the <code>upstream</code> or use variables in the <code>proxy_pass</code> in all locations to make resolving works. <code>Read more &lt;https://github.com/DmitryFillo/nginx-proxy-pitfalls#caveats&gt;</code>_.</li>
-<li><code>You can have both resolve and non-resolve locations for same domain &lt;https://github.com/DmitryFillo/nginx-proxy-pitfalls/blob/master/README.rst#you-can-have-both-resolve-and-non-resolve-locations-for-same-domain&gt;</code>_.</li>
-<li>When a variable is used in proxy_pass directive, the location header is not longer adjusted. To get around this, simply set <code>proxy_redirect</code>. <code>Read more &lt;https://github.com/DmitryFillo/nginx-proxy-pitfalls#caveats&gt;</code>_.</li>
+<li>Use variables within <code>proxy_pass</code> directive, e.g. <code>proxy_pass https://$endpoint/;</code>, where <code>$endpoint</code> can be manually setted or extracted from location regexp. <code>Read more &lt;https://github.com/DmitryFillo/nginx-proxy-pitfalls#add-variables&gt;</code></li>
+<li>Make sure that your endpoint isn't used in the another locations w/o variables, because in this case resolving won't work. To fix this move endpoint domain to the <code>upstream</code> or use variables in the <code>proxy_pass</code> in all locations to make resolving works. <code>Read more &lt;https://github.com/DmitryFillo/nginx-proxy-pitfalls#caveats&gt;</code></li>
+<li>You can have both resolve and non-resolve locations for same domain <code>&lt;https://github.com/DmitryFillo/nginx-proxy-pitfalls/blob/master/README.rst#you-can-have-both-resolve-and-non-resolve-locations-for-same-domain&gt;</code>_.</li>
+<li>When a variable is used in proxy_pass directive, the location header is not longer adjusted. To get around this, simply set <code>proxy_redirect</code>
+</br><code>Read more &lt;https://github.com/DmitryFillo/nginx-proxy-pitfalls#caveats&gt;</code></li>
 </ul>
 <p>But I recommend to read full article, because it's interesting.</p>
-<h1 id="explanatory-example">Explanatory example<a class="headerlink" href="#explanatory-example" title="Permanent link">&para;</a></h1>
-<p>.. code:: nginx</p>
-<p>location /api/ {
-      proxy_pass <a href="http://api.com/">http://api.com/</a>;
-  }</p>
-<p>In this case nginx will resolve api.com only once at startup (or reload). But there are some cases when your endpoint can be resolved to any IP, e.g. if you're using load balancer which doing magic failover via DNS mapping. If api.com will point to another IP your proxying will fail.</p>
-<h1 id="finding-the-solution">Finding the solution<a class="headerlink" href="#finding-the-solution" title="Permanent link">&para;</a></h1>
-<h2 id="add-a-resolver-directive">Add a resolver directive<a class="headerlink" href="#add-a-resolver-directive" title="Permanent link">&para;</a></h2>
-<p>You can check <code>official nginx documentation &lt;http://nginx.org/en/docs/&gt;</code>_ and find <code>resolver &lt;http://nginx.org/en/docs/http/ngx_http_core_module.html#resolver&gt;</code>_ directive:</p>
-<p>.. code:: nginx</p>
-<p>location /api/ {
-      resolver 8.8.8.8;
-      proxy_pass <a href="https://api.com/">https://api.com/</a>;
-  }</p>
-<p>No, it will not work. Even this will not work:</p>
-<p>.. code:: nginx</p>
-<p>location /api/ {
-      resolver 8.8.8.8 valid=1s;
-      proxy_pass <a href="https://api.com/">https://api.com/</a>;
-  }</p>
-<p>It's because of nginx doesn't respect <code>resolver</code> directive in this case. It will resolve api.com only at startup (or reload) by system resolver (/etc/resolv.conf), even if real TTL of A/AAAA record api.com is 1s.</p>
-<h2 id="add-variables">Add variables<a class="headerlink" href="#add-variables" title="Permanent link">&para;</a></h2>
-<p>You can google a bit and find that <code>nginx try to resolve proxy endpoint with variables &lt;https://trac.nginx.org/nginx/ticket/723&gt;</code><em>. Also <code>official documentation for proxy_pass directive notices this too &lt;http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_pass&gt;</code></em>. Hmmm, I think this should be noticed in the <code>resolver</code> description, but let's try anyway:</p>
-<p>.. code:: nginx</p>
-<p>location = /proxy/ {
-      set <span><span class="MathJax_Preview">endpoint proxy.com;
-      resolver 8.8.8.8 valid=10s;
-      proxy_pass https://</span><script type="math/tex">endpoint proxy.com;
-      resolver 8.8.8.8 valid=10s;
-      proxy_pass https://</script></span>endpoint/;
-  }</p>
-<p>Works as expected, nginx will query proxy.com every 10s on particular requests. These configurations works too:</p>
-<p>.. code:: nginx</p>
-<p>set <span><span class="MathJax_Preview">endpoint api.com;
-  location ~ ^/api/(.*)</span><script type="math/tex">endpoint api.com;
-  location ~ ^/api/(.*)</script></span> {
-      resolver 8.8.8.8 valid=60s;
-      proxy_pass https://<span><span class="MathJax_Preview">endpoint/</span><script type="math/tex">endpoint/</script></span>1<span><span class="MathJax_Preview">is_args</span><script type="math/tex">is_args</script></span>args;
-  }</p>
-<p>.. code:: nginx</p>
-<p>location ~ ^/(?<dest_proxy>[\w-]+)(?:/(?<path_proxy>.*))? {
-      resolver 8.8.8.8 ipv6=off valid=60s;
-      proxy_pass https://<span path_proxy="path_proxy"><span class="MathJax_Preview">{dest_proxy}.example.com/</span><script type="math/tex">{dest_proxy}.example.com/</script></span><span><span class="MathJax_Preview">is_args</span><script type="math/tex">is_args</script></span>args;
-  }</p>
-<p>Notice that nginx will start even without <code>resolver</code> directive, but will fail with 502 at runtime, because "no resolver defined to resolve".</p>
-<h2 id="caveats">Caveats<a class="headerlink" href="#caveats" title="Permanent link">&para;</a></h2>
-<p>.. code:: nginx</p>
-<p>location = /api_version/ {
-      proxy_pass <a href="https://api.com/version/">https://api.com/version/</a>;
-  }</p>
-<p>location ~ ^/api/(.*)$ {
-      set <span><span class="MathJax_Preview">endpoint api.com;
-      resolver 8.8.8.8 valid=60s;
-      proxy_pass https://</span><script type="math/tex">endpoint api.com;
-      resolver 8.8.8.8 valid=60s;
-      proxy_pass https://</script></span>endpoint/<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>is_args$args;
-  }</p>
-<p>In this case nginx will resolve api.com once at startup with system resolver and then will never do re-resolve even for /api/ requests. <em>Example with /api_version/ is just synthetic example, you can use more complex scenarios with headers set, etc.</em></p>
-<p>Use variables everywhere to make it work as expected:</p>
-<p>.. code:: nginx</p>
-<p>location = /api_version/ {
-      set <span><span class="MathJax_Preview">endpoint api.com;
-      resolver 8.8.8.8 valid=60s;
-      proxy_pass https://</span><script type="math/tex">endpoint api.com;
-      resolver 8.8.8.8 valid=60s;
-      proxy_pass https://</script></span>endpoint/version/;
-  }</p>
-<p>location ~ ^/api/(.*)$ {
-      set <span><span class="MathJax_Preview">endpoint api.com;
-      resolver 8.8.8.8 valid=60s;
-      proxy_pass https://</span><script type="math/tex">endpoint api.com;
-      resolver 8.8.8.8 valid=60s;
-      proxy_pass https://</script></span>endpoint/<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>is_args$args;
-  }</p>
-<p>You can move <code>set</code> and <code>resolver</code> to the <code>server</code> or <code>http</code> (or use <code>include</code>) directives to avoid copy-paste (also I assume that it will increase perfomance a bit, but I haven't tested it).</p>
-<p>If response from proxy contains <code>Location</code> header, as in the case of a redirect, nginx will automatically replace these values as needed. However, if variables are used in <code>proxy_pass</code>, this must be done explicitly via <code>proxy_redirect</code>:</p>
-<p>.. code:: nginx</p>
-<p>location = /api_version/ {
-      set <span><span class="MathJax_Preview">endpoint api.com;
-      resolver 8.8.8.8 valid=60s;
-      proxy_pass https://</span><script type="math/tex">endpoint api.com;
-      resolver 8.8.8.8 valid=60s;
-      proxy_pass https://</script></span>endpoint/version/;
-      proxy_redirect https://$endpoint/ /;
-  }</p>
-<p>location ~ ^/api/(.*)$ {
-      set <span><span class="MathJax_Preview">endpoint api.com;
-      resolver 8.8.8.8 valid=60s;
-      proxy_pass https://</span><script type="math/tex">endpoint api.com;
-      resolver 8.8.8.8 valid=60s;
-      proxy_pass https://</script></span>endpoint/<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>is_args<span><span class="MathJax_Preview">args;
-      proxy_redirect https://</span><script type="math/tex">args;
-      proxy_redirect https://</script></span>endpoint/ /;
-  }</p>
-<p>Single line in <code>nginx docs &lt;http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_redirect&gt;</code>_ that mention it:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>The default parameter is not permitted if proxy_pass is specified using variables.
+<h2 id="explanatory-example">Explanatory example<a class="headerlink" href="#explanatory-example" title="Permanent link">&para;</a></h2>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">location</span> <span class="s">/api/</span> <span class="p">{</span>
+        <span class="kn">proxy_pass</span> <span class="s">http://api.com/</span><span class="p">;</span>
+    <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
 
-<h1 id="upstreams">Upstreams<a class="headerlink" href="#upstreams" title="Permanent link">&para;</a></h1>
-<p>If you're using nginx plus, you can use <code>resolve</code> parameter, <code>check out documentation &lt;http://nginx.org/en/docs/http/ngx_http_upstream_module.html#server&gt;</code>_. I assume that it will be efficient, because documentation says "monitors changes of the IP addresses that correspond to a domain name of the server", while solutions listed above will query DNS on the particular requests. But if you're using open source nginx, no honey is available for you. No money — no honey.</p>
-<h2 id="you-can-have-both-resolve-and-non-resolve-locations-for-same-domain">You can have both resolve and non-resolve locations for same domain<a class="headerlink" href="#you-can-have-both-resolve-and-non-resolve-locations-for-same-domain" title="Permanent link">&para;</a></h2>
-<p>.. code:: nginx</p>
-<p>upstream proxy {
-      server proxy.com:443;
-  }</p>
-<p>server {
-      listen      80;
-      server_name fillo.me;</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<p>In this case nginx will resolve api.com only once at startup (or reload). But there are some cases when your endpoint can be resolved to any IP, e.g. if you're using load balancer which doing magic failover via DNS mapping. If api.com will point to another IP your proxying will fail.</p>
+<h2 id="finding-the-solution">Finding the solution<a class="headerlink" href="#finding-the-solution" title="Permanent link">&para;</a></h2>
+<h2 id="add-a-resolver-directive">Add a resolver directive<a class="headerlink" href="#add-a-resolver-directive" title="Permanent link">&para;</a></h2>
+<p>You can check <code>official nginx documentation &lt;http://nginx.org/en/docs/&gt;</code> and find <code>resolver &lt;http://nginx.org/en/docs/http/ngx_http_core_module.html#resolver&gt;</code> directive:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">location</span> <span class="s">/api/</span> <span class="p">{</span>
+        <span class="kn">resolver</span> <span class="mi">8</span><span class="s">.8.8.8</span><span class="p">;</span>
+        <span class="kn">proxy_pass</span> <span class="s">https://api.com/</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+
+<p>No, it will not work. Even this will not work:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">location</span> <span class="s">/api/</span> <span class="p">{</span>
+      <span class="kn">resolver</span> <span class="mi">8</span><span class="s">.8.8.8</span> <span class="s">valid=1s</span><span class="p">;</span>
+      <span class="kn">proxy_pass</span> <span class="s">https://api.com/</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+
+<p>It's because of nginx doesn't respect <code>resolver</code> directive in this case. It will resolve api.com only at startup (or reload) by system resolver (/etc/resolv.conf), even if real TTL of A/AAAA record api.com is 1s.</p>
+<h2 id="add-variables">Add variables<a class="headerlink" href="#add-variables" title="Permanent link">&para;</a></h2>
+<p>You can google a bit and find that <code>nginx try to resolve proxy endpoint with variables &lt;https://trac.nginx.org/nginx/ticket/723&gt;</code><em>. Also <code>official documentation for proxy_pass directive notices this too &lt;http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_pass&gt;</code></em>. Hmmm, I think this should be noticed in the <code>resolver</code> description, but let's try anyway:</p>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">location</span> <span class="p">=</span> <span class="s">/proxy/</span> <span class="p">{</span>
+        <span class="kn">set</span> <span class="nv">$endpoint</span> <span class="s">proxy.com</span><span class="p">;</span>
+        <span class="kn">resolver</span> <span class="mi">8</span><span class="s">.8.8.8</span> <span class="s">valid=10s</span><span class="p">;</span>
+        <span class="kn">proxy_pass</span> <span class="s">https://</span><span class="nv">$endpoint/</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+Works as expected, nginx will query proxy.com every 10s on particular requests. These configurations works too:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">set</span> <span class="nv">$endpoint</span> <span class="s">api.com</span><span class="p">;</span>
+    <span class="k">location</span> <span class="p">~</span> <span class="sr">^/api/(.*)$</span> <span class="p">{</span>
+        <span class="kn">resolver</span> <span class="mi">8</span><span class="s">.8.8.8</span> <span class="s">valid=60s</span><span class="p">;</span>
+        <span class="kn">proxy_pass</span> <span class="s">https://</span><span class="nv">$endpoint/$1$is_args$args</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">location</span> <span class="p">~</span> <span class="sr">^/(?&lt;dest_proxy&gt;[\w-]+)(?:/(?&lt;path_proxy&gt;.*))?</span> <span class="p">{</span>
+        <span class="kn">resolver</span> <span class="mi">8</span><span class="s">.8.8.8</span> <span class="s">ipv6=off</span> <span class="s">valid=60s</span><span class="p">;</span>
+        <span class="kn">proxy_pass</span> <span class="s">https://</span><span class="nv">${dest_proxy}.example.com/${path_proxy}$is_args$args</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+Notice that nginx will start even without <code>resolver</code> directive, but will fail with 502 at runtime, because "no resolver defined to resolve".</p>
+<h2 id="caveats">Caveats<a class="headerlink" href="#caveats" title="Permanent link">&para;</a></h2>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">location</span> <span class="p">=</span> <span class="s">/api_version/</span> <span class="p">{</span>
+        <span class="kn">proxy_pass</span> <span class="s">https://api.com/version/</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">location</span> <span class="p">~</span> <span class="sr">^/api/(.*)$</span> <span class="p">{</span>
+        <span class="kn">set</span> <span class="nv">$endpoint</span> <span class="s">api.com</span><span class="p">;</span>
+        <span class="kn">resolver</span> <span class="mi">8</span><span class="s">.8.8.8</span> <span class="s">valid=60s</span><span class="p">;</span>
+        <span class="kn">proxy_pass</span> <span class="s">https://</span><span class="nv">$endpoint/$1$is_args$args</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+In this case nginx will resolve api.com once at startup with system resolver and then will never do re-resolve even for /api/ requests. <em>Example with /api_version/ is just synthetic example, you can use more complex scenarios with headers set, etc.</em></p>
+<p>Use variables everywhere to make it work as expected:</p>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -836,66 +1014,146 @@ NGINX proxy pitfalls related with DNS resolving
  7
  8
  9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>  location = /proxy-with-resolve/ {
-     set $endpoint proxy.com;
-     resolver 8.8.8.8 valid=1s;
-     proxy_pass https://$endpoint/;
-  }
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">location</span> <span class="p">=</span> <span class="s">/api_version/</span> <span class="p">{</span>
+        <span class="kn">set</span> <span class="nv">$endpoint</span> <span class="s">api.com</span><span class="p">;</span>
+        <span class="kn">resolver</span> <span class="mi">8</span><span class="s">.8.8.8</span> <span class="s">valid=60s</span><span class="p">;</span>
+        <span class="kn">proxy_pass</span> <span class="s">https://</span><span class="nv">$endpoint/version/</span><span class="p">;</span>
+    <span class="p">}</span>
 
-  location = /proxy-without-resolve/ {
-     proxy_pass https://proxy/;
-     proxy_set_header Host proxy.com;
-  }
+    <span class="k">location</span> <span class="p">~</span> <span class="sr">^/api/(.*)$</span> <span class="p">{</span>
+        <span class="kn">set</span> <span class="nv">$endpoint</span> <span class="s">api.com</span><span class="p">;</span>
+        <span class="kn">resolver</span> <span class="mi">8</span><span class="s">.8.8.8</span> <span class="s">valid=60s</span><span class="p">;</span>
+        <span class="kn">proxy_pass</span> <span class="s">https://</span><span class="nv">$endpoint/$1$is_args$args</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+You can move <code>set</code> and <code>resolver</code> to the <code>server</code> or <code>http</code> (or use <code>include</code>) directives to avoid copy-paste (also I assume that it will increase performance a bit, but I haven't tested it).</p>
+<p>If response from proxy contains <code>Location</code> header, as in the case of a redirect, nginx will automatically replace these values as needed. However, if variables are used in <code>proxy_pass</code>, this must be done explicitly via <code>proxy_redirect</code>:</p>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">location</span> <span class="p">=</span> <span class="s">/api_version/</span> <span class="p">{</span>
+        <span class="kn">set</span> <span class="nv">$endpoint</span> <span class="s">api.com</span><span class="p">;</span>
+        <span class="kn">resolver</span> <span class="mi">8</span><span class="s">.8.8.8</span> <span class="s">valid=60s</span><span class="p">;</span>
+        <span class="kn">proxy_pass</span> <span class="s">https://</span><span class="nv">$endpoint/version/</span><span class="p">;</span>
+        <span class="kn">proxy_redirect</span> <span class="s">https://</span><span class="nv">$endpoint/</span> <span class="s">/</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">location</span> <span class="p">~</span> <span class="sr">^/api/(.*)$</span> <span class="p">{</span>
+        <span class="kn">set</span> <span class="nv">$endpoint</span> <span class="s">api.com</span><span class="p">;</span>
+        <span class="kn">resolver</span> <span class="mi">8</span><span class="s">.8.8.8</span> <span class="s">valid=60s</span><span class="p">;</span>
+        <span class="kn">proxy_pass</span> <span class="s">https://</span><span class="nv">$endpoint/$1$is_args$args</span><span class="p">;</span>
+        <span class="kn">proxy_redirect</span> <span class="s">https://</span><span class="nv">$endpoint/</span> <span class="s">/</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+Single line in <code>nginx docs &lt;http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_redirect&gt;</code> that mention it: <mark>The default parameter is not permitted if proxy_pass is specified using variables.</mark></p>
+<h2 id="upstreams">Upstreams<a class="headerlink" href="#upstreams" title="Permanent link">&para;</a></h2>
+<p>If you're using nginx plus, you can use <code>resolve</code> parameter, <code>check out documentation &lt;http://nginx.org/en/docs/http/ngx_http_upstream_module.html#server&gt;</code>_. I assume that it will be efficient, because documentation says "monitors changes of the IP addresses that correspond to a domain name of the server", while solutions listed above will query DNS on the particular requests. But if you're using open source nginx, no honey is available for you. No money — no honey.</p>
+<h2 id="you-can-have-both-resolve-and-non-resolve-locations-for-same-domain">You can have both resolve and non-resolve locations for same domain<a class="headerlink" href="#you-can-have-both-resolve-and-non-resolve-locations-for-same-domain" title="Permanent link">&para;</a></h2>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">upstream</span> <span class="s">proxy</span> <span class="p">{</span>
+        <span class="kn">server</span> <span class="n">proxy.com</span><span class="p">:</span><span class="mi">443</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">server</span> <span class="p">{</span>
+        <span class="kn">listen</span>      <span class="mi">80</span><span class="p">;</span>
+        <span class="kn">server_name</span> <span class="s">fillo.me</span><span class="p">;</span>
+
+        <span class="kn">location</span> <span class="p">=</span> <span class="s">/proxy-with-resolve/</span> <span class="p">{</span>
+            <span class="kn">set</span> <span class="nv">$endpoint</span> <span class="s">proxy.com</span><span class="p">;</span>
+            <span class="kn">resolver</span> <span class="mi">8</span><span class="s">.8.8.8</span> <span class="s">valid=1s</span><span class="p">;</span>
+            <span class="kn">proxy_pass</span> <span class="s">https://</span><span class="nv">$endpoint/</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="kn">location</span> <span class="p">=</span> <span class="s">/proxy-without-resolve/</span> <span class="p">{</span>
+            <span class="kn">proxy_pass</span> <span class="s">https://proxy/</span><span class="p">;</span>
+            <span class="kn">proxy_set_header</span> <span class="s">Host</span> <span class="s">proxy.com</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
 
-<p>}</p>
 <p>Yes, <a href="http://fillo.me/proxy-with-resolve/">http://fillo.me/proxy-with-resolve/</a> will resolve proxy.com every 1s on particular requests, while <a href="http://fillo.me/proxy-without-resolve/">http://fillo.me/proxy-without-resolve/</a> will not resolve proxy.com (nginx will resolve proxy.com at startup/reload once). This magic works because <code>upstream</code> directive is used.</p>
 <p>Another example:</p>
-<p>.. code:: nginx</p>
-<p>upstream api_version {
-      server version.api.com:443;
-  }</p>
-<p>server {
-      listen      80;
-      server_name fillo.me;</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>  location = /api_version/ {
-     proxy_pass https://api_version/version/;
-     proxy_set_header Host version.api.com;
-  }
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">upstream</span> <span class="s">api_version</span> <span class="p">{</span>
+        <span class="kn">server</span> <span class="n">version.api.com</span><span class="p">:</span><span class="mi">443</span><span class="p">;</span>
+    <span class="p">}</span>
 
-  location ~ ^/api/(?&lt;dest_proxy&gt;[\w-]+)(?:/(?&lt;path_proxy&gt;.*))? {
-      resolver 8.8.8.8 valid=60s;
-      proxy_pass https://${dest_proxy}.api.com/${path_proxy}$is_args$args;
-  }
+    <span class="k">server</span> <span class="p">{</span>
+        <span class="kn">listen</span>      <span class="mi">80</span><span class="p">;</span>
+        <span class="kn">server_name</span> <span class="s">fillo.me</span><span class="p">;</span>
+
+        <span class="kn">location</span> <span class="p">=</span> <span class="s">/api_version/</span> <span class="p">{</span>
+            <span class="kn">proxy_pass</span> <span class="s">https://api_version/version/</span><span class="p">;</span>
+            <span class="kn">proxy_set_header</span> <span class="s">Host</span> <span class="s">version.api.com</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="kn">location</span> <span class="p">~</span> <span class="sr">^/api/(?&lt;dest_proxy&gt;[\w-]+)(?:/(?&lt;path_proxy&gt;.*))?</span> <span class="p">{</span>
+            <span class="kn">resolver</span> <span class="mi">8</span><span class="s">.8.8.8</span> <span class="s">valid=60s</span><span class="p">;</span>
+            <span class="kn">proxy_pass</span> <span class="s">https://</span><span class="nv">${dest_proxy}.api.com/${path_proxy}$is_args$args</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-
-<p>}</p>
-<ul>
-<li>If you will open <a href="http://fillo.me/api_version/">http://fillo.me/api_version/</a> then no resolve will be done, because of nginx resolved version.api.com at startup.</li>
-<li>If you will open <a href="http://fillo.me/api/version/version/">http://fillo.me/api/version/version/</a> then it will work as expected, nginx will resolve version.api.com every 60s on particular request.</li>
-<li>If you will open <a href="http://fillo.me/api/checkout/items/">http://fillo.me/api/checkout/items/</a> then it will work as expected, nginx will resolve checkout.api.com every 60s on particular request.</li>
-</ul>
-<h1 id="tested-on">Tested on<a class="headerlink" href="#tested-on" title="Permanent link">&para;</a></h1>
+* If you will open <a href="http://fillo.me/api_version/">http://fillo.me/api_version/</a> then no resolve will be done, because of nginx resolved version.api.com at startup.
+* If you will open <a href="http://fillo.me/api/version/version/">http://fillo.me/api/version/version/</a> then it will work as expected, nginx will resolve version.api.com every 60s on particular request.
+* If you will open <a href="http://fillo.me/api/checkout/items/">http://fillo.me/api/checkout/items/</a> then it will work as expected, nginx will resolve checkout.api.com every 60s on particular request.</p>
+<h4 id="tested-on">Tested on<a class="headerlink" href="#tested-on" title="Permanent link">&para;</a></h4>
 <ul>
 <li>1.9.6</li>
 <li>1.10.1</li>
 </ul>
 <p>Although I think it works for many other versions.</p>
-<h1 id="further-research">Further research<a class="headerlink" href="#further-research" title="Permanent link">&para;</a></h1>
+<h4 id="further-research">Further research<a class="headerlink" href="#further-research" title="Permanent link">&para;</a></h4>
 <ul>
-<li><code>This issue &lt;https://trac.nginx.org/nginx/ticket/723&gt;</code>_ says that changing HTTPS to the HTTP helps. Check how protocol changes affects examples above.</li>
-<li>Compare perfomance with and without resolving.</li>
-<li>Compare perfomance with different variables scopes.</li>
+<li><code>This issue &lt;https://trac.nginx.org/nginx/ticket/723&gt;</code> says that changing HTTPS to the HTTP helps. Check how protocol changes affects examples above.</li>
+<li>Compare performance with and without resolving.</li>
+<li>Compare performance with different variables scopes.</li>
 <li>How to force upstream resolving.</li>
 </ul>
                 
