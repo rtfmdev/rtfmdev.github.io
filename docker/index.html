@@ -17,7 +17,7 @@
         <meta name="author" content="Den Zalman">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.3">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.a2408e81.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.fe0cca5b.min.css">
       
         <link rel="stylesheet" href="../assets/stylesheets/palette.a46bcfb3.min.css">
       
@@ -54,7 +54,6 @@
     
       
         
-<link rel="preconnect dns-prefetch" href="https://www.google-analytics.com">
 <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-XXXXXXXX-X","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
 <script async src="https://www.google-analytics.com/analytics.js"></script>
       
@@ -68,6 +67,7 @@
     
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -484,6 +484,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#open-sockets-inside-docker-container" class="md-nav__link">
+    Open sockets inside docker container
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -815,6 +822,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#open-sockets-inside-docker-container" class="md-nav__link">
+    Open sockets inside docker container
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -926,6 +940,16 @@ mkdir -p <span class="nv">$chr</span>
 <p>Use exit to leave the chroot environment:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">exit</span>
 </code></pre></div>
+
+<h3 id="open-sockets-inside-docker-container">Open sockets inside docker container<a class="headerlink" href="#open-sockets-inside-docker-container" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>docker inspect -f <span class="s1">&#39;{{.State.Pid}}&#39;</span> container_name_or_id
+</code></pre></div>
+And once you have the PID, use that as the argument to the target (-t) option of <strong>nsenter</strong>. For example, to run <strong>netstat</strong> inside the container network namespace:</p>
+<div class="highlight"><pre><span></span><code>$ sudo nsenter -t <span class="m">15652</span> -n netstat
+Active Internet connections <span class="o">(</span>only servers<span class="o">)</span>
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        <span class="m">0</span>      <span class="m">0</span> <span class="m">0</span>.0.0.0:80              <span class="m">0</span>.0.0.0:*               LISTEN  
+</code></pre></div>
                 
                   
                 
@@ -1034,14 +1058,14 @@ mkdir -p <span class="nv">$chr</span>
     </div>
     
       <script src="../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../assets/javascripts/bundle.4a5ba8d6.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
           base: "..",
           features: [],
           search: Object.assign({
-            worker: "../assets/javascripts/worker/search.27c6a5e6.min.js"
+            worker: "../assets/javascripts/worker/search.9b3611bd.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
