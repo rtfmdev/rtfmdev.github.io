@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#trapping-sig-inside-fargate-and-ecs-containers" class="md-skip">
+        <a href="#_1" class="md-skip">
           Skip to content
         </a>
       
@@ -232,6 +232,8 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         ECS Fargate
@@ -247,6 +249,8 @@
       
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -323,6 +327,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esr-repo-access-from-another-account" class="md-nav__link">
+    ESR repo access from another account
+  </a>
   
 </li>
       
@@ -790,6 +801,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon">
@@ -868,6 +881,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#esr-repo-access-from-another-account" class="md-nav__link">
+    ESR repo access from another account
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -884,9 +904,8 @@
                   
                 
                 
-                  <h1>ECS Fargate</h1>
-                
-                <h2 id="trapping-sig-inside-fargate-and-ecs-containers">Trapping SIG inside Fargate and ECS containers<a class="headerlink" href="#trapping-sig-inside-fargate-and-ecs-containers" title="Permanent link">&para;</a></h2>
+                <h1 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="trapping-sig-inside-fargate-and-ecs-containers">Trapping SIG inside Fargate and ECS containers<a class="headerlink" href="#trapping-sig-inside-fargate-and-ecs-containers" title="Permanent link">&para;</a></h2>
 <p>Wrap any container, which you want to trap signals inside.
 In my example I use custom SIG handler for prevent Consul Agent sidecar's early shutdown. Timeout can be set through env variable EXIT_TIMEOUT.</p>
 <p><strong>Dockerfile</strong></p>
@@ -1050,6 +1069,43 @@ $ aws application-autoscaling put-scheduled-action --service-namespace ecs <span
 
 <span class="na">  depends_on</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;aws_appautoscaling_target.tgt&quot;</span><span class="p">]</span>
 <span class=" -Punctuation">}</span>
+</code></pre></div>
+
+<h2 id="esr-repo-access-from-another-account">ESR repo access from another account<a class="headerlink" href="#esr-repo-access-from-another-account" title="Permanent link">&para;</a></h2>
+<p>Set Repo Permissions Policy in main Account A for Account B:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;Version&quot;</span><span class="p">:</span> <span class="s2">&quot;2012-10-17&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Statement&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;Effect&quot;</span><span class="p">:</span> <span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Action&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;ecr:GetAuthorizationToken&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;ecr:BatchCheckLayerAvailability&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;ecr:GetDownloadUrlForLayer&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;ecr:GetRepositoryPolicy&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;ecr:DescribeRepositories&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;ecr:ListImages&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;ecr:DescribeImages&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;ecr:BatchGetImage&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;ecr:InitiateLayerUpload&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;ecr:UploadLayerPart&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;ecr:CompleteLayerUpload&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;ecr:PutImage&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;Condition&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;StringLike&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;aws:ResourceTag/Team&quot;</span><span class="p">:</span> <span class="s2">&quot;Payments&quot;</span>
+          <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;Principal&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;AWS&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="err">//</span> <span class="err">Cahnge</span> <span class="err">to</span> <span class="s2">&quot;root&quot;</span> <span class="err">for</span> <span class="err">whole</span> <span class="err">account</span> <span class="err">B</span> <span class="err">access</span>
+            <span class="s2">&quot;arn:aws:iam::YOUR-ACCOUNT-B-ID:user/devusr2&quot;</span> 
+          <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;Sid&quot;</span><span class="p">:</span> <span class="s2">&quot;AllowCrossAccountPushAndPull&quot;</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
 </code></pre></div>
                 
                   
