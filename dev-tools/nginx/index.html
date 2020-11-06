@@ -1,6 +1,4 @@
 
-
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -11,13 +9,14 @@
         <meta name="description" content="Devops manual, howto, cheatseet, tips and notes">
       
       
+      
         <link rel="canonical" href="https://rtfmdev.github.io/dev-tools/nginx/">
       
       
         <meta name="author" content="Den Zalman">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.3">
     
     
       
@@ -25,19 +24,21 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.947af8d5.min.css">
-      
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.7f672a1f.min.css">
-      
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2cb7adb3.min.css">
       
         
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f0267088.min.css">
         
-        <meta name="theme-color" content="#3f51b5">
+          
+          
+          <meta name="theme-color" content="#4051b5">
+        
       
     
     
     
       
+        
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
@@ -65,9 +66,11 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="indigo">
-  
     
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="indigo">
+      
+  
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -83,7 +86,9 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
+      
+
+<header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href="https://rtfmdev.github.io" title="RTFM for Dev and Ops" class="md-header-nav__button md-logo" aria-label="RTFM for Dev and Ops">
       
@@ -145,8 +150,6 @@
     
     <div class="md-container" data-md-component="container">
       
-        
-      
       
         
       
@@ -157,7 +160,9 @@
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="https://rtfmdev.github.io" title="RTFM for Dev and Ops" class="md-nav__button md-logo" aria-label="RTFM for Dev and Ops">
       
@@ -176,7 +181,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="Main page" class="md-nav__link">
+    <a href="../.." class="md-nav__link">
       Main page
     </a>
   </li>
@@ -193,15 +198,11 @@
     
     <label class="md-nav__link" for="nav-2">
       AWS services
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="AWS services" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
+        <span class="md-nav__icon md-icon"></span>
         AWS services
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -213,7 +214,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../AWS_services/" title="AWS services" class="md-nav__link">
+    <a href="../../AWS_services/" class="md-nav__link">
       AWS services
     </a>
   </li>
@@ -225,7 +226,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../AWS_services/assumeRole/" title="Assume Role" class="md-nav__link">
+    <a href="../../AWS_services/assumeRole/" class="md-nav__link">
       Assume Role
     </a>
   </li>
@@ -237,7 +238,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../AWS_services/fargate/" title="ECS Fargate" class="md-nav__link">
+    <a href="../../AWS_services/fargate/" class="md-nav__link">
       ECS Fargate
     </a>
   </li>
@@ -249,7 +250,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../AWS_services/useful-tips/" title="Useful Tips" class="md-nav__link">
+    <a href="../../AWS_services/useful-tips/" class="md-nav__link">
       Useful Tips
     </a>
   </li>
@@ -273,15 +274,11 @@
     
     <label class="md-nav__link" for="nav-3">
       Dev tools
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Dev tools" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
+        <span class="md-nav__icon md-icon"></span>
         Dev tools
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -293,7 +290,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../git/" title="Git Tricks" class="md-nav__link">
+    <a href="../git/" class="md-nav__link">
       Git Tricks
     </a>
   </li>
@@ -305,7 +302,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../javascript/" title="Javascript" class="md-nav__link">
+    <a href="../javascript/" class="md-nav__link">
       Javascript
     </a>
   </li>
@@ -317,7 +314,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../jenkins/" title="Jenkins" class="md-nav__link">
+    <a href="../jenkins/" class="md-nav__link">
       Jenkins
     </a>
   </li>
@@ -329,7 +326,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../mongo/" title="MongoDB" class="md-nav__link">
+    <a href="../mongo/" class="md-nav__link">
       MongoDB
     </a>
   </li>
@@ -351,12 +348,10 @@
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         Nginx
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
+        <span class="md-nav__icon md-icon"></span>
       </label>
     
-    <a href="./" title="Nginx" class="md-nav__link md-nav__link--active">
+    <a href="./" class="md-nav__link md-nav__link--active">
       Nginx
     </a>
     
@@ -368,9 +363,7 @@
   
   
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -470,7 +463,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../one-liners/" title="Bash oneliners" class="md-nav__link">
+    <a href="../one-liners/" class="md-nav__link">
       Bash oneliners
     </a>
   </li>
@@ -482,7 +475,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../python/" title="Python" class="md-nav__link">
+    <a href="../python/" class="md-nav__link">
       Python
     </a>
   </li>
@@ -494,7 +487,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../terraform/" title="Terraform" class="md-nav__link">
+    <a href="../terraform/" class="md-nav__link">
       Terraform
     </a>
   </li>
@@ -516,15 +509,11 @@
     
     <label class="md-nav__link" for="nav-4">
       Docker
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Docker" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
+        <span class="md-nav__icon md-icon"></span>
         Docker
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -536,7 +525,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../docker/" title="Docker tips" class="md-nav__link">
+    <a href="../../docker/" class="md-nav__link">
       Docker tips
     </a>
   </li>
@@ -548,7 +537,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../docker/commans/" title="Cheatsheet" class="md-nav__link">
+    <a href="../../docker/commans/" class="md-nav__link">
       Cheatsheet
     </a>
   </li>
@@ -570,15 +559,11 @@
     
     <label class="md-nav__link" for="nav-5">
       Kubernetes
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Kubernetes" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
+        <span class="md-nav__icon md-icon"></span>
         Kubernetes
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -590,7 +575,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../kubernetes/advanced_tools/" title="Advanced tools" class="md-nav__link">
+    <a href="../../kubernetes/advanced_tools/" class="md-nav__link">
       Advanced tools
     </a>
   </li>
@@ -602,7 +587,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../kubernetes/configMaps/" title="ConfigMaps and Secrets" class="md-nav__link">
+    <a href="../../kubernetes/configMaps/" class="md-nav__link">
       ConfigMaps and Secrets
     </a>
   </li>
@@ -614,7 +599,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../kubernetes/helm/" title="Helm" class="md-nav__link">
+    <a href="../../kubernetes/helm/" class="md-nav__link">
       Helm
     </a>
   </li>
@@ -626,7 +611,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../kubernetes/ingress/" title="Ingress" class="md-nav__link">
+    <a href="../../kubernetes/ingress/" class="md-nav__link">
       Ingress
     </a>
   </li>
@@ -638,7 +623,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../kubernetes/kubectl/" title="kubectl cheatsheet" class="md-nav__link">
+    <a href="../../kubernetes/kubectl/" class="md-nav__link">
       kubectl cheatsheet
     </a>
   </li>
@@ -650,7 +635,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../kubernetes/monitoring/" title="Monitoring" class="md-nav__link">
+    <a href="../../kubernetes/monitoring/" class="md-nav__link">
       Monitoring
     </a>
   </li>
@@ -662,7 +647,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../kubernetes/networking/" title="Networking" class="md-nav__link">
+    <a href="../../kubernetes/networking/" class="md-nav__link">
       Networking
     </a>
   </li>
@@ -674,7 +659,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../kubernetes/volume_types/" title="Volume Types" class="md-nav__link">
+    <a href="../../kubernetes/volume_types/" class="md-nav__link">
       Volume Types
     </a>
   </li>
@@ -696,15 +681,11 @@
     
     <label class="md-nav__link" for="nav-6">
       Linux
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Linux" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
+        <span class="md-nav__icon md-icon"></span>
         Linux
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -716,7 +697,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../linux/" title="Linux" class="md-nav__link">
+    <a href="../../linux/" class="md-nav__link">
       Linux
     </a>
   </li>
@@ -738,15 +719,11 @@
     
     <label class="md-nav__link" for="nav-7">
       Miscellaneous
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Miscellaneous" data-md-level="1">
       <label class="md-nav__title" for="nav-7">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
+        <span class="md-nav__icon md-icon"></span>
         Miscellaneous
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -758,7 +735,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../miscellaneous/" title="Notes" class="md-nav__link">
+    <a href="../../miscellaneous/" class="md-nav__link">
       Notes
     </a>
   </li>
@@ -770,7 +747,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../miscellaneous/bookshelf/" title="Bookshelf" class="md-nav__link">
+    <a href="../../miscellaneous/bookshelf/" class="md-nav__link">
       Bookshelf
     </a>
   </li>
@@ -782,7 +759,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../miscellaneous/makdocs/" title="Makdocs helper" class="md-nav__link">
+    <a href="../../miscellaneous/makdocs/" class="md-nav__link">
       Makdocs helper
     </a>
   </li>
@@ -811,9 +788,7 @@
   
   
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -913,9 +888,6 @@
               
                 
                 
-                  
-                
-                
                 <h1 id="nginx-proxy-pitfalls-related-with-dns-resolving">NGINX proxy pitfalls related with DNS resolving<a class="headerlink" href="#nginx-proxy-pitfalls-related-with-dns-resolving" title="Permanent link">&para;</a></h1>
 <p>If you're using <code>proxy_pass</code> and your endpoint's IPs can vary in time, please read this article to avoid misunderstandings about how nginx works.</p>
 <h2 id="tldr">TL;DR<a class="headerlink" href="#tldr" title="Permanent link">&para;</a></h2>
@@ -931,7 +903,6 @@
         <span class="kn">proxy_pass</span> <span class="s">http://api.com/</span><span class="p">;</span>
     <span class="p">}</span>
 </code></pre></div>
-
 <p>In this case nginx will resolve api.com only once at startup (or reload). But there are some cases when your endpoint can be resolved to any IP, e.g. if you're using load balancer which doing magic failover via DNS mapping. If api.com will point to another IP your proxying will fail.</p>
 <h2 id="finding-the-solution">Finding the solution<a class="headerlink" href="#finding-the-solution" title="Permanent link">&para;</a></h2>
 <h3 id="add-a-resolver-directive">Add a resolver directive<a class="headerlink" href="#add-a-resolver-directive" title="Permanent link">&para;</a></h3>
@@ -941,14 +912,12 @@
         <span class="kn">proxy_pass</span> <span class="s">https://api.com/</span><span class="p">;</span>
     <span class="p">}</span>
 </code></pre></div>
-
 <p>No, it will not work. Even this will not work:</p>
 <div class="highlight"><pre><span></span><code>    <span class="k">location</span> <span class="s">/api/</span> <span class="p">{</span>
       <span class="kn">resolver</span> <span class="mi">8</span><span class="s">.8.8.8</span> <span class="s">valid=1s</span><span class="p">;</span>
       <span class="kn">proxy_pass</span> <span class="s">https://api.com/</span><span class="p">;</span>
     <span class="p">}</span>
 </code></pre></div>
-
 <p>It's because of nginx doesn't respect <code>resolver</code> directive in this case. It will resolve api.com only at startup (or reload) by system resolver (/etc/resolv.conf), even if real TTL of A/AAAA record api.com is 1s.</p>
 <h3 id="add-variables">Add variables<a class="headerlink" href="#add-variables" title="Permanent link">&para;</a></h3>
 <p>You can google a bit and find that <a href="https://trac.nginx.org/nginx/ticket/723">nginx try to resolve proxy endpoint with variables</a>. Also <a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_pass">official documentation for proxy_pass directive notices this too</a>. Ok, I think this should be noticed in the <code>resolver</code> description, but let's try anyway:</p>
@@ -1037,7 +1006,6 @@ Single line in <a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html
         <span class="p">}</span>
     <span class="p">}</span>
 </code></pre></div>
-
 <p>Yes, <code>http://fillo.me/proxy-with-resolve/</code> will resolve proxy.com every 1s on particular requests, while <code>http://fillo.me/proxy-without-resolve/</code> will not resolve proxy.com (nginx will resolve proxy.com at startup/reload once). This magic works because <code>upstream</code> directive is used.</p>
 <p>Another example:</p>
 <p><div class="highlight"><pre><span></span><code>    <span class="k">upstream</span> <span class="s">api_version</span> <span class="p">{</span>
@@ -1085,7 +1053,7 @@ Single line in <a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html
 
   <h2 id="__comments">Comments</h2>
   <div id="disqus_thread"></div>
-  <script>var disqus_config=function(){this.page.url="https://rtfmdev.github.io/dev-tools/nginx/",this.page.identifier="/dev-tools/nginx/"};!function(){var e=document,i=e.createElement("script");i.src="//rtfmdev.disqus.com/embed.js",i.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(i)}()</script>
+  <script>var disqus_config=function(){this.page.url="https://rtfmdev.github.io/dev-tools/nginx/",this.page.identifier="/dev-tools/nginx/"};window.addEventListener("load",function(){var e=document,i=e.createElement("script");i.src="//rtfmdev.disqus.com/embed.js",i.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(i)})</script>
 
               
             </article>
@@ -1099,7 +1067,7 @@ Single line in <a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../mongo/" title="MongoDB" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../mongo/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1114,7 +1082,7 @@ Single line in <a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html
           </a>
         
         
-          <a href="../one-liners/" title="Bash oneliners" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../one-liners/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
@@ -1182,15 +1150,15 @@ Single line in <a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.c3dc8c49.min.js"></script>
-      <script src="../../assets/javascripts/bundle.f9edbbd5.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../../assets/javascripts/vendor.7e0ee788.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c1ccee15.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
           base: "../..",
           features: [],
           search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.8e2cddea.min.js"
+            worker: "../../assets/javascripts/worker/search.4ac00218.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
