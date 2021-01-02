@@ -20,10 +20,6 @@
      <lastmod>2021-01-02</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://rtfmdev.github.io/dev-tools/bash/</loc>
-     <lastmod>2021-01-02</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
      <loc>https://rtfmdev.github.io/dev-tools/git/</loc>
      <lastmod>2021-01-02</lastmod>
      <changefreq>daily</changefreq>
@@ -41,10 +37,6 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://rtfmdev.github.io/dev-tools/nginx/</loc>
-     <lastmod>2021-01-02</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://rtfmdev.github.io/dev-tools/one-liners/</loc>
      <lastmod>2021-01-02</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -97,6 +89,14 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://rtfmdev.github.io/linux/</loc>
+     <lastmod>2021-01-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://rtfmdev.github.io/linux/bash/</loc>
+     <lastmod>2021-01-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://rtfmdev.github.io/linux/one-liners/</loc>
      <lastmod>2021-01-02</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
