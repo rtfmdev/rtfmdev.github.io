@@ -828,14 +828,14 @@
 <ul>
 <li>
 <p>It is remarkably helpful sometimes that you can do set intersection, union, and difference of text files via <code>sort</code>/<code>uniq</code>. Suppose <code>a</code> and <code>b</code> are text files that are already uniqued. This is fast, and works on files of arbitrary size, up to many gigabytes. (Sort is not limited by memory, though you may need to use the <code>-T</code> option if <code>/tmp</code> is on a small root partition.) See also the note about <code>LC_ALL</code> above and <code>sort</code>'s <code>-u</code> option (left out for clarity below).
-<div class="highlight"><pre><span></span><code>      sort a b <span class="p">|</span> uniq &gt; c   <span class="c1"># c is a union b</span>
-      sort a b <span class="p">|</span> uniq -d &gt; c   <span class="c1"># c is a intersect b</span>
-      sort a b b <span class="p">|</span> uniq -u &gt; c   <span class="c1"># c is set difference a - b</span>
+<div class="highlight"><pre><span></span><code>sort a b <span class="p">|</span> uniq &gt; c   <span class="c1"># c is a union b</span>
+sort a b <span class="p">|</span> uniq -d &gt; c   <span class="c1"># c is a intersect b</span>
+sort a b b <span class="p">|</span> uniq -u &gt; c   <span class="c1"># c is set difference a - b</span>
 </code></pre></div></p>
 </li>
 <li>
 <p>Pretty-print two JSON files, normalizing their syntax, then coloring and paginating the result:
-<div class="highlight"><pre><span></span><code>      diff &lt;(jq --sort-keys . &lt; file1.json) &lt;(jq --sort-keys . &lt; file2.json) | colordiff | less -R
+<div class="highlight"><pre><span></span><code>diff &lt;(jq --sort-keys . &lt; file1.json) &lt;(jq --sort-keys . &lt; file2.json) | colordiff | less -R
 </code></pre></div></p>
 </li>
 <li>
@@ -843,17 +843,17 @@
 </li>
 <li>
 <p>Summing all numbers in the third column of a text file (this is probably 3X faster and 3X less code than equivalent Python):
-<div class="highlight"><pre><span></span><code>      awk <span class="s1">&#39;{ x += $3 } END { print x }&#39;</span> myfile
+<div class="highlight"><pre><span></span><code>awk <span class="s1">&#39;{ x += $3 } END { print x }&#39;</span> myfile
 </code></pre></div></p>
 </li>
 <li>
 <p>To see sizes/dates on a tree of files, this is like a recursive <code>ls -l</code> but is easier to read than <code>ls -lR</code>:
-<div class="highlight"><pre><span></span><code>      find . -type f -ls
+<div class="highlight"><pre><span></span><code>find . -type f -ls
 </code></pre></div></p>
 </li>
 <li>
 <p>Say you have a text file, like a web server log, and a certain value that appears on some lines, such as an <code>acct_id</code> parameter that is present in the URL. If you want a tally of how many requests for each <code>acct_id</code>:
-<div class="highlight"><pre><span></span><code>      egrep -o <span class="s1">&#39;acct_id=[0-9]+&#39;</span> access.log <span class="p">|</span> cut -d<span class="o">=</span> -f2 <span class="p">|</span> sort <span class="p">|</span> uniq -c <span class="p">|</span> sort -rn
+<div class="highlight"><pre><span></span><code>egrep -o <span class="s1">&#39;acct_id=[0-9]+&#39;</span> access.log <span class="p">|</span> cut -d<span class="o">=</span> -f2 <span class="p">|</span> sort <span class="p">|</span> uniq -c <span class="p">|</span> sort -rn
 </code></pre></div></p>
 </li>
 <li>
@@ -861,14 +861,14 @@
 </li>
 <li>
 <p>Run this function to get a random tip from this document (parses Markdown and extracts an item):
-<div class="highlight"><pre><span></span><code>      <span class="k">function</span> taocl<span class="o">()</span> <span class="o">{</span>
-        curl -s https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README.md <span class="p">|</span>
-          sed <span class="s1">&#39;/cowsay[.]png/d&#39;</span> <span class="p">|</span>
-          pandoc -f markdown -t html <span class="p">|</span>
-          xmlstarlet fo --html --dropdtd <span class="p">|</span>
-          xmlstarlet sel -t -v <span class="s2">&quot;(html/body/ul/li[count(p)&gt;0])[</span><span class="nv">$RANDOM</span><span class="s2"> mod last()+1]&quot;</span> <span class="p">|</span>
-          xmlstarlet unesc <span class="p">|</span> fmt -80 <span class="p">|</span> iconv -t US
-      <span class="o">}</span>
+<div class="highlight"><pre><span></span><code><span class="k">function</span> taocl<span class="o">()</span> <span class="o">{</span>
+curl -s https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README.md <span class="p">|</span>
+    sed <span class="s1">&#39;/cowsay[.]png/d&#39;</span> <span class="p">|</span>
+    pandoc -f markdown -t html <span class="p">|</span>
+    xmlstarlet fo --html --dropdtd <span class="p">|</span>
+    xmlstarlet sel -t -v <span class="s2">&quot;(html/body/ul/li[count(p)&gt;0])[</span><span class="nv">$RANDOM</span><span class="s2"> mod last()+1]&quot;</span> <span class="p">|</span>
+    xmlstarlet unesc <span class="p">|</span> fmt -80 <span class="p">|</span> iconv -t US
+<span class="o">}</span>
 </code></pre></div></p>
 </li>
 </ul>
