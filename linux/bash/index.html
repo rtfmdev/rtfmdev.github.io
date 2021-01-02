@@ -964,10 +964,14 @@
 <p>Learn at least one text-based editor well. The <code>nano</code> editor is one of the simplest for basic editing (opening, editing, saving, searching). However, for the power user in a text terminal, there is no substitute for Vim (<code>vi</code>), the hard-to-learn but venerable, fast, and full-featured editor. Many people also use the classic Emacs, particularly for larger editing tasks. (Of course, any modern software developer working on an extensive project is unlikely to use only a pure text-based editor and should also be familiar with modern graphical IDEs and tools.)</p>
 </li>
 </ul>
-<p>!!! Finding documentation:
-    * Know how to read official documentation with <code>man</code> (for the inquisitive, <code>man man</code> lists the section numbers, e.g. 1 is "regular" commands, 5 is files/conventions, and 8 are for administration). Find man pages with <code>apropos</code>.
-    * Know that some commands are not executables, but Bash builtins, and that you can get help on them with <code>help</code> and <code>help -d</code>. You can find out whether a command is an executable, shell builtin or an alias by using <code>type command</code>.
-    * <code>curl cheat.sh/command</code> will give a brief "cheat sheet" with common examples of how to use a shell command.</p>
+<div class="admonition example">
+<p class="admonition-title">Finding documentation:</p>
+<ul>
+<li>Know how to read official documentation with <code>man</code> (for the inquisitive, <code>man man</code> lists the section numbers, e.g. 1 is "regular" commands, 5 is files/conventions, and 8 are for administration). Find man pages with <code>apropos</code>.</li>
+<li>Know that some commands are not executables, but Bash builtins, and that you can get help on them with <code>help</code> and <code>help -d</code>. You can find out whether a command is an executable, shell builtin or an alias by using <code>type command</code>.</li>
+<li><code>curl cheat.sh/command</code> will give a brief "cheat sheet" with common examples of how to use a shell command.</li>
+</ul>
+</div>
 <ul>
 <li>
 <p>Learn about redirection of output and input using <code>&gt;</code> and <code>&lt;</code> and pipes using <code>|</code>. Know <code>&gt;</code> overwrites the output file and <code>&gt;&gt;</code> appends. Learn about stdout and stderr.</p>
