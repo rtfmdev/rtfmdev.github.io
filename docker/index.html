@@ -478,6 +478,19 @@
     Install Docker
   </a>
   
+    <nav class="md-nav" aria-label="Install Docker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ubuntu" class="md-nav__link">
+    Ubuntu
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -858,6 +871,19 @@
     Install Docker
   </a>
   
+    <nav class="md-nav" aria-label="Install Docker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ubuntu" class="md-nav__link">
+    Ubuntu
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -954,6 +980,7 @@ systemctl start docker-container@ecs-agent.service
 </code></pre></div></p>
 <h2 id="install-docker">Install Docker<a class="headerlink" href="#install-docker" title="Permanent link">&para;</a></h2>
 <p>The Docker installation package available in the official Ubuntu repository may not be the latest version. To ensure we get the latest version, we’ll install Docker from the official Docker repository. To do that, we’ll add a new package source, add the GPG key from Docker to ensure the downloads are valid, and then install the package.</p>
+<h3 id="ubuntu">Ubuntu<a class="headerlink" href="#ubuntu" title="Permanent link">&para;</a></h3>
 <p>First, update your existing list of packages:</p>
 <div class="highlight"><pre><span></span><code>sudo apt update
 </code></pre></div>
@@ -964,12 +991,22 @@ systemctl start docker-container@ecs-agent.service
 <div class="highlight"><pre><span></span><code>curl -fsSL https://download.docker.com/linux/ubuntu/gpg <span class="p">|</span> sudo apt-key add -
 </code></pre></div>
 <p>Add the Docker repository to APT sources:</p>
-<div class="highlight"><pre><span></span><code>sudo add-apt-repository <span class="se">\</span>
-<span class="s2">&quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable&quot;</span>
+<p><div class="highlight"><pre><span></span><code><span class="c1"># amd64</span>
+sudo add-apt-repository <span class="se">\</span>
+   <span class="s2">&quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu \</span>
+<span class="s2">   </span><span class="k">$(</span>lsb_release -cs<span class="k">)</span><span class="s2"> \</span>
+<span class="s2">   stable&quot;</span>
 </code></pre></div>
+or
+<div class="highlight"><pre><span></span><code><span class="c1"># arm64</span>
+sudo add-apt-repository <span class="se">\</span>
+   <span class="s2">&quot;deb [arch=arm64] https://download.docker.com/linux/ubuntu \</span>
+<span class="s2">   </span><span class="k">$(</span>lsb_release -cs<span class="k">)</span><span class="s2"> \</span>
+<span class="s2">   stable&quot;</span>
+</code></pre></div></p>
 <p>Next, update the package database with the Docker packages from the newly added repo and install Docker:</p>
 <div class="highlight"><pre><span></span><code>sudo apt update
-sudo apt install docker-ce
+sudo apt install docker-ce docker-ce-cli containerd.io
 </code></pre></div>
 <p>Docker should now be installed, the daemon started, and the process enabled to start on boot. Check that it’s running:</p>
 <div class="highlight"><pre><span></span><code>sudo systemctl status docker
